@@ -30,8 +30,8 @@ noremap <leader>s <C-w>s    " create new hsplit, and switch to it.
 " Saving and Quiting
 noremap <leader>w :w<CR>    " Save
 noremap <leader>q :q<CR>    " Quit
-noremap q :q<CR>            " Quit
-noremap Q :q!<CR>           " Force Quit
+noremap Q :q<CR>            " Quit
+noremap q :q!<CR>           " Force Quit
 noremap <leader>Q :q!<CR>   " Force Quit
 noremap <leader>e :wq<CR>   " Save and quit
 

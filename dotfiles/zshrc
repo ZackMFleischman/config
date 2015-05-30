@@ -1,0 +1,177 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to disable command auto-correction.
+# DISABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+ZSH_THEME=burner
+source $ZSH/oh-my-zsh.sh
+
+# Paths
+SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | tr '\n' ':')
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
+# export MANPATH="/usr/local/man:$MANPATH"
+# export CDPATH=".:/Users/zfleischman/repos/farm2"
+
+# Source Scripts
+. ~/repos/scripts/farm2/findfile
+
+# Ensure running python 3
+#alias python='python3'
+
+# Open Apps
+alias fire='open -a /Applications/Firefox.app'
+alias ch='open -a /Applications/Google\ Chrome.app'
+alias ij='open -a /Applications/IntelliJ\ IDEA\ 12.app'
+
+# Command Shortcuts
+alias sz='source ~/.zshrc'
+alias ez='vim ~/.zshrc'
+alias eg='vim ~/.gitconfig'
+alias ev='vim ~/.vimrc'
+alias evm='vim ~/.vimmappings'
+alias ls='pwd; ls -G'
+alias ll='ls -la'
+alias zb='zyngabackup'
+
+# Git
+alias d='git difftool'
+alias dd='git diff HEAD --color=always'
+alias ddd='git diff HEAD --color=always | cat'
+alias s='git status'
+alias br='git branch -r'
+alias sl='git stash list | awk '"'"' BEGIN { print "" } {print "",$0} END { print "" }'"'"''
+alias l='gitlog -10'
+alias l2='gitlog -20'
+alias l3='gitlog -30' 
+alias l4='gitlog -40'
+alias ldate='gitlogdate -10'
+alias l2date='gitlogdate -20'
+alias l3date='gitlogdate -30'
+alias l4date='gitlogdate -40'
+alias lx='gitlog'
+alias lxdate='gitlogdate'
+alias gf='git fetch'
+alias r='git pull --rebase'
+alias p='git push'
+alias c='git commit -am'
+alias u='git pull'
+alias has='git branch --contains'
+alias reset='git reset --hard HEAD'
+alias tool1='git config --global diff.tool Kaleidoscope'
+alias tool2='git config --global diff.tool p4mergetool'
+
+# Code Collab
+alias lr='ccollab actionitems'
+
+################
+# Path Shortcuts
+################
+
+# Wonderdome
+alias w='cd ~/repos/wonderdome'
+alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
+alias f='cd ~/repos/farm2;pwd'
+alias q='cd ~/repos/scripts'
+alias r='cd ~/repos'
+
+################
+# Zynga Specific
+################
+
+# Zynga State Fair Leaderboards
+alias lb='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py'
+alias lb2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1'
+alias lbl='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py | less'
+alias lbl2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1 | less'
+alias lb_tiers='lb | grep "^\[" | nl'
+alias lb_0='lb | grep "total players"'
+alias lb_1='lb | grep ": 1$" | nl'
+alias lb_2='lb | grep ": 2$" | nl'
+alias lb_3='lb | grep ": 3$" | nl'
+alias lb2_tiers='lb2 | grep "^\[" | nl'
+alias lb2_0='lb2 | grep "total players"'
+alias lb2_1='lb2 | grep ": 1$" | nl'
+alias lb2_2='lb2 | grep ": 2$" | nl'
+alias lb2_3='lb2 | grep ": 3$" | nl'
+
+# Syncs
+alias sync='~/repos/farm2/util/devserver/sync.sh -f'
+alias syncquick='~/repos/farm2/util/devserver/sync.sh -q'
+alias syncloc='~/repos/farm2/util/devserver/sync.sh -a loc'
+alias syncstitch='~/repos/farm2/util/devserver/sync.sh -a stitch'
+alias syncpartial='~/repos/farm2/util/devserver/sync.sh -a server,shared,util'
+
+# Flash Vars
+alias flashvars='vim /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js'
+alias cpflashvars='cp /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js /Users/zfleischman/repos/farm2-new/Client/Launcher/html-template/'
+
+# Silo
+alias silo='java -jar ~/silo/release/Silo.jar'
+alias sf='silo switch "State Fair"'
+
+# Misc
+alias z='ssh farm2-dev-4.zc2.zynga.com'
+alias zz='ssh farm2-dev-4.zc2.zynga.com -t "tmux attach -t zFleischman; bash -l"'
+alias phpdebug='ssh -o ServerAliveInterval=20 -R 9009:localhost:9009 farmville2-dev-03.zc1.zynga.com'
+alias zs='ssh farm2-admin-script-01'
+alias logs='/bin/sh /Users/zfleischman/repos/farm2/util/devserver/tailLogs.sh'
+
+# Ctrl-Z to switch between vim and the command line
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
