@@ -55,8 +55,8 @@ ZSH_THEME=burner
 source $ZSH/oh-my-zsh.sh
 
 # Paths
-SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | tr '\n' ':')
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
+SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
 # export MANPATH="/usr/local/man:$MANPATH"
 # export CDPATH=".:/Users/zfleischman/repos/farm2"
 

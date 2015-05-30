@@ -17,4 +17,7 @@ done
 # Install Oh-My-Zsh and my custom themes
 source scripts/installOhMyZsh
 
+# Install Ag
+brew install the_silver_searcher
+
 echo "Done!"
