@@ -14,6 +14,10 @@ do
     ln -sfn $PWD/$f ~/.$file
 done
 
+# Install Vundle
+echo "Installing Vundle..."
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Install Oh-My-Zsh and my custom themes
 source scripts/installOhMyZsh
 
