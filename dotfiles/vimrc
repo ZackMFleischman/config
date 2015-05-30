@@ -7,6 +7,75 @@
 source ~/.vimplugins
 source ~/.vimpluginmappings
 
+" ===========================
+" KEY MAPPINGS
+" ===========================
+
+" So we don't have to reach for escape to leave insert mode.
+inoremap jk <esc>
+
+" Enter key goes to the end. Useful for line navigation. Enter the line # then
+" press Enter
+nnoremap <CR> G
+
+" Switch mark jumpers
+nnoremap ' `
+nnoremap ` '
+
+" Bindings for easy split nav
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" LEADER MAPPINGS
+" ---------------
+let mapleader="\<Space>"
+
+" Split Panes
+noremap <leader>v <C-w>v    " create new vsplit, and switch to it.
+noremap <leader>s <C-w>s    " create new hsplit, and switch to it.
+
+" Saving and Quiting
+noremap <leader>w :w<CR>    " Save
+noremap <leader>e :wq<CR>   " Save and quit
+noremap Q :q<CR>            " Quit
+noremap <leader>Q :q<CR>    " Quit
+noremap q :q!<CR>           " Force Quit
+noremap <leader>q :q!<CR>   " Force Quit
+
+" Undo
+noremap <leader>u <C-r>     " Undo
+
+" Modify .vimrc
+noremap <leader>t :vsplit<CR>:e ~/.vimrc<CR>           " Edit .vimrc
+noremap <leader>T :source ~/.vimrc<CR>      " Apply .vimrc
+
+" Turns off search highlight
+noremap <leader><F5> :nohlsearch<CR>     
+
+" Delete line
+noremap <leader>d ^d$
+
+" Tabs
+map <F6> :tabedit 
+map <F8> :tabn<CR>  " Next Tab
+map <F7> :tabp<CR>  " Previous Tab
+
+" Replace text
+noremap <leader>r :%s//g<left><left>
+noremap <leader>R :%s//gc<left><left><left>
+
+" Goto mark
+noremap gm m
+
+" Format whole file
+map <leader>= gmzgg=G`z
+
+"====================
+" Settings
+"====================
+
 " Syntax highlighting
 syntax on   
 
@@ -59,67 +128,3 @@ set t_Co=256
 " Allow the cursor to go anywhere in visual block mode.
 set virtualedit+=block
 
-" ===========================
-" KEY MAPPINGS
-" ===========================
-
-" So we don't have to reach for escape to leave insert mode.
-inoremap jk <esc>
-
-" Enter key goes to the end. Useful for line navigation. Enter the line # then
-" press Enter
-nnoremap <CR> G
-
-" Switch mark jumpers
-nnoremap ' `
-nnoremap ` '
-
-" Bindings for easy split nav
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" LEADER MAPPINGS
-" ---------------
-let mapleader="\<Space>"
-
-" Split Panes
-noremap <leader>v <C-w>v    " create new vsplit, and switch to it.
-noremap <leader>s <C-w>s    " create new hsplit, and switch to it.
-
-" Saving and Quiting
-noremap <leader>w :w<CR>    " Save
-noremap <leader>e :wq<CR>   " Save and quit
-noremap Q :q<CR>            " Quit
-noremap <leader>Q :q<CR>    " Quit
-noremap q :q!<CR>           " Force Quit
-noremap <leader>q :q!<CR>   " Force Quit
-
-" Undo
-noremap <leader>u <C-r>     " Undo
-
-" Modify .vimrc
-noremap <leader>t :e ~/.vimmappings<CR>           " Edit .vimrc
-noremap <leader>T :source ~/.vimmappings<CR>      " Apply .vimrc
-
-" Turns off search highlight
-noremap <leader><F5> :nohlsearch<CR>     
-
-" Delete line
-noremap <leader>d ^d$
-
-" Tabs
-map <F6> :tabedit 
-map <F8> :tabn<CR>  " Next Tab
-map <F7> :tabp<CR>  " Previous Tab
-
-" Replace text
-noremap <leader>r :%s//g<left><left>
-noremap <leader>R :%s//gc<left><left><left>
-
-" Goto mark
-noremap gm m
-
-" Format whole file
-map <leader>= gmzgg=G`z
