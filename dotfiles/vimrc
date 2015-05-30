@@ -3,6 +3,9 @@
 " Author: Zack Fleischman
 "
 
+" Remap leader to the space bar. Do this before sourcing any mappings
+let mapleader="\<Space>"
+
 " Plugins and Key Mappings
 source ~/.vimplugins
 source ~/.vimpluginmappings
@@ -34,7 +37,6 @@ nnoremap <C-l> <C-w>l
 
 " LEADER MAPPINGS
 " ---------------
-let mapleader="\<Space>"
 
 " Split Panes
 noremap <leader>v <C-w>v    " create new vsplit, and switch to it.
