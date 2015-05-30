@@ -1,6 +1,6 @@
 # config
 A lightweight way to setup my toolkit across different machines
 
-## ./setupDotfiles
-Creates symlinks to all my dotfiles to the ~ directory
-
+## ./setup
+symlinks dot files to ~
+installs oh-my-zsh and custom themes
