@@ -14,4 +14,7 @@ do
     ln -sfn $PWD/$f ~/.$file
 done
 
+# Install Oh-My-Zsh and my custom themes
+source installOhMyZsh
+
 echo "Done!"
