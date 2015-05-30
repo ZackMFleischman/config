@@ -34,11 +34,13 @@ noremap q :q<CR>            " Quit
 noremap Q :q!<CR>           " Force Quit
 noremap <leader>Q :q!<CR>   " Force Quit
 noremap <leader>e :wq<CR>   " Save and quit
+
+" Undo
 noremap <leader>u <C-r>     " Undo
 
 " Modify .vimrc
-noremap <leader>r :e $MYVIMRC<CR>           " Edit .vimrc
-noremap <leader>R :source $MYVIMRC<CR>      " Apply .vimrc
+noremap <leader>r :e ~/.vimmappings<CR>           " Edit .vimrc
+noremap <leader>R :source ~/.vimmappings<CR>      " Apply .vimrc
 
 " Turns off search highlight
 noremap <leader><F5> :nohlsearch<CR>     

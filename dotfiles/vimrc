@@ -1,13 +1,12 @@
-"  
+" 
 " File: .vimrc
 " Author: Zack Fleischman
 "
 
-" Source Plugins
+" Plugins and Key Mappings
 source ~/.vimplugins
-
-" Source Keymappings
 source ~/.vimmappings
+source ~/.vimpluginmappings
 
 " Syntax highlighting
 syntax on   
