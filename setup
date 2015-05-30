@@ -15,6 +15,6 @@ do
 done
 
 # Install Oh-My-Zsh and my custom themes
-source installOhMyZsh
+source scripts/installOhMyZsh
 
 echo "Done!"
