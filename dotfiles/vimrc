@@ -22,6 +22,10 @@ nnoremap <CR> G
 nnoremap ' `
 nnoremap ` '
 
+" Switch go to beginning of line / end of whitespace
+nnoremap 0 ^
+nnoremap ^ 0
+
 " Bindings for easy split nav
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
