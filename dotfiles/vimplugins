@@ -1,0 +1,68 @@
+"===============================
+"===BEGIN VUNDLE 
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Easy Clip (cycle paste and m==cut command)
+Plugin 'https://github.com/tpope/vim-repeat.git'
+Plugin 'https://github.com/svermeulen/vim-easyclip.git' 
+
+" Clojure Syntax Highlighting and Indenting 
+Plugin 'https://github.com/guns/vim-clojure-static.git'
+Plugin 'https://github.com/guns/vim-clojure-highlight.git'
+
+" Rainbow Parens Improved
+" Needs: let g:rainbow_active = 1
+Plugin 'https://github.com/luochen1990/rainbow.git'
+
+" Fireplace (Clojure REPL)
+Plugin 'https://github.com/tpope/vim-fireplace.git'
+
+" ParEdit 
+Plugin 'https://github.com/vim-scripts/paredit.vim.git'
+
+" Easy Motion
+Plugin 'https://github.com/Lokaltog/vim-easymotion.git'
+
+" Ctrl-P
+Plugin 'https://github.com/kien/ctrlp.vim.git'
+
+" NERD Tree
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+
+" Airline
+Plugin 'https://github.com/bling/vim-airline.git'
+
+" Fugitive
+Plugin 'https://github.com/tpope/vim-fugitive.git'
+
+" AG
+Plugin 'https://github.com/rking/ag.vim.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+"=========================================
+"==END VUNDLE

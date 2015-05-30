@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Loop over all the files in the "dotfiles" directory 
+# and make a symlink in ~
+DOT_FILES=dotfiles/*
+for f in $DOT_FILES
+do
+    # Strip the path
+    file=$(basename "$f")
+
+    # Create a dot file symlink in the home folder	
+    echo "Creating symlink for ~/.$file"
+    PWD=$(pwd)
+    ln -sfn $PWD/$f ~/.$file
+done
+
+echo "Done!"
