@@ -39,6 +39,7 @@ binaries=(
     sshfs
     trash
     node
+    htop
     vim
     tree
     zsh
