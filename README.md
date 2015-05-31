@@ -1,5 +1,6 @@
 # config
 A lightweight way to setup my toolkit across different machines
+
 Note: This repo should be setup in ~/repos
 
 ## Setting up a new machine (Mac)
