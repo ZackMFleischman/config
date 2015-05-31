@@ -39,6 +39,7 @@ binaries=(
     sshfs
     trash
     node
+    vim
     tree
     zsh
     the_silver_searcher

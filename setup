@@ -4,7 +4,7 @@
 echo ""
 echo "Installing Homebrew"
 echo "-------------------"
-source scripts/setupHomebrew
+source scripts/installHomebrew
 
 # Install Oh-My-Zsh and my custom themes
 echo ""
