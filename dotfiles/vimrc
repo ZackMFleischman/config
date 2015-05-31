@@ -185,6 +185,7 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 noremap <leader>o :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
 
 " Airline
 set laststatus=2
