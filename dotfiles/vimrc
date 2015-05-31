@@ -154,20 +154,6 @@ noremap <leader>as :PluginSearch!<CR>      " searches plugins
 " Rainbow Parens
 let g:rainbow_active = 1
 
-" Easy Motion 
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
-let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-let g:EasyMotion_smartcase = 1
-nmap s <Plug>(easymotion-s)
-nmap S <Plug>(easymotion-bd-w)
-
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -207,3 +193,9 @@ let g:airline_theme="badwolf"
 " Ag
 noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
 noremap <leader>d :Ag 
+
+" Sneak
+let g:sneak#streak = 1
+let g:sneak#s_next = 1
+nmap s <Plug>Sneak_s
+nmap S <Plug>Sneak_S
