@@ -1,20 +1,23 @@
 #!/bin/bash
 
+# Install Homebrew
+echo ""
+echo "Installing Homebrew"
+echo "-------------------"
+source scripts/setupHomebrew
+
+# Install Oh-My-Zsh and my custom themes
+echo ""
+echo "Installing oh-my-zsh"
+echo "--------------------"
+source scripts/installOhMyZsh
+
 # Loop over all the files in the "dotfiles" directory 
 # and make a symlink in ~
+echo ""
 echo "Copying over symlinks for dot files"
 echo "-----------------------------------"
-DOT_FILES=dotfiles/*
-for f in $DOT_FILES
-do
-    # Strip the path
-    file=$(basename "$f")
-
-    # Create a dot file symlink in the home folder	
-    echo "Creating symlink for ~/.$file"
-    PWD=$(pwd)
-    ln -sfn $PWD/$f ~/.$file
-done
+source scripts/installDotFiles
 
 # Install Vundle
 echo ""
@@ -26,23 +29,15 @@ else
     echo "Vundle is already installed!"
 fi
 
-# Install Oh-My-Zsh and my custom themes
+# Installing Scripts
 echo ""
-echo "Installing oh-my-zsh"
-echo "--------------------"
-source scripts/installOhMyZsh
-
-# Install Homebrew
-echo ""
-echo "Installing Homebrew"
-echo "-------------------"
-source scripts/setupHomebrew
-
-# Install Ag
-echo ""
-echo "Installing Ag"
-echo "-------------"
-brew install the_silver_searcher
+echo "Installing my scripts..."
+echo "------------------------"
+if ! [ -d ~/repos/scripts ]; then
+    git clone https://github.com/zFleischman/scripts.git ~/repos/scripts
+else
+    echo "My Scripts already installed."
+fi
 
 echo ""
 echo "Done!"

@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME=burner
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -51,20 +51,23 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-ZSH_THEME=burner
 source $ZSH/oh-my-zsh.sh
 
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 # export CDPATH=".:/Users/zfleischman/repos/farm2"
 
 # Source Scripts
 . ~/repos/scripts/farm2/findfile
 
+# Autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # Ensure running python 3
-#alias python='python3'
+alias python='python3'
 
 # Open Apps
 alias fire='open -a /Applications/Firefox.app'

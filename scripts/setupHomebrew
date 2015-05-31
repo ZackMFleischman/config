@@ -1,2 +1,91 @@
-#!/bin/sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Check for Homebrew,
+# Install if we don't have it
+if test ! $(which brew); then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo "Homebrew is already installed"
+fi
+
+# Update homebrew recipes
+echo ""
+echo "Updating homebrew..."
+brew update
+
+# Install GNU core utilities (those that come with OS X are outdated)
+echo ""
+echo "Installing core utilities..."
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
+brew install bash
+
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+
+# Install Command Line Programs
+echo ""
+echo "Installing command line programs..."
+binaries=(
+    git
+    graphicsmagick
+    rename
+    zopfli
+    ffmpeg
+    python3
+    sshfs
+    trash
+    node
+    tree
+    zsh
+    the_silver_searcher
+)
+brew install ${binaries[@]}
+
+# Install GUI Programs
+echo ""
+echo "Installing homebrew cask..."
+# Install cask
+brew install caskroom/cask/brew-cask
+
+echo ""
+echo "Installing GUI Applications..."
+# Apps
+apps=(
+    dropbox
+    box-sync
+    adium
+    audacity
+    calibre
+    kaleidoscope
+    keepassx
+    handbrake
+    p4merge
+    processing
+    the-unarchiver
+    utorrent
+    disk-inventory-x
+    google-chrome
+    firefox
+    spotify
+    iterm2
+    virtualbox
+    flux
+    vlc
+    skype
+    evernote
+    xee
+    bettertouchtool
+)
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+brew cask install --appdir="/Applications" ${apps[@]}
+
+# Cleaning up
+echo ""
+echo "Cleaning up homebrew..."
+brew cleanup
+
