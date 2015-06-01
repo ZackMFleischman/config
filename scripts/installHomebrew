@@ -40,6 +40,7 @@ binaries=(
     sshfs
     trash
     node
+    tmux
     htop
     vim
     tree
