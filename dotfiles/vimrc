@@ -8,6 +8,7 @@ let mapleader="\<Space>"
 
 " Plugins 
 source ~/.vimplugins
+au BufReadPost .vimplugins set syntax=sh
 
 " ===========================
 " KEY MAPPINGS
