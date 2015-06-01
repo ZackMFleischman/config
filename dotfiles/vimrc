@@ -84,9 +84,9 @@ map <leader>= gmzgg=G`z
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal! g`\"" |
+            \ endif
 " Remember info about open buffers on close
 set viminfo^=%
 
@@ -163,6 +163,7 @@ let g:rainbow_active = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 map <leader>f :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'ra'
 
 " NERD Tree
 function! NERDTreeQuit()
