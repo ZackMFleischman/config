@@ -195,7 +195,7 @@ let g:NERDTreeQuitOnOpen = 1
 " Airline
 set laststatus=2
 let g:airline_theme="badwolf"
-let g:airline_detect_whitespace=0
+let g:airline#extensions#whitespace#enabled=0
 
 " Ag
 noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
@@ -212,3 +212,13 @@ let g:sneak#use_ic_scs = 1
 nmap <leader>p :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
