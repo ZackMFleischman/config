@@ -165,7 +165,6 @@ let g:ctrlp_cmd = 'CtrlP'
 map <leader>f :CtrlP<CR>
 
 " NERD Tree
-map <C-o> :NERDTreeToggle<CR>
 function! NERDTreeQuit()
     redir => buffersoutput
     silent buffers
@@ -214,11 +213,10 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
