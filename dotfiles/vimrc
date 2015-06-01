@@ -204,8 +204,9 @@ noremap <leader>d :Ag
 " Sneak
 let g:sneak#streak = 1
 let g:sneak#s_next = 1
-nmap s <Plug>Sneak_s
-nmap S <Plug>Sneak_S
+nmap s H<Plug>Sneak_s
+nmap S L<Plug>Sneak_S
+let g:sneak#use_ic_scs = 1
 
 " Tagbar
 nmap <leader>p :TagbarToggle<CR>
