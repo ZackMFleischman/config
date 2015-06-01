@@ -36,6 +36,7 @@ binaries=(
     zopfli
     ffmpeg
     python3
+    ctags
     sshfs
     trash
     node

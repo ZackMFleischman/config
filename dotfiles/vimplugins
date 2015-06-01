@@ -49,6 +49,9 @@ Plugin 'justinmk/vim-sneak'
 " AG
 Plugin 'https://github.com/rking/ag.vim.git'
 
+" Tagbar
+Plugin 'majutsushi/tagbar'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

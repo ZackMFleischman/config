@@ -53,6 +53,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
@@ -80,7 +83,7 @@ alias ez='vim ~/.zshrc'
 alias eg='vim ~/.gitconfig'
 alias ev='vim ~/.vimrc'
 alias ep='vim ~/.vimplugins'
-alias ls='pwd; ls -G'
+alias ls="echo -e '\e[1;30m'`pwd`; echo -en '\e[0m';ls --color=tty"
 alias ll='ls -la'
 alias zb='zyngabackup'
 
@@ -123,7 +126,8 @@ alias w='cd ~/repos/wonderdome'
 alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
 alias f='cd ~/repos/farm2;pwd'
 alias q='cd ~/repos/scripts'
-alias r='cd ~/repos'
+alias a='cd ~/repos'
+alias ac='cd ~/repos/config'
 
 ################
 # Zynga Specific
