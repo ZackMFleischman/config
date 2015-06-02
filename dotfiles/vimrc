@@ -221,3 +221,17 @@ let g:tagbar_autoclose = 1
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+
+" Python Mode
+let g:pymode_options_colorcolumn=1
+hi ColorColumn ctermbg=8
+noremap <leader>c :PymodeLint<CR>
+noremap <leader>cc :PymodeLintAuto<CR>
+noremap <leader>ct :PymodeLintToggle<CR>
+noremap <leader>ce <C-w>j<C-w>j:q<CR>
+let g:pymode_lint_options_mccabe = { 'complexity': 120 }
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
+let g:pymode_options_colorcolumn = 0
+let g:pymode_run_bind = '<leader>B'
+let g:pymode_folding = 0
