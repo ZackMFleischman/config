@@ -19,6 +19,7 @@ binaries=(
     tree
     zsh
     the_silver_searcher
+    ack
 )
 brew install ${binaries[@]}
 
