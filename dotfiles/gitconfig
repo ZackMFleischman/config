@@ -1,7 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [user]
-	name = zFleischman
+	name = Zack Fleischman
 	email = zFleischman@gmail.com
 [diff]
 	tool = diffmerge
