@@ -26,68 +26,8 @@ brew install bash
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-# Install Command Line Programs
-echo ""
-echo "Installing command line programs..."
-binaries=(
-    git
-    graphicsmagick
-    rename
-    zopfli
-    ffmpeg
-    python3
-    ctags
-    sshfs
-    trash
-    node
-    autojump
-    tmux
-    htop
-    vim
-    tree
-    zsh
-    the_silver_searcher
-)
-brew install ${binaries[@]}
-
-# Install GUI Programs
-echo ""
-echo "Installing homebrew cask..."
-# Install cask
-brew install caskroom/cask/brew-cask
-
-echo ""
-echo "Installing GUI Applications..."
-# Apps
-apps=(
-    dropbox
-    box-sync
-    adium
-    audacity
-    calibre
-    kaleidoscope
-    keepassx
-    handbrake
-    p4merge
-    processing
-    the-unarchiver
-    utorrent
-    disk-inventory-x
-    google-chrome
-    firefox
-    spotify
-    iterm2
-    virtualbox
-    flux
-    vlc
-    skype
-    evernote
-    xee
-    bettertouchtool
-)
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-brew cask install --appdir="/Applications" ${apps[@]}
+# Install Programs
+source installPrograms
 
 # Cleaning up
 echo ""
