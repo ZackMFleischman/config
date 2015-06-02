@@ -5,7 +5,7 @@ function mypath {
 }
 
 function date {
-    python ~/repos/scripts/util/date.py
+    python ~/repos/scripts/util/dateFormatted.py
 }
 
 
