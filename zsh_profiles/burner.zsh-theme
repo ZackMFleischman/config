@@ -4,7 +4,7 @@ function mypath {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-function date {
+function getDateFormatted {
     python ~/repos/scripts/util/dateFormatted.py
 }
 
@@ -32,4 +32,4 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[075]%}) ✗"
 
 # Put it all together!
 PROMPT="$JUNKFOOD_CURRENT_USER_%{$FG[025]%}@$JUNKFOOD_MACHINE_$JUNKFOOD_LOCA_"
-RPROMPT="%(?.%{$FG[075]%}\$(date)%{$reset_color%}.%{$FG[105]%}Error: %?%{$reset_color%})"
+RPROMPT="%(?.%{$FG[075]%}\$(getDateFormatted)%{$reset_color%}.%{$FG[105]%}Error: %?%{$reset_color%})"
