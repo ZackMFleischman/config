@@ -46,8 +46,8 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " ---------------
 
 " Split Panes
-noremap <leader>v <C-w>v    " create new vsplit, and switch to it.
-noremap <leader>s <C-w>s    " create new hsplit, and switch to it.
+noremap <leader>v <C-w>v<C-w>l    " create new vsplit, and switch to it.
+noremap <leader>s <C-w>s<C-w>j    " create new hsplit, and switch to it.
 
 " Saving and Quiting
 noremap <leader>w :w<CR>    " Save
