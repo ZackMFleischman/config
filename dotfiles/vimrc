@@ -126,6 +126,11 @@ set shiftround  " tab / shifting moves to closest tabstop.
 set autoindent  " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
 
+" Show Whitespace
+nmap <leader>\ :set list!<CR>
+set list
+set listchars=eol:¬,tab:▸\ ,trail:·,nbsp:⎵
+
 " We have VCS -- we don't need this stuff.
 set nobackup " We have vcs, we don't need backups.
 set nowritebackup " We have vcs, we don't need backups.
