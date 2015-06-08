@@ -105,6 +105,8 @@ alias ac='cd ~/repos/config'
 ################
 
 # Zynga State Fair Leaderboards
+alias mark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -m'
+alias unmark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -u'
 alias lb='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py'
 alias lb2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1'
 alias lbl='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py | less'
