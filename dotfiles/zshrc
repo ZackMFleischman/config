@@ -48,6 +48,7 @@ alias ep='vim ~/.vimplugins'
 alias ls="echo -e '\e[1;30m'`pwd`; echo -en '\e[0m';ls --color=tty"
 alias ll='ls -la'
 alias zb='zyngabackup'
+alias pp='prettyprint'
 
 # Git
 alias d='git difftool'
@@ -79,6 +80,8 @@ alias merge='git mergetool'
 
 # Code Collab
 alias lr='ccollab actionitems'
+
+
 
 ################
 # Path Shortcuts
