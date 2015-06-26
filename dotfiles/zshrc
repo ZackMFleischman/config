@@ -17,6 +17,9 @@ source $ZSH/oh-my-zsh.sh
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
+# zsh options
+setopt no_histverify
+
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
@@ -146,6 +149,9 @@ alias zz='ssh farm2-dev-4.zc2.zynga.com -t "tmux attach -t zFleischman; bash -l"
 alias phpdebug='ssh -o ServerAliveInterval=20 -R 9009:localhost:9009 farmville2-dev-03.zc1.zynga.com'
 alias zs='ssh farm2-admin-script-01'
 alias logs='/bin/sh /Users/zfleischman/repos/farm2/util/devserver/tailLogs.sh'
+
+#################
+## Functions
 
 # Ctrl-Z to switch between vim and the command line
 fancy-ctrl-z () {
