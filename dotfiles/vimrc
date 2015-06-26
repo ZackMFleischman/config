@@ -10,6 +10,8 @@ let mapleader="\<Space>"
 source ~/.vimplugins
 au BufReadPost .vimplugins set syntax=sh
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " ===========================
 " KEY MAPPINGS
 " ===========================
