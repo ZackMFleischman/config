@@ -46,6 +46,9 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 " Vim Sneak
 Plugin 'justinmk/vim-sneak'
 
+" Processing
+Plugin 'goonzoid/vim-reprocessed'
+
 " AG
 Plugin 'https://github.com/rking/ag.vim.git'
 
