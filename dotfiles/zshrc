@@ -145,7 +145,6 @@ alias cpflashvars='cp /Users/zfleischman/repos/farm2/Client/Launcher/html-templa
 
 # Silo
 alias silo='java -jar ~/silo/release/Silo.jar'
-alias sf='silo switch "State Fair"'
 
 # Misc
 alias z='ssh farm2-dev-4.zc2.zynga.com'
