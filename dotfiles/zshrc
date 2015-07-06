@@ -28,7 +28,8 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 # export CDPATH=".:/Users/zfleischman/repos/farm2"
 
 # Source Scripts
-. ~/repos/scripts/farm2/findfile
+source ~/repos/scripts/util/findfile
+source ~/repos/scripts/util/exportColors
 
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

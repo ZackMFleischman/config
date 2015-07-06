@@ -31,6 +31,9 @@ nnoremap ` '
 nnoremap 0 ^
 nnoremap ^ 0
 
+" Remove trailing whitespace
+nnoremap <leader>` :%s/\s\+$//<CR>
+
 " Bindings for easy split nav (Control and Command)
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -54,9 +57,6 @@ noremap <leader>s <C-w>s<C-w>j    " create new hsplit, and switch to it.
 " Saving and Quiting
 noremap <leader>w :w<CR>    " Save
 noremap <leader>e :wq<CR>   " Save and quit
-noremap Q :q<CR>            " Quit
-noremap <leader>Q :q<CR>    " Quit
-noremap q :q!<CR>           " Force Quit
 noremap <leader>q :q!<CR>   " Force Quit
 
 " Undo
