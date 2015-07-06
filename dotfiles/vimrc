@@ -241,7 +241,13 @@ let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_options_colorcolumn = 0
 let g:pymode_run_bind = '<leader>B'
 let g:pymode_folding = 0
+set completeopt-=preview
 :autocmd FileType python     noremap <leader>c :PymodeLint<CR>        
 :autocmd FileType python     noremap <leader>cf :PymodeLintAuto<CR>   
 :autocmd FileType python     noremap <leader>ct :PymodeLintToggle<CR> 
 :autocmd FileType python     noremap <leader>ce <C-w>j<C-w>j:q<CR>    
+
+" Reprocessed
+let g:reprocessed_map_keys = 0
+nnoremap <leader>1 :RunCurrentSketch<cr>
+nnoremap <leader>2 :PresentCurrentSketch<cr>
