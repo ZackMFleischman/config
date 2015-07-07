@@ -43,6 +43,7 @@ apps=(
     keepassx
     handbrake
     p4merge
+    xtraFinder
     processing
     the-unarchiver
     utorrent
