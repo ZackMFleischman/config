@@ -132,6 +132,7 @@ alias lb2_0='lb2 | grep "total players"'
 alias lb2_1='lb2 | grep ": 1$" | nl'
 alias lb2_2='lb2 | grep ": 2$" | nl'
 alias lb2_3='lb2 | grep ": 3$" | nl'
+alias lb_cheaters="lb | grep C_ | cut -d '(' -f2 | awkc 1 | awk '{s+=\$1} END {print s}'"
 
 # Syncs
 alias sync='~/repos/farm2/util/devserver/sync.sh -f'
