@@ -20,6 +20,7 @@ binaries=(
     zsh
     the_silver_searcher
     ack
+    mercurial
 )
 brew install ${binaries[@]}
 
@@ -63,3 +64,6 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 brew cask install --appdir="/Applications" ${apps[@]}
+
+# Install python programs
+/usr/local/bin/pip3 install hg+http://bitbucket.org/pygame/pygame
