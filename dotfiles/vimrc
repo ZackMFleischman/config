@@ -22,6 +22,7 @@ inoremap jk <esc>
 " Enter key goes to the end. Useful for line navigation. Enter the line # then
 " press Enter
 nnoremap <CR> G
+nnoremap <leader><CR> <CR>
 
 " Switch mark jumpers
 nnoremap ' `
@@ -208,7 +209,7 @@ let g:airline_theme="badwolf"
 let g:airline#extensions#whitespace#enabled=0
 
 " Ag
-noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
+"noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
 noremap <leader>d :Ag 
 
 " Sneak
@@ -241,6 +242,7 @@ let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_options_colorcolumn = 0
 let g:pymode_run_bind = '<leader>B'
 let g:pymode_folding = 0
+let g:pymode_rope_goto_definition_bind = "<leader>D"
 set completeopt-=preview
 :autocmd FileType python     noremap <leader>c :PymodeLint<CR>        
 :autocmd FileType python     noremap <leader>cf :PymodeLintAuto<CR>   
