@@ -61,6 +61,8 @@ alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
 
+alias ve='virtualenv virt_env/virt1'
+
 # Git
 alias d='git difftool'
 alias dd='git diff HEAD --color=always'
