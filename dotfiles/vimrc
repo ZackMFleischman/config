@@ -157,6 +157,15 @@ set t_Co=256
 " Allow the cursor to go anywhere in visual block mode.
 set virtualedit+=block
 
+" Set relative line numbers in visual mode
+:nnoremap <silent> v :<C-u>set nonu rnu<CR>v
+:nnoremap <silent> V :<C-u>set nonu rnu<CR>V
+:nnoremap <silent> <C-v> :<C-u>set nu rnu<CR><C-v>
+:nnoremap <silent> gv :<C-u>set nu rnu<CR>gv
+vnoremap <Esc> <Esc>:set nu<CR>
+:autocmd CursorMoved * if mode() !~# "[vV\<C-v>]" | set nu | endif
+
+
 "=========================================
 " PLUGIN MAPPINGS
 " ========================================
