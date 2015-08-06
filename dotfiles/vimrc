@@ -165,6 +165,18 @@ set virtualedit+=block
 vnoremap <Esc> <Esc>:set nu<CR>
 :autocmd CursorMoved * if mode() !~# "[vV\<C-v>]" | set nu | endif
 
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+
+
 
 "=========================================
 " PLUGIN MAPPINGS
