@@ -36,8 +36,9 @@ source ~/repos/scripts/util/exportColors
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Ensure running python 3
-alias python='python3'
+#alias python='python3'
 alias pip='pip3'
+alias pudb='python -m pudb.run'
 
 # Open Apps
 alias fire='open -a /Applications/Firefox.app'
@@ -60,6 +61,8 @@ alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
 alias pudb='python -m pudb.run'
+
+alias ve='virtualenv virt_env/virt1'
 
 # Git
 alias d='git difftool'
