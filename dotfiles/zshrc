@@ -59,6 +59,7 @@ alias htop='sudo htop'
 alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
+alias pudb='python -m pudb.run'
 
 # Git
 alias d='git difftool'
@@ -91,6 +92,8 @@ alias merge='git mergetool'
 # Code Collab
 alias lr='ccollab actionitems'
 
+# Resumé
+alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf'
 
 
 ################

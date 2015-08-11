@@ -246,6 +246,8 @@ set completeopt-=preview
 :autocmd FileType python     noremap <leader>cf :PymodeLintAuto<CR>   
 :autocmd FileType python     noremap <leader>ct :PymodeLintToggle<CR> 
 :autocmd FileType python     noremap <leader>ce <C-w>j<C-w>j:q<CR>    
+" 2.0 -> 3.0 print statements
+noremap <leader>cp :%s/print \(.*\)/print(\1)/g<CR>
 
 " Reprocessed
 let g:reprocessed_map_keys = 0
