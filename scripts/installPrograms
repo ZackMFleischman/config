@@ -1,3 +1,4 @@
+###############################
 # Install Command Line Programs
 ###############################
 echo ""
@@ -36,15 +37,11 @@ echo "Installing GUI Applications..."
 # Apps
 apps=(
     dropbox
-    box-sync
-    adium
-    audacity
     calibre
     kaleidoscope
     keepassx
     handbrake
     p4merge
-    xtraFinder
     processing
     the-unarchiver
     utorrent
@@ -59,11 +56,7 @@ apps=(
     skype
     evernote
     xee
-    bettertouchtool
 )
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 brew cask install --appdir="/Applications" ${apps[@]}
-
-# Install python programs
-/usr/local/bin/pip3 install hg+http://bitbucket.org/pygame/pygame

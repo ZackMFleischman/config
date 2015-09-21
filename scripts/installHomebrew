@@ -27,7 +27,12 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 # Install Programs
-source installPrograms
+source scripts/installPrograms
+
+# Install python programs
+echo "Installing Pygame..."
+/usr/local/bin/pip3 install hg+http://bitbucket.org/pygame/pygame
+echo "Finished installing Pygame!"
 
 # Cleaning up
 echo ""
