@@ -1,0 +1,200 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME=burner
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
+# zsh options
+setopt no_histverify
+
+# Paths
+SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS"
+export PATH="$PATH:/usr/texbin"
+
+# Source Scripts
+source ~/repos/scripts/util/findfile
+source ~/repos/scripts/util/exportColors
+
+# Autojump
+. /usr/share/autojump/autojump.sh
+
+# Ensure running python 3
+#alias python='python3'
+alias pip='pip3'
+alias pudb='python -m pudb.run'
+
+# Open Apps
+alias fire='open -a /Applications/Firefox.app'
+alias ch='open -a /Applications/Google\ Chrome.app'
+alias ij='open -a /Applications/IntelliJ\ IDEA\ 12.app'
+alias vlc='open -a /Applications/VLC.app'
+
+# Command Shortcuts
+alias sz='source ~/.zshrc'
+alias ez='vim ~/.zshrc'
+alias eg='vim ~/.gitconfig'
+alias ev='vim ~/.vimrc'
+alias ep='vim ~/.vimplugins'
+alias ls="echo -e '\e[1;30m'`pwd`; echo -en '\e[0m';ls --color=tty"
+alias ll='ls -la'
+alias zb='zyngabackup'
+alias pp='prettyprint'
+alias htop='sudo htop'
+alias mem='top -o mem'
+alias cpu='top -o cpu'
+alias x='chmod 755 '
+alias pudb='python -m pudb.run'
+
+alias ve='virtualenv virt_env/virt1'
+
+# Git
+alias d='git difftool'
+alias dd='git diff HEAD --color=always'
+alias ddd='git diff HEAD --color=always | cat'
+alias s='git status'
+alias br='git branch -r'
+alias sl='git stash list | awk '"'"' BEGIN { print "" } {print "",$0} END { print "" }'"'"''
+alias l='gitlog -10'
+alias l2='gitlog -20'
+alias l3='gitlog -30' 
+alias l4='gitlog -40'
+alias ldate='gitlogdate -10'
+alias l2date='gitlogdate -20'
+alias l3date='gitlogdate -30'
+alias l4date='gitlogdate -40'
+alias lx='gitlog'
+alias lxdate='gitlogdate'
+alias gf='git fetch'
+alias r='git pull --rebase'
+alias p='git push'
+alias c='git commit -am'
+alias u='git pull'
+alias has='git branch --contains'
+alias reset='git reset --hard HEAD'
+alias tool1='git config --global diff.tool Kaleidoscope'
+alias tool2='git config --global diff.tool p4mergetool'
+alias merge='git mergetool'
+
+# Code Collab
+alias lr='ccollab actionitems'
+
+# Resumé
+alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf'
+
+
+################
+# Path Shortcuts
+################
+
+# All Repos
+alias a='cd ~/repos'
+
+# Wonderdome
+alias w='cd ~/repos/wonderdome'
+alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
+
+# Farm2
+alias f='cd ~/repos/farm2;pwd'
+
+# Scripts
+alias q='cd ~/repos/scripts'
+
+# Config
+alias ac='cd ~/repos/config'
+
+################
+# Zynga Specific
+################
+
+# Zynga State Fair Leaderboards
+alias mark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -m'
+alias unmark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -u'
+alias lb='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py'
+alias lb2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1'
+alias lbl='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py | less'
+alias lbl2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1 | less'
+alias lb_tiers='lb | grep "^\[" | nl'
+alias lb_0='lb | grep "total players"'
+alias lb_1='lb | grep ": 1$" | nl'
+alias lb_2='lb | grep ": 2$" | nl'
+alias lb_3='lb | grep ": 3$" | nl'
+alias lb2_tiers='lb2 | grep "^\[" | nl'
+alias lb2_0='lb2 | grep "total players"'
+alias lb2_1='lb2 | grep ": 1$" | nl'
+alias lb2_2='lb2 | grep ": 2$" | nl'
+alias lb2_3='lb2 | grep ": 3$" | nl'
+alias lb_cheaters="lb | grep C_ | cut -d '(' -f2 | awkc 1 | awk '{s+=\$1} END {print s}'"
+
+# Syncs
+alias sync='~/repos/farm2/util/devserver/sync.sh -f'
+alias syncquick='~/repos/farm2/util/devserver/sync.sh -q'
+alias syncloc='~/repos/farm2/util/devserver/sync.sh -a loc'
+alias syncstitch='~/repos/farm2/util/devserver/sync.sh -a stitch'
+alias syncpartial='~/repos/farm2/util/devserver/sync.sh -a server,shared,util'
+
+# Flash Vars
+alias flashvars='vim /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js'
+alias cpflashvars='cp /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js /Users/zfleischman/repos/farm2-new/Client/Launcher/html-template/'
+
+# Silo
+alias silo='java -jar ~/silo/release/Silo.jar'
+
+# Misc
+alias z='ssh farm2-dev-4.zc2.zynga.com'
+alias zz='ssh farm2-dev-4.zc2.zynga.com -t "tmux attach -t zFleischman; bash -l"'
+alias phpdebug='ssh -o ServerAliveInterval=20 -R 9009:localhost:9009 farmville2-dev-03.zc1.zynga.com'
+alias zs='ssh farm2-admin-script-01'
+alias logs='/bin/sh /Users/zfleischman/repos/farm2/util/devserver/tailLogs.sh'
+
+#################
+## Functions
+
+# Extract from a zipped file
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//')    ;;
+            *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')    ;;
+            *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
+            *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
+            *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
+            *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
+            *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
+            *.tgz)       tar xvzf $1 && cd $(echo $1 | sed 's/.tgz//')    ;;
+            *.zip)       unzip $1 && cd $(echo $1 | sed 's/.zip//')    ;;
+            *.Z)         uncompress $1 && cd $(echo $1 | sed 's/.Z//')    ;;
+            *.7z)        7z x $1 && cd $(echo $1 | sed 's/.7z//')    ;;
+            *)           echo "don't know how to extract '$1'..." ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+# Ctrl-Z to switch between vim and the command line
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
