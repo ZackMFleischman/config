@@ -7,9 +7,7 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 [diff]
-	tool = myVimDiff
-[difftool "myVimDiff"]
-        cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+	tool = vimdiff
 [merge]
 	tool = vimdiff
 [difftool]
