@@ -11,7 +11,9 @@ source scripts/installOhMyZsh
 echo ""
 echo "Copying over symlinks for dot files"
 echo "-----------------------------------"
-source installDotFiles.Linux
+cd scripts
+source installDotFiles.linux
+cd ..
 
 # Install Vundle
 echo ""
