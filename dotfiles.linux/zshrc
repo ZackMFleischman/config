@@ -63,8 +63,8 @@ alias ve='virtualenv virt_env/virt1'
 
 # Git
 alias d='git difftool'
-alias dd='git diff HEAD --color=always'
-alias ddd='git diff HEAD --color=always | cat'
+alias dd='git --no-pager diff --color=always'
+alias ddd='git diff --color=always'
 alias s='git status'
 alias br='git branch -r'
 alias sl='git stash list | awk '"'"' BEGIN { print "" } {print "",$0} END { print "" }'"'"''
@@ -115,6 +115,11 @@ alias q='cd ~/repos/scripts'
 
 # Config
 alias ac='cd ~/repos/config'
+
+################
+# Counsyl Specific
+################
+alias w='cd ~/repos/website'
 
 ################
 # Zynga Specific

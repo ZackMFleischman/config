@@ -7,3 +7,9 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false

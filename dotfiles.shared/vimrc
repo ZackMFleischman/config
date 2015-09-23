@@ -59,6 +59,7 @@ noremap <leader>s <C-w>s<C-w>j    " create new hsplit, and switch to it.
 noremap <leader>w :w<CR>    " Save
 noremap <leader>e :wq<CR>   " Save and quit
 noremap <leader>q :q!<CR>   " Force Quit
+noremap <leader>Q :qa!<CR>   " Force Quit All
 
 " Undo
 noremap <leader>u <C-r>     " Undo
@@ -176,7 +177,11 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
 
-
+" Diff Color Scheme
+if &diff
+    colorscheme diffColorScheme
+    noremap <leader>q :qa!<CR>   " Force Quit All
+endif
 
 "=========================================
 " PLUGIN MAPPINGS
