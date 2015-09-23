@@ -1,7 +1,12 @@
-#!/bin/sh
+#!/bin/bash
+
+source ./installDotFiles.shared
 
 # Create symlinks for dot files
-DOT_FILES=../dotfiles/*
+echo "-------------------------"
+echo "Installing linux dotfiles"
+echo "-------------------------"
+DOT_FILES=../dotfiles.linux/*
 for f in $DOT_FILES
 do
     # Strip the path
@@ -10,5 +15,7 @@ do
     # Create a dot file symlink in the home folder	
     echo "Creating symlink for ~/.$file"
     PWD=$(pwd)
+    echo "ln -sfn $PWD/$f ~/.$file"
     ln -sfn $PWD/$f ~/.$file
+    echo ""
 done
