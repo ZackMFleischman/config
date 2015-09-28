@@ -120,6 +120,7 @@ alias ac='cd ~/repos/config'
 # Counsyl Specific
 ################
 alias w='cd ~/repos/website'
+alias act='source ~/repos/website/vendor/venv/bin/activate'
 
 ################
 # Zynga Specific
