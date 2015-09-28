@@ -108,7 +108,7 @@ alias w='cd ~/repos/wonderdome'
 alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
 
 # Farm2
-alias f='cd ~/repos/farm2;pwd'
+alias f='cd ~/repos/website/counsyl/product'
 
 # Scripts
 alias q='cd ~/repos/scripts'
