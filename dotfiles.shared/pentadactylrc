@@ -47,7 +47,7 @@ map -modes=n,v <M-v> -builtin <M-v><M-v>
 map -modes=n,v j -builtin 8j
 map -modes=n,v k -builtin 8k
 map -modes=n,v <leader>o :set go&<CR>
-map -modes=n,v <leader>O :set go+=mTB<CR>
+map -modes=n,v <leader>p :set go+=mTB<CR>
 map -modes=n,v <leader>e :emenu Tools.Add to Evernote<CR>
 set hintkeys=asdfwer
 
