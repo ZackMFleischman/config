@@ -41,7 +41,7 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 noremap <leader>` <C-^>
 
 " Buffer Switch
-noremap <leader>b :buffers<CR>:bu<SPACE>
+noremap <leader>b :CtrlPMRU<CR>
 
 """""""""""""
 " Tab Control
