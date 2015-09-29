@@ -40,6 +40,11 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
+" Folding
+nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <leader>o zf
+
+
 """""""""""""
 " Tab Control
 """""""""""""
@@ -330,7 +335,7 @@ function! NERDTreeQuit()
     endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
-noremap <leader>o :NERDTreeToggle<CR>
+noremap <leader>i :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 
 " Airline
@@ -363,24 +368,6 @@ let g:tagbar_autoclose = 1
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
-
-" Python Mode
-let g:pymode_options_colorcolumn=1
-hi ColorColumn ctermbg=8
-let g:pymode_lint_options_mccabe = { 'complexity': 120 }
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
-let g:pymode_options_colorcolumn = 0
-let g:pymode_run_bind = '<leader>B'
-let g:pymode_folding = 0
-let g:pymode_rope_goto_definition_bind = "<leader>D"
-set completeopt-=preview
-:autocmd FileType python     noremap <leader>c :PymodeLint<CR>        
-:autocmd FileType python     noremap <leader>cf :PymodeLintAuto<CR>   
-:autocmd FileType python     noremap <leader>ct :PymodeLintToggle<CR> 
-:autocmd FileType python     noremap <leader>ce <C-w>j<C-w>j:q<CR>    
-" 2.0 -> 3.0 print statements
-noremap <leader>cp :%s/print \(.*\)/print(\1)/g<CR>
 
 " Jedi
 "let g:jedi#use_splits_not_buffers = "top"
