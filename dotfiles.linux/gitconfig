@@ -1,0 +1,14 @@
+[color]
+	ui = auto
+[user]
+	email = zFleischman@counsyl.com
+	name = Zack Fleischman
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false

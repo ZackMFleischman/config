@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Install Homebrew
-echo ""
-echo "Installing Homebrew"
-echo "-------------------"
-source scripts/installHomebrew
-
 # Install Oh-My-Zsh and my custom themes
 echo ""
 echo "Installing oh-my-zsh"
@@ -17,7 +11,9 @@ source scripts/installOhMyZsh
 echo ""
 echo "Copying over symlinks for dot files"
 echo "-----------------------------------"
-source scripts/installDotFiles
+cd scripts
+source installDotFiles.linux
+cd ..
 
 # Install Vundle
 echo ""

@@ -12,6 +12,8 @@ au BufReadPost .vimplugins set syntax=sh
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+colorscheme murphy
+
 " ===========================
 " KEY MAPPINGS
 " ===========================
@@ -35,21 +37,32 @@ nnoremap ^ 0
 " Remove trailing whitespace
 nnoremap <leader>` :%s/\s\+$//<CR>
 
+" Tab Control
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+noremap <C-n> <C-w>T
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+
 " Bindings for easy split nav (Control and Command)
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
-" Pane resizing
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
-" LEADER MAPPINGS
-" ---------------
+" Pane resizing
+nnoremap <silent> - :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> = :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> _ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> + :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+nnoremap <leader>- :res +5<CR>
+nnoremap <leader>= :res -5<CR>
+nnoremap <leader>9 :vertical resize +5<CR>
+nnoremap <leader>0 :vertical resize -5<CR>
 
 " Split Panes
 noremap <leader>v <C-w>v<C-w>l    " create new vsplit, and switch to it.
@@ -59,6 +72,7 @@ noremap <leader>s <C-w>s<C-w>j    " create new hsplit, and switch to it.
 noremap <leader>w :w<CR>    " Save
 noremap <leader>e :wq<CR>   " Save and quit
 noremap <leader>q :q!<CR>   " Force Quit
+noremap <leader>Q :qa!<CR>   " Force Quit All
 
 " Undo
 noremap <leader>u <C-r>     " Undo
@@ -68,10 +82,10 @@ noremap <leader>t :vsplit<CR>:e ~/.vimrc<CR>           " Edit .vimrc
 noremap <leader>T :source ~/.vimrc<CR>      " Apply .vimrc
 
 " Turns off search highlight
-noremap <leader><F5> :nohlsearch<CR>     
+noremap <leader>; :nohlsearch<CR>
 
-" Delete line
-noremap <leader>d ^d$
+" Navigate back a file
+noremap <leader><TAB> <C-^>
 
 " Tabs
 map <F6> :tabedit 
@@ -86,7 +100,7 @@ noremap <leader>R :%s//gc<left><left><left>
 noremap gm m
 
 " Format whole file
-map <leader>= gmzgg=G`z
+map <leader>+ gmzgg=G`z
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -172,10 +186,59 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
+nnoremap <C-q> :call NumberToggle()<cr>
 
-nnoremap <C-n> :call NumberToggle()<cr>
+
+" Diff Color Scheme
+if &diff
+    colorscheme diffColorScheme
+    noremap <leader>q :qa!<CR>   " Force Quit All
+endif
 
 
+" Set Tab Labels
+if exists("+showtabline")
+    function! MyTabLine()
+        let s = ''
+        let wn = ''
+        let t = tabpagenr()
+        let i = 1
+        while i <= tabpagenr('$')
+            let buflist = tabpagebuflist(i)
+            let winnr = tabpagewinnr(i)
+            let s .= '%' . i . 'T'
+            let s .= (i == t ? '%1*' : '%2*')
+            let s .= ' '
+            let wn = tabpagewinnr(i,'$')
+
+            let s .= '%#TabNum#'
+            let s .= i
+            let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+            let bufnr = buflist[winnr - 1]
+            let file = bufname(bufnr)
+            let buftype = getbufvar(bufnr, 'buftype')
+            if buftype == 'nofile'
+                if file =~ '\/.'
+                    let file = substitute(file, '.*\/\ze.', '', '')
+                endif
+            else
+                let file = fnamemodify(file, ':p:t')
+            endif
+            if file == ''
+                let file = '[No Name]'
+            endif
+            let s.= ' ' . file . ' '
+            let i = i + 1
+        endwhile
+        let s .= '%T%#TabLineFill#%='
+        let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+        return s
+    endfunction
+    set stal=2
+    set tabline=%!MyTabLine()
+    set showtabline=1
+    highlight link TabNum Special
+endif
 
 
 "=========================================
@@ -194,8 +257,9 @@ let g:rainbow_active = 1
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-map <leader>f :CtrlP<CR>
+let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
+map <leader>f :CtrlP<CR>
 
 " NERD Tree
 function! NERDTreeQuit()
@@ -231,7 +295,8 @@ let g:airline#extensions#whitespace#enabled=0
 
 " Ag
 "noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
-noremap <leader>d :Ag 
+noremap <leader>d : ~/repos/website/counsyl/product<C-b>Ag 
+noremap <leader>D :Ag 
 
 " Sneak
 let g:sneak#streak = 1
@@ -272,7 +337,10 @@ set completeopt-=preview
 " 2.0 -> 3.0 print statements
 noremap <leader>cp :%s/print \(.*\)/print(\1)/g<CR>
 
+" Jedi
+let g:jedi#use_splits_not_buffers = "top"
+
 " Reprocessed
 let g:reprocessed_map_keys = 0
-nnoremap <leader>1 :RunCurrentSketch<cr>
-nnoremap <leader>2 :PresentCurrentSketch<cr>
+"nnoremap <leader>1 :RunCurrentSketch<cr>
+"nnoremap <leader>2 :PresentCurrentSketch<cr>

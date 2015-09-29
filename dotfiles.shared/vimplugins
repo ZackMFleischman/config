@@ -62,7 +62,16 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 
 " Python Mode
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
+
+" Jedi Vim
+Plugin 'https://github.com/davidhalter/jedi-vim.git'
+
+" Supertab
+Plugin 'ervandew/supertab'
+
+" YouCompleteMe
+" Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Install Homebrew
+echo ""
+echo "Installing Homebrew"
+echo "-------------------"
+source scripts/installHomebrew
+
+# Install Oh-My-Zsh and my custom themes
+echo ""
+echo "Installing oh-my-zsh"
+echo "--------------------"
+source scripts/installOhMyZsh
+
+# Loop over all the files in the "dotfiles" directory 
+# and make a symlink in ~
+echo ""
+echo "Copying over symlinks for dot files"
+echo "-----------------------------------"
+cd scripts
+source installDotFiles.mac
+cd ..
+
+# Install Vundle
+echo ""
+echo "Installing Vundle"
+echo "-----------------"
+if ! [ -e ~/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+else
+    echo "Vundle is already installed!"
+fi
+
+# Installing Scripts
+echo ""
+echo "Installing my scripts..."
+echo "------------------------"
+if ! [ -d ~/repos/scripts ]; then
+    git clone git@github.com:zFleischman/scripts.git ~/repos/scripts
+else
+    echo "My Scripts already installed."
+fi
+
+echo ""
+echo "Done!"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Create symlinks for dot files
+DOT_FILES=../dotfiles.shared/*
+echo "-------------------------"
+echo "Installing shared dotfiles"
+echo "-------------------------"
+for f in $DOT_FILES
+do
+    # Strip the path
+    file=$(basename "$f")
+
+    # Create a dot file symlink in the home folder	
+    echo "Creating symlink for ~/.$file"
+    PWD=$(pwd)
+    echo "ln -sfn $PWD/$f ~/.$file"
+    ln -sfn $PWD/$f ~/.$file
+    echo ""
+done
