@@ -12,7 +12,7 @@ au BufReadPost .vimplugins set syntax=sh
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-colorscheme murphy
+colorscheme wombat256mod
 
 " ===========================
 " KEY MAPPINGS
@@ -40,8 +40,12 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
-" Buffer Switch
-noremap <leader>b :buffers<CR>:bu<SPACE>
+" Folding
+nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <leader>o zf
+" Unfold everything on window open
+":autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+
 
 """""""""""""
 " Tab Control
@@ -62,6 +66,7 @@ noremap <leader>5 5gt
 noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
+noremap <leader>9 9gt
 
 " Open current split into new tab
 noremap <C-n> <C-w>T
@@ -106,8 +111,8 @@ nnoremap <silent> _ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent> + :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 nnoremap <leader>- :res +5<CR>
 nnoremap <leader>= :res -5<CR>
-nnoremap <leader>9 :vertical resize +5<CR>
-nnoremap <leader>0 :vertical resize -5<CR>
+nnoremap <leader>] :vertical resize +5<CR>
+nnoremap <leader>[ :vertical resize -5<CR>
 
 " Split Panes
 noremap <leader>v <C-w>v<C-w>l    " create new vsplit, and switch to it.
@@ -135,8 +140,7 @@ map <F8> :tabn<CR>  " Next Tab
 map <F7> :tabp<CR>  " Previous Tab
 
 " Replace text
-noremap <leader>r :%s//g<left><left>
-noremap <leader>R :%s//gc<left><left><left>
+noremap <leader>R :%s//g<left><left>
 
 " Goto mark
 noremap gm m
@@ -301,7 +305,14 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
-map <leader>f :CtrlP<CR>
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("t")': [';', '<c-m>'],
+  \ 'AcceptSelection("v")': ["'", '<c-v>'],
+  \ }
+noremap <leader>f :CtrlP<CR>
+noremap <leader>b :CtrlPBuffer<CR>
+noremap <leader>m :CtrlPMRU<CR>
 
 " NERD Tree
 function! NERDTreeQuit()
@@ -327,7 +338,7 @@ function! NERDTreeQuit()
     endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
-noremap <leader>o :NERDTreeToggle<CR>
+noremap <leader>i :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 
 " Airline
@@ -336,9 +347,7 @@ let g:airline_theme="badwolf"
 let g:airline#extensions#whitespace#enabled=0
 
 " Ag
-"noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
-noremap <leader>d : ~/repos/website/counsyl/product<C-b>Ag 
-noremap <leader>D :Ag 
+noremap <leader>D : ~/repos/website/counsyl/product<C-b>Ag 
 
 " Sneak
 let g:sneak#streak = 1
@@ -361,26 +370,10 @@ let g:tagbar_autoclose = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-" Python Mode
-let g:pymode_options_colorcolumn=1
-hi ColorColumn ctermbg=8
-let g:pymode_lint_options_mccabe = { 'complexity': 120 }
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
-let g:pymode_options_colorcolumn = 0
-let g:pymode_run_bind = '<leader>B'
-let g:pymode_folding = 0
-let g:pymode_rope_goto_definition_bind = "<leader>D"
-set completeopt-=preview
-:autocmd FileType python     noremap <leader>c :PymodeLint<CR>        
-:autocmd FileType python     noremap <leader>cf :PymodeLintAuto<CR>   
-:autocmd FileType python     noremap <leader>ct :PymodeLintToggle<CR> 
-:autocmd FileType python     noremap <leader>ce <C-w>j<C-w>j:q<CR>    
-" 2.0 -> 3.0 print statements
-noremap <leader>cp :%s/print \(.*\)/print(\1)/g<CR>
-
 " Jedi
-let g:jedi#use_splits_not_buffers = "top"
+"let g:jedi#use_splits_not_buffers = "top"
+let g:jedi#use_tabs_not_buffers = 1
+
 
 " Reprocessed
 let g:reprocessed_map_keys = 0
