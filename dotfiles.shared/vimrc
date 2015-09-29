@@ -300,8 +300,8 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [';', '<cr>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ 'AcceptSelection("t")': [';', '<c-m>'],
+  \ 'AcceptSelection("v")': ["'", '<c-v>'],
   \ }
 noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
