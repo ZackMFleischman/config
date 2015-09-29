@@ -79,6 +79,10 @@ Plugin 'kchmck/vim-coffee-script'
 " SimpylFold 
 Plugin 'tmhedberg/SimpylFold'
 
+" Color Scheme
+Plugin 'michalbachowski/vim-wombat256mod'
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line

@@ -12,7 +12,7 @@ au BufReadPost .vimplugins set syntax=sh
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-colorscheme murphy
+colorscheme wombat256mod
 
 " ===========================
 " KEY MAPPINGS

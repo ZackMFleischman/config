@@ -3,55 +3,83 @@
 loadplugins '\.(js|penta)$'
 group user
 
+" Space is my leader
+:map <Space> <Leader>
+
+" Hint settings
+set hintkeys=asdfwer
 highlight Hint font: bold 10px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 0 0 1px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(45, 239, 110, .75); color: black; font-size: 18px !important;
 
+" Reddit commands
 command! -nargs=1 S tabopen reddit.com/r/<args>
 command! -nargs=1 s open reddit.com/r/<args>
+
+" Google search commands
 command! -nargs=1 I tabopen google.com/search?q=<args>&btnI
 command! -nargs=1 i open google.com/search?q=<args>&btnI
 
-:map <Space> <Leader>
+" Tree Style Tabs
+map -b -modes=n,v <leader>e :js gBrowser.treeStyleTab.collapseExpandSubtree(gBrowser.selectedTab, false)<CR>
+map -b -modes=n,v <leader>f :js gBrowser.treeStyleTab.collapseExpandSubtree(gBrowser.selectedTab, true)<CR>
 
+" Google Search
 map -count -modes=n,v I <count>:I<Space>
 map -count -modes=n,v i <count>:i<Space>
-map -count -modes=n,v <lt> <count>:tabmove!<Space>-1<Return>
+
+" Make text bigger
 map -count -modes=n,v = -builtin <count><M-=>
+
+" Tab Move
+map -count -modes=n,v <lt> <count>:tabmove!<Space>-1<Return>
 map -count -modes=n,v > <count>:tabmove!<Space>+1<Return>
+
+" Scroll up/down
 map -count -modes=n,v c <count><C-u>
-map -count -modes=n,v C-d <count>:dialog<Space>downloads
-map -count -modes=n,v e <count><C-p>
-map -count -modes=n,v E <count><C-p>
-map -count -modes=n,v l -builtin <count>F
-map -count -modes=n,v m1 <count><M-1>
-map -count -modes=n,v m2 <count><M-2>
-map -count -modes=n,v m3 <count><M-3>
-map -count -modes=n,v m4 <count><M-4>
-map -count -modes=n,v m5 <count><M-5>
-map -count -modes=n,v m6 <count><M-6>
-map -count -modes=n,v m7 <count><M-7>
-map -count -modes=n,v m8 <count><M-8>
-map -count -modes=n,v m9 <count><M-9>
-map -count -modes=n,v me -builtin <count><C-p>
-map -count -modes=n,v mr -builtin <count><C-n>
-map -count -modes=n,v q -builtin <count>r
-map -count -modes=n,v r <count><C-n>
-map -count -modes=n,v R <count><C-n>
-map -count -modes=n,v s <count>:s<Space>
-map -count -modes=n,v S <count>:S<Space>
 map -count -modes=n,v v <count><C-d>
-map -count -modes=n,v w -builtin <count>H
-map -count -modes=n,v W -builtin <count>L
-map -count -modes=n,v ] :dialog<Space>downloads<Return>
-map -modes=n,v <M-c> -builtin <M-v><M-c>
-map -modes=n,v <M-v> -builtin <M-v><M-v>
+map -count -modes=n,v C-d <count>:dialog<Space>downloads
 map -modes=n,v j -builtin 8j
 map -modes=n,v k -builtin 8k
+
+" Previous/Next Tabs
+map -count -modes=n,v e <count><C-p>
+map -count -modes=n,v E <count><C-p>
+map -count -modes=n,v r <count><C-n>
+map -count -modes=n,v R <count><C-n>
+
+" Open hint in new tab
+map -count -modes=n,v l -builtin <count>F
+
+" Not sure...
+map -count -modes=n,v me -builtin <count><C-p>
+map -count -modes=n,v mr -builtin <count><C-n>
+
+" Refresh
+map -count -modes=n,v q -builtin <count>r
+
+" Reddit search 
+map -count -modes=n,v s <count>:s<Space>
+map -count -modes=n,v S <count>:S<Space>
+
+" Nav Back/Forward
+map -count -modes=n,v w -builtin <count>H
+map -count -modes=n,v W -builtin <count>L
+
+" Show downloads
+map -count -modes=n,v ] :dialog<Space>downloads<Return>
+
+" Copy/Paste
+map -modes=n,v <M-c> -builtin <M-v><M-c>
+map -modes=n,v <M-v> -builtin <M-v><M-v>
+
+" Show/Hide Address Bar and Settings Bar
 map -modes=n,v <leader>o :set go&<CR>
 map -modes=n,v <leader>p :set go+=mTB<CR>
-map -modes=n,v <leader>e :emenu Tools.Add to Evernote<CR>
-set hintkeys=asdfwer
 
+" Add to evernote
+map -modes=n,v <leader>n :emenu Tools.Add to Evernote<CR>
+
+""""""""""""""""""""""""""""""""""""
+" Gmail passkeys
 set passkeys=mail.google.com:xarcjkel<CR>
 
 
-" vim: set ft=pentadactyl:
