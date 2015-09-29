@@ -12,6 +12,8 @@ au BufReadPost .vimplugins set syntax=sh
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+colorscheme murphy
+
 " ===========================
 " KEY MAPPINGS
 " ===========================
@@ -35,11 +37,18 @@ nnoremap ^ 0
 " Remove trailing whitespace
 nnoremap <leader>` :%s/\s\+$//<CR>
 
+" Tab Control
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+noremap <C-n> <C-w>T
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+
 " Bindings for easy split nav (Control and Command)
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
@@ -54,9 +63,6 @@ nnoremap <leader>- :res +5<CR>
 nnoremap <leader>= :res -5<CR>
 nnoremap <leader>9 :vertical resize +5<CR>
 nnoremap <leader>0 :vertical resize -5<CR>
-
-" LEADER MAPPINGS
-" ---------------
 
 " Split Panes
 noremap <leader>v <C-w>v<C-w>l    " create new vsplit, and switch to it.
@@ -180,8 +186,7 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-q> :call NumberToggle()<cr>
 
 
 " Diff Color Scheme
@@ -189,6 +194,52 @@ if &diff
     colorscheme diffColorScheme
     noremap <leader>q :qa!<CR>   " Force Quit All
 endif
+
+
+" Set Tab Labels
+if exists("+showtabline")
+    function! MyTabLine()
+        let s = ''
+        let wn = ''
+        let t = tabpagenr()
+        let i = 1
+        while i <= tabpagenr('$')
+            let buflist = tabpagebuflist(i)
+            let winnr = tabpagewinnr(i)
+            let s .= '%' . i . 'T'
+            let s .= (i == t ? '%1*' : '%2*')
+            let s .= ' '
+            let wn = tabpagewinnr(i,'$')
+
+            let s .= '%#TabNum#'
+            let s .= i
+            let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+            let bufnr = buflist[winnr - 1]
+            let file = bufname(bufnr)
+            let buftype = getbufvar(bufnr, 'buftype')
+            if buftype == 'nofile'
+                if file =~ '\/.'
+                    let file = substitute(file, '.*\/\ze.', '', '')
+                endif
+            else
+                let file = fnamemodify(file, ':p:t')
+            endif
+            if file == ''
+                let file = '[No Name]'
+            endif
+            let s.= ' ' . file . ' '
+            let i = i + 1
+        endwhile
+        let s .= '%T%#TabLineFill#%='
+        let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+        return s
+    endfunction
+    set stal=2
+    set tabline=%!MyTabLine()
+    set showtabline=1
+    highlight link TabNum Special
+endif
+
 
 "=========================================
 " PLUGIN MAPPINGS
@@ -291,5 +342,5 @@ let g:jedi#use_splits_not_buffers = "top"
 
 " Reprocessed
 let g:reprocessed_map_keys = 0
-nnoremap <leader>1 :RunCurrentSketch<cr>
-nnoremap <leader>2 :PresentCurrentSketch<cr>
+"nnoremap <leader>1 :RunCurrentSketch<cr>
+"nnoremap <leader>2 :PresentCurrentSketch<cr>
