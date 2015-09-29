@@ -40,9 +40,6 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
-" Build CTags
-noremap <leader>] :!ctags -R /home/zfleischman/repos/website/counsyl/product<cr>
-
 """""""""""""
 " Tab Control
 """""""""""""
@@ -386,12 +383,11 @@ set completeopt-=preview
 noremap <leader>cp :%s/print \(.*\)/print(\1)/g<CR>
 
 " Jedi
-let g:jedi#use_splits_not_buffers = "top"
+"let g:jedi#use_splits_not_buffers = "top"
+let g:jedi#use_tabs_not_buffers = 1
+
 
 " Reprocessed
 let g:reprocessed_map_keys = 0
 "nnoremap <leader>1 :RunCurrentSketch<cr>
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
-
-" CTags
-noremap <leader>r <C-]>
