@@ -51,7 +51,7 @@ map -modes=n,v <leader>p :set go+=mTB<CR>
 map -modes=n,v <leader>e :emenu Tools.Add to Evernote<CR>
 set hintkeys=asdfwer
 
-set passkeys=mail.google.com:xarcjkel<CR>
+set passkeys=mail.google.com:xarcjkeul~`<CR>
 
 
 " vim: set ft=pentadactyl:
