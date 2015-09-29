@@ -66,6 +66,7 @@ noremap <leader>5 5gt
 noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
+noremap <leader>9 9gt
 
 " Open current split into new tab
 noremap <C-n> <C-w>T
@@ -110,8 +111,8 @@ nnoremap <silent> _ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent> + :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 nnoremap <leader>- :res +5<CR>
 nnoremap <leader>= :res -5<CR>
-nnoremap <leader>9 :vertical resize +5<CR>
-nnoremap <leader>0 :vertical resize -5<CR>
+nnoremap <leader>] :vertical resize +5<CR>
+nnoremap <leader>[ :vertical resize -5<CR>
 
 " Split Panes
 noremap <leader>v <C-w>v<C-w>l    " create new vsplit, and switch to it.
