@@ -43,6 +43,8 @@ noremap <leader>` <C-^>
 " Folding
 nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <leader>o zf
+" Unfold everything on window open
+":autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
 
 
 """""""""""""
@@ -344,9 +346,7 @@ let g:airline_theme="badwolf"
 let g:airline#extensions#whitespace#enabled=0
 
 " Ag
-"noremap <leader>D : ~/repos/wonderdome<C-b>Ag 
-noremap <leader>d : ~/repos/website/counsyl/product<C-b>Ag 
-noremap <leader>D :Ag 
+noremap <leader>D : ~/repos/website/counsyl/product<C-b>Ag 
 
 " Sneak
 let g:sneak#streak = 1
