@@ -35,24 +35,69 @@ nnoremap 0 ^
 nnoremap ^ 0
 
 " Remove trailing whitespace
-nnoremap <leader>` :%s/\s\+$//<CR>
+nnoremap <leader>W :%s/\s\+$//<CR>
 
+" Navigate back a file
+noremap <leader>` <C-^>
+
+" Buffer Switch
+noremap <leader>b :buffers<CR>:bu<SPACE>
+
+"""""""""""""
 " Tab Control
-nnoremap <C-h> gT
-nnoremap <C-l> gt
-noremap <C-n> <C-w>T
+"""""""""""""
+" Goto Last Tab
+let g:lasttab = tabpagenr()
+au TabLeave * let g:lasttab = tabpagenr()
+noremap <leader><TAB> :exe "tabn ".g:lasttab<CR>
+
+" Go left and right tabs and go directly to tab
+noremap <leader>h gT
+noremap <leader>l gt
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
 noremap <leader>4 4gt
 noremap <leader>5 5gt
 noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
 
+" Open current split into new tab
+noremap <C-n> <C-w>T
+
+" Move tabs around
+function! ShiftTabRight()
+    let currTabNum = tabpagenr()
+    let maxTabNum = tabpagenr('$')
+    if currTabNum == maxTabNum
+        exe "tabm 0"
+    else
+        exe "tabm ".currTabNum
+    endif
+endfunction
+function! ShiftTabLeft()
+    let currTabNum = tabpagenr()
+    let maxTabNum = tabpagenr('$')
+    let next = currTabNum-2
+    if currTabNum == 1
+        exe "tabm ".maxTabNum
+    else
+        exe "tabm ".next
+    endif
+endfunction
+nnoremap <silent> < :call ShiftTabLeft()<CR>
+nnoremap <silent> > :call ShiftTabRight()<CR>
+
+
+""""""""
+" Splits
+""""""""
 " Bindings for easy split nav (Control and Command)
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
 
 " Pane resizing
 nnoremap <silent> - :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -83,9 +128,6 @@ noremap <leader>T :source ~/.vimrc<CR>      " Apply .vimrc
 
 " Turns off search highlight
 noremap <leader>; :nohlsearch<CR>
-
-" Navigate back a file
-noremap <leader><TAB> <C-^>
 
 " Tabs
 map <F6> :tabedit 
