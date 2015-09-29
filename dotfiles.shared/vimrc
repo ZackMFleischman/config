@@ -40,9 +40,6 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
-" Buffer Switch
-noremap <leader>b :CtrlPMRU<CR>
-
 """""""""""""
 " Tab Control
 """""""""""""
@@ -301,7 +298,14 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
-map <leader>f :CtrlP<CR>
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [';', '<cr>'],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
+noremap <leader>f :CtrlP<CR>
+noremap <leader>b :CtrlPBuffer<CR>
+noremap <leader>m :CtrlPMRU<CR>
 
 " NERD Tree
 function! NERDTreeQuit()
