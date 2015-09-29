@@ -40,6 +40,9 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
+" Build CTags
+noremap <leader>] :!ctags -R /home/zfleischman/repos/website/counsyl/product<cr>
+
 """""""""""""
 " Tab Control
 """""""""""""
@@ -132,8 +135,7 @@ map <F8> :tabn<CR>  " Next Tab
 map <F7> :tabp<CR>  " Previous Tab
 
 " Replace text
-noremap <leader>r :%s//g<left><left>
-noremap <leader>R :%s//gc<left><left><left>
+noremap <leader>R :%s//g<left><left>
 
 " Goto mark
 noremap gm m
@@ -390,3 +392,6 @@ let g:jedi#use_splits_not_buffers = "top"
 let g:reprocessed_map_keys = 0
 "nnoremap <leader>1 :RunCurrentSketch<cr>
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
+
+" CTags
+noremap <leader>r <C-]>
