@@ -107,8 +107,6 @@ alias a='cd ~/repos'
 alias w='cd ~/repos/wonderdome'
 alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
 
-# Farm2
-alias f='cd ~/repos/website/counsyl/product'
 
 # Scripts
 alias q='cd ~/repos/scripts'
@@ -123,6 +121,7 @@ alias w='cd ~/repos/website'
 alias act='source ~/repos/website/vendor/venv/bin/activate'
 alias z='~/repos/website/counsyl/product/manage.py'
 alias ss='~/repos/website/counsyl/product/manage.py runserver 0.0.0.0:8000'
+alias f='cd ~/repos/website/counsyl/product'
 
 ################
 # Zynga Specific
