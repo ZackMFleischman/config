@@ -56,8 +56,9 @@ au TabLeave * let g:lasttab = tabpagenr()
 noremap <leader><TAB> :exe "tabn ".g:lasttab<CR>
 
 " Go left and right tabs and go directly to tab
-noremap <leader>h gT
-noremap <leader>l gt
+noremap <C-h> gT
+noremap <C-l> gt
+
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -99,10 +100,10 @@ nnoremap <silent> > :call ShiftTabRight()<CR>
 " Splits
 """"""""
 " Bindings for easy split nav (Control and Command)
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-j> <C-w>j
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
 
 " Pane resizing
 nnoremap <silent> - :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -303,7 +304,7 @@ let g:rainbow_active = 1
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_by_filename = 1
+let g:ctrlp_by_filename = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_prompt_mappings = {
@@ -347,7 +348,8 @@ let g:airline_theme="badwolf"
 let g:airline#extensions#whitespace#enabled=0
 
 " Ag
-noremap <leader>D : ~/repos/website/counsyl/product<C-b>Ag 
+noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
+noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag 
 
 " Sneak
 let g:sneak#streak = 1
