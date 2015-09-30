@@ -122,7 +122,8 @@ alias ac='cd ~/repos/config'
 ################
 # Counsyl Specific
 ################
-alias z='cd ~/repos/vagrant/boxes/testv-dev;vagrant ssh'
+alias z='cd ~/repos/vagrant/boxes/testv-dev;vagrant ssh -- -t "tmux attach"'
+
 
 #################
 ## Functions
