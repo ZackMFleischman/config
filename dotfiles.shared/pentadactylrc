@@ -78,8 +78,26 @@ map -modes=n,v <leader>p :set go+=mTB<CR>
 " Add to evernote
 map -modes=n,v <leader>n :emenu Tools.Add to Evernote<CR>
 
-""""""""""""""""""""""""""""""""""""
-" Gmail passkeys
-set passkeys=mail.google.com:xarcjkeul~`<CR>
+""""""""""""""""""""""""""""""
+" Gmail 
+""""""""""""""""""""""""""""""
+set passkeys=mail.google.com:xarcjkeul?<CR>
 
+" Go to inbox
+map -modes=n,v <leader>i <C-z>gi<Esc>
+
+" Mark as read
+map -modes=n,v <leader>r <C-z>x<S-i>x<Esc>
+
+" Mark as unread
+map -modes=n,v <leader>u <C-z>x<S-u>x<Esc>
+
+" Archive
+map -modes=n,v <leader>e <C-z>xe<Esc>
+
+" Nav Gmail Tabs
+" map -modes=n,v <leader>h <C-z>~<Esc>
+" map -modes=n,v <leader>l <C-z>`<Esc>
+map -modes=n,v H <C-z>~<Esc>
+map -modes=n,v L <C-z>`<Esc>
 
