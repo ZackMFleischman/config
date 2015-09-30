@@ -20,6 +20,9 @@ HELPDIR=/usr/local/share/zsh/help
 # zsh options
 setopt no_histverify
 
+# Tmux window naming
+DISABLE_AUTO_TITLE=true
+
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS"
