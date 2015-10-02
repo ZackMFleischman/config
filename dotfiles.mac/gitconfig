@@ -1,5 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = /usr/local/bin/vim
 [user]
 	name = Zack Fleischman
 	email = zFleischman@gmail.com
