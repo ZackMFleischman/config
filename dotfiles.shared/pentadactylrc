@@ -81,7 +81,7 @@ map -modes=n,v <leader>n :emenu Tools.Add to Evernote<CR>
 """"""""""""""""""""""""""""""
 " Gmail 
 """"""""""""""""""""""""""""""
-set passkeys=mail.google.com:xarcjkeul?<CR>
+set passkeys=mail.google.com:xarcjkeul?`~<CR>
 
 " Go to inbox
 map -modes=n,v <leader>i <C-z>gi<Esc>
