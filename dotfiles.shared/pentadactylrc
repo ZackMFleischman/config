@@ -78,6 +78,15 @@ map -modes=n,v <leader>p :set go+=mTB<CR>
 " Add to evernote
 map -modes=n,v <leader>n :emenu Tools.Add to Evernote<CR>
 
+" Delete everthing to the right
+map -modes=n,v <leader>d b5<CR>99db1<CR>
+map -modes=n,v D 99d
+
+" Go to first buffer
+map -modes=n,v <leader>g b1<CR>
+
+
+
 """"""""""""""""""""""""""""""
 " Gmail 
 """"""""""""""""""""""""""""""
