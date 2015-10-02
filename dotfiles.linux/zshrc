@@ -125,53 +125,12 @@ alias act='source ~/repos/website/vendor/venv/bin/activate'
 alias z='~/repos/website/counsyl/product/manage.py'
 alias ss='act;~/repos/website/counsyl/product/manage.py runserver 0.0.0.0:8000'
 alias f='cd ~/repos/website/counsyl/product'
+source ~/repos/website/vendor/venv/bin/activate
 
-################
-# Zynga Specific
-################
-
-# Zynga State Fair Leaderboards
-alias mark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -m'
-alias unmark='python ~/repos/farm2/scripts/stateFair/CheaterMarkingTool.py -u'
-alias lb='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py'
-alias lb2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1'
-alias lbl='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py | less'
-alias lbl2='python ~/repos/farm2/scripts/stateFair/GetStateFairLeaderboards.py -o 1 | less'
-alias lb_tiers='lb | grep "^\[" | nl'
-alias lb_0='lb | grep "total players"'
-alias lb_1='lb | grep ": 1$" | nl'
-alias lb_2='lb | grep ": 2$" | nl'
-alias lb_3='lb | grep ": 3$" | nl'
-alias lb2_tiers='lb2 | grep "^\[" | nl'
-alias lb2_0='lb2 | grep "total players"'
-alias lb2_1='lb2 | grep ": 1$" | nl'
-alias lb2_2='lb2 | grep ": 2$" | nl'
-alias lb2_3='lb2 | grep ": 3$" | nl'
-alias lb_cheaters="lb | grep C_ | cut -d '(' -f2 | awkc 1 | awk '{s+=\$1} END {print s}'"
-
-# Syncs
-alias sync='~/repos/farm2/util/devserver/sync.sh -f'
-alias syncquick='~/repos/farm2/util/devserver/sync.sh -q'
-alias syncloc='~/repos/farm2/util/devserver/sync.sh -a loc'
-alias syncstitch='~/repos/farm2/util/devserver/sync.sh -a stitch'
-alias syncpartial='~/repos/farm2/util/devserver/sync.sh -a server,shared,util'
-
-# Flash Vars
-alias flashvars='vim /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js'
-alias cpflashvars='cp /Users/zfleischman/repos/farm2/Client/Launcher/html-template/zfleischman/flashVars.js /Users/zfleischman/repos/farm2-new/Client/Launcher/html-template/'
-
-# Silo
-alias silo='java -jar ~/silo/release/Silo.jar'
-
-# Misc
-alias z='ssh farm2-dev-4.zc2.zynga.com'
-alias zz='ssh farm2-dev-4.zc2.zynga.com -t "tmux attach -t zFleischman; bash -l"'
-alias phpdebug='ssh -o ServerAliveInterval=20 -R 9009:localhost:9009 farmville2-dev-03.zc1.zynga.com'
-alias zs='ssh farm2-admin-script-01'
-alias logs='/bin/sh /Users/zfleischman/repos/farm2/util/devserver/tailLogs.sh'
 
 #################
 ## Functions
+#################
 
 # Extract from a zipped file
 extract () {

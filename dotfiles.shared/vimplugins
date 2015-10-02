@@ -82,6 +82,8 @@ Plugin 'tmhedberg/SimpylFold'
 " Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
 
+" Unite
+Plugin 'Shougo/unite.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

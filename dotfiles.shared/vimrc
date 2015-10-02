@@ -301,20 +301,6 @@ noremap <leader>as :PluginSearch!<CR>      " searches plugins
 " Rainbow Parens
 let g:rainbow_active = 1
 
-" Ctrl-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_by_filename = 0
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("t")': [';', '<c-m>'],
-  \ 'AcceptSelection("v")': ["'", '<c-v>'],
-  \ }
-noremap <leader>f :CtrlP<CR>
-noremap <leader>b :CtrlPBuffer<CR>
-noremap <leader>m :CtrlPMRU<CR>
-
 " NERD Tree
 function! NERDTreeQuit()
     redir => buffersoutput
@@ -347,10 +333,6 @@ set laststatus=2
 let g:airline_theme="badwolf"
 let g:airline#extensions#whitespace#enabled=0
 
-" Ag
-noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
-noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag 
-
 " Sneak
 let g:sneak#streak = 1
 let g:sneak#s_next = 1
@@ -381,3 +363,25 @@ let g:jedi#use_tabs_not_buffers = 1
 let g:reprocessed_map_keys = 0
 "nnoremap <leader>1 :RunCurrentSketch<cr>
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
+
+" Ag
+noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
+noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag 
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_by_filename = 0
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_height = 40
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [';'],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ 'AcceptSelection("v")': ["'", '<c-v>'],
+  \ }
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+noremap <leader>f :CtrlP<CR>
+noremap <leader>b :CtrlPBuffer<CR>
+noremap <leader>m :CtrlPMRU<CR>
+
