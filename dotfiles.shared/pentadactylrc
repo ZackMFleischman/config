@@ -84,6 +84,14 @@ map -modes=n,v D 99d
 
 " Go to first buffer
 map -modes=n,v <leader>g b1<CR>
+map -modes=n,v <leader>s b3<CR>
+
+" Go to my email and calendar
+map -modes=n,v <leader>d b2<CR>
+map -modes=n,v <leader>w b4<CR>
+
+" Rehash
+map -modes=n,v <leader>q :rehash<CR>
 
 
 
