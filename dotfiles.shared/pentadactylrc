@@ -112,6 +112,11 @@ map -modes=n,v <leader>u <C-z>x<S-u>x<Esc>
 " Archive
 map -modes=n,v <leader>e <C-z>xe<Esc>
 
+" Select all
+map -modes=n,v <leader>s <C-z>*a<Esc>
+map -modes=n,v <leader>S <C-z>*n<Esc>
+
+
 " Nav Gmail Tabs
 " map -modes=n,v <leader>h <C-z>~<Esc>
 " map -modes=n,v <leader>l <C-z>`<Esc>
