@@ -44,7 +44,11 @@ noremap <leader>` <C-^>
 nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <leader>o zf
 " Unfold everything on window open
-":autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+:autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+
+" Color Column at 79 chars
+set colorcolumn=+1
+set textwidth=79
 
 
 """""""""""""
