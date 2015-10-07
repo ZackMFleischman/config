@@ -14,7 +14,12 @@ highlight Hint font: bold 10px "Droid Sans Mono", monospace !important; margin: 
 command! -nargs=1 S tabopen reddit.com/r/<args>
 command! -nargs=1 s open reddit.com/r/<args>
 
-" Google search commands
+" Counsyl commands
+http://testv-dev.counsyl.dev:8000/
+command! -nargs=1 X tabopen http://testv-dev.counsyl.dev:8000/<args>
+command! -nargs=1 x open http://testv-dev.counsyl.dev:8000/<args>
+
+" Google feeling lucky search commands
 command! -nargs=1 I tabopen google.com/search?q=<args>&btnI
 command! -nargs=1 i open google.com/search?q=<args>&btnI
 
@@ -59,6 +64,10 @@ map -count -modes=n,v q -builtin <count>r
 " Reddit search 
 map -count -modes=n,v s <count>:s<Space>
 map -count -modes=n,v S <count>:S<Space>
+
+" Counsyl search 
+map -count -modes=n,v x <count>:x<Space>
+map -count -modes=n,v X <count>:X<Space>
 
 " Nav Back/Forward
 map -count -modes=n,v w -builtin <count>H
