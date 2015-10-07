@@ -46,10 +46,6 @@ vnoremap <leader>o zf
 " Unfold everything on window open
 :autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
 
-" Color Column at 79 chars
-set colorcolumn=+1
-set textwidth=79
-
 
 """""""""""""
 " Tab Control
@@ -389,3 +385,12 @@ noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>m :CtrlPMRU<CR>
 
+" Color Column at 80 chars
+set textwidth=79
+set colorcolumn=+1
+let &colorcolumn=join(range(80,999),",")
+highlight ColorColumn ctermbg=235
+
+" Cursor Line
+set cursorline
+hi CursorLine cterm=None ctermbg=237
