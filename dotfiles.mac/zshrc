@@ -37,7 +37,7 @@ source ~/repos/scripts/util/exportColors
 
 # Ensure running python 3
 #alias python='python3'
-alias pip='pip3'
+#alias pip='pip3'
 alias pudb='python -m pudb.run'
 
 # Open Apps
