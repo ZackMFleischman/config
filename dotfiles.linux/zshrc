@@ -30,6 +30,7 @@ export PATH="$PATH:/usr/texbin"
 
 # Source Scripts
 source ~/repos/scripts/util/findfile
+source ~/repos/scripts/util/findstring
 source ~/repos/scripts/util/exportColors
 
 # Autojump
