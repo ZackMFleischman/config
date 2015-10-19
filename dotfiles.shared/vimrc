@@ -97,6 +97,12 @@ nnoremap <silent> > :call ShiftTabRight()<CR>
 
 
 """"""""
+" Paste
+""""""""
+nnoremap <leader>P :set paste<CR>
+nnoremap <leader>O :set nopaste<CR>
+
+""""""""
 " Splits
 """"""""
 " Bindings for easy split nav (Control and Command)
