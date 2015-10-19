@@ -130,8 +130,7 @@ alias goclone='ssh zfleischman@clone-web-phi.counsyl.com'
 alias selenium='~/repos/website/counsyl/product/manage.py test --retest --run-all --only-selenium-tests --with-seleniumnosefilter --selenium-config-preset=remote-chrome --selenium-remote-driver-url=http://10.0.2.2:9515 --selenium-liveserver-external-url=http://testv-dev.counsyl.dev:8081/ --liveserver=0.0.0.0:8081 -s'
 alias lint='pushd .>/dev/null;cd ~/repos/website;make gitlint;popd>/dev/null'
 source ~/repos/website/vendor/venv/bin/activate
-
-
+cd ~/repos/website/counsyl/product
 
 #################
 ## Functions

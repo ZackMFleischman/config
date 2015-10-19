@@ -364,6 +364,9 @@ let g:tagbar_autoclose = 1
 "let g:jedi#use_splits_not_buffers = "top"
 let g:jedi#use_tabs_not_buffers = 1
 
+" Supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " Reprocessed
 let g:reprocessed_map_keys = 0
