@@ -92,8 +92,8 @@ function! ShiftTabLeft()
         exe "tabm ".next
     endif
 endfunction
-"nnoremap <C-.> :call ShiftTabLeft()<CR>
-"nnoremap <C-,> :call ShiftTabRight()<CR>
+nnoremap <leader><F9> :call ShiftTabLeft()<CR>
+nnoremap <leader><F10>  :call ShiftTabRight()<CR>
 
 """"""""""""""
 " Indentation
@@ -383,7 +383,9 @@ let g:reprocessed_map_keys = 0
 
 " Ag
 noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
-noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag 
+noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
+noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
+let g:ag_qhandler="botright copen 30"
 
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
