@@ -398,6 +398,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("v")': ["'", '<c-v>'],
   \ }
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_custom_ignore = '.git'
 noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>m :CtrlPMRU<CR>
