@@ -92,8 +92,16 @@ function! ShiftTabLeft()
         exe "tabm ".next
     endif
 endfunction
-nnoremap <silent> < :call ShiftTabLeft()<CR>
-nnoremap <silent> > :call ShiftTabRight()<CR>
+"nnoremap <C-.> :call ShiftTabLeft()<CR>
+"nnoremap <C-,> :call ShiftTabRight()<CR>
+
+""""""""""""""
+" Indentation
+""""""""""""""
+nnoremap < <<
+nnoremap > >>
+vnoremap < <gv
+vnoremap > >gv
 
 
 """"""""
@@ -153,7 +161,7 @@ noremap <leader>R :%s//g<left><left>
 noremap gm m
 
 " Format whole file
-map <leader>+ gmzgg=G`z
+noremap <leader>F gmzgg=G`z
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *

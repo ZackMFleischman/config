@@ -85,6 +85,15 @@ Plugin 'michalbachowski/vim-wombat256mod'
 " Unite
 Plugin 'Shougo/unite.vim'
 
+" Sparkup (html formatting)
+Plugin 'rstacruz/sparkup'
+
+" Nerd Commenter
+Plugin 'scrooloose/nerdcommenter'
+
+" Vim Javascript
+Plugin 'pangloss/vim-javascript'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
