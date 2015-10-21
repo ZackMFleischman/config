@@ -27,7 +27,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>5A52E747-5B22-4E4C-A7DA-8BDC97D823F8</string>
 	<key>DimBackgroundWindows</key>
@@ -120,7 +120,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>-568 922 2560 1395 -568 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 80 1440 797 0 0 1440 877 </string>
+	<string>-568 905 2554 1412 -568 900 2560 1417 </string>
 	<key>NeverWarnAboutSpaces</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1586,7 +1586,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>464563528.124394</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>466982928.02763897</real>
+	<real>467069328.028768</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1651,7 +1651,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-19T21:15:39Z</date>
+	<date>2015-10-20T21:15:39Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
