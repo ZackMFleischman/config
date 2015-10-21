@@ -44,10 +44,31 @@ noremap <leader>` <C-^>
 nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <leader>o zf
 " Unfold everything on window open
-:autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+":autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+fu! CustomFoldText()
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " lines "
+    let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+endf
+set foldtext=CustomFoldText()
 
 
-"""""""""""""
+""""""""""""s
 " Tab Control
 """""""""""""
 " Goto Last Tab
@@ -405,6 +426,9 @@ noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>m :CtrlPMRU<CR>
 
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1
+
 " Color Column at 80 chars
 set textwidth=79
 set colorcolumn=+1
@@ -414,3 +438,4 @@ highlight ColorColumn ctermbg=235
 " Cursor Line
 set cursorline
 hi CursorLine cterm=None ctermbg=237
+hi Folded ctermfg=18 ctermbg=243

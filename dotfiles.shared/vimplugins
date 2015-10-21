@@ -77,7 +77,7 @@ Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
 
 " SimpylFold 
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'tmhedberg/SimpylFold'
 
 " Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
