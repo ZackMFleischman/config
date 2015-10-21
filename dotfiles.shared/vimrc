@@ -111,11 +111,9 @@ nnoremap <leader><F10>  :call ShiftTabRight()<CR>
 "-----------------------------
 
 " Key Maps
-nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <leader>o zf
-
-" Fold method
-set foldmethod=indent
+nnoremap zj :set foldlevel=0<CR>zz
+nnoremap zk :set foldlevel=1<CR>zz
+nnoremap zl :set foldlevel=99<CR>zz
 
 " Unfold everything on window open
 :autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
@@ -125,10 +123,13 @@ hi Folded ctermfg=18 ctermbg=243
 
 " Custom Fold Text
 fu! CustomFoldText()
-    "get first non-blank line
+    " Get first comment line
     let fs = v:foldstart
     while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
     endwhile
+    while getline(fs) =~ '^\s*"""\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    "while getline(fs) =~ '\"\"\"$' | let fs = nextnonblank(fs + 1)
     if fs > v:foldend
         let line = getline(v:foldstart)
     else
@@ -146,6 +147,15 @@ fu! CustomFoldText()
     return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
 endf
 set foldtext=CustomFoldText()
+
+" Code folding columns on the left to see folds
+"set foldcolumn=1
+
+" Close folds automatically
+"set foldclose=all
+
+" Fold Method
+set foldmethod=indent
 
 """"""""""""""
 " Indentation
