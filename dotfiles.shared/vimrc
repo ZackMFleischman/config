@@ -6,13 +6,29 @@
 " Remap leader to the space bar. Do this before sourcing any mappings
 let mapleader="\<Space>"
 
+"-----------------------
+" Sourcing External Files
+"-----------------------
+
 " Plugins 
 source ~/.vimplugins
 au BufReadPost .vimplugins set syntax=sh
 
+" Code Folding
+"au BufReadPost .vim_folding set syntax=sh
+"au BufReadPost *.py source ~/.vim_folding
+"source ~/.vim_folding
+
+
+"---------------------------
+
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+"---------------------------
+
 colorscheme wombat256mod
+
+"---------------------------
 
 " ===========================
 " KEY MAPPINGS
@@ -39,34 +55,6 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 
 " Navigate back a file
 noremap <leader>` <C-^>
-
-" Folding
-nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <leader>o zf
-" Unfold everything on window open
-":autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
-fu! CustomFoldText()
-    "get first non-blank line
-    let fs = v:foldstart
-    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
-    endwhile
-    if fs > v:foldend
-        let line = getline(v:foldstart)
-    else
-        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
-    endif
-
-    "let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
-    let w = 80
-    let foldSize = 1 + v:foldend - v:foldstart
-    let foldSizeStr = " " . foldSize . " lines "
-    let foldLevelStr = repeat("+--", v:foldlevel)
-    let lineCount = line("$")
-    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
-    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
-    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
-endf
-set foldtext=CustomFoldText()
 
 
 """"""""""""s
@@ -116,6 +104,48 @@ function! ShiftTabLeft()
 endfunction
 nnoremap <leader><F9> :call ShiftTabLeft()<CR>
 nnoremap <leader><F10>  :call ShiftTabRight()<CR>
+
+
+"-----------------------------
+" Code Folding 
+"-----------------------------
+
+" Key Maps
+nnoremap <leader>o @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <leader>o zf
+
+" Fold method
+set foldmethod=indent
+
+" Unfold everything on window open
+:autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+
+" Folded Text Colors
+hi Folded ctermfg=18 ctermbg=243
+
+" Custom Fold Text
+fu! CustomFoldText()
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    "let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let w = 80
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " lines "
+    let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+endf
+set foldtext=CustomFoldText()
 
 """"""""""""""
 " Indentation
@@ -427,16 +457,21 @@ noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>m :CtrlPMRU<CR>
 
-" SimpylFold
-let g:SimpylFold_docstring_preview = 1
+"==============================================================================
+" After the fact settings
+"==============================================================================
 
-" Color Column at 80 chars
-set textwidth=79
+"-------------------------
+" Color Column at 80 chars¬
+"-------------------------
+set textwidth=80
 set colorcolumn=+1
 let &colorcolumn=join(range(80,999),",")
 highlight ColorColumn ctermbg=235
 
-" Cursor Line
+"------------
+" Cursor Line¬
+"------------
 set cursorline
 hi CursorLine cterm=None ctermbg=237
 hi Folded ctermfg=18 ctermbg=243

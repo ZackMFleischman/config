@@ -79,11 +79,12 @@ Plugin 'kchmck/vim-coffee-script'
 " SimpylFold 
 " Plugin 'tmhedberg/SimpylFold'
 
+
 " Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
 
 " Unite
-Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/unite.vim'
 
 " Sparkup (html formatting)
 Plugin 'rstacruz/sparkup'
