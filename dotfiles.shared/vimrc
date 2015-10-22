@@ -169,8 +169,8 @@ vnoremap > >gv
 """"""""
 " Paste
 """"""""
-nnoremap <leader>P :set paste<CR>
-nnoremap <leader>O :set nopaste<CR>
+nnoremap <leader>} :set paste<CR>
+nnoremap <leader>{ :set nopaste<CR>
 
 """"""""
 " Splits
@@ -200,6 +200,16 @@ noremap <leader>w :w<CR>    " Save
 noremap <leader>e :wq<CR>   " Save and quit
 noremap <leader>q :q!<CR>   " Force Quit
 noremap <leader>Q :qa!<CR>   " Force Quit All
+
+" Snap to def and classes
+nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-k> 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-h> 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-l> $/\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+noremap <leader>o 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
+noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
+noremap <C-o> <C-o>zz
+
 
 " Undo
 noremap <leader>u <C-r>     " Undo
