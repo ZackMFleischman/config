@@ -24,6 +24,9 @@ au BufReadPost .vimplugins set syntax=sh
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Turn off smart indent for Python (# comments get messed up)
+au! FileType python setl nosmartindent
+
 "---------------------------
 
 colorscheme wombat256mod
@@ -495,3 +498,8 @@ highlight ColorColumn ctermbg=235
 set cursorline
 hi CursorLine cterm=None ctermbg=237
 hi Folded ctermfg=18 ctermbg=243
+
+hi CursorLineNR cterm=bold
+augroup CLNRSet
+    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+augroup END
