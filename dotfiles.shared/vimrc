@@ -184,6 +184,58 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
+function! MarkWindowSwap()
+    let g:markedWinNum = winnr()
+endfunction
+
+function! DoWindowSwap()
+    "Mark destination
+    let curNum = winnr()
+    let curBuf = bufnr( "%" )
+    exe g:markedWinNum . "wincmd w"
+    "Switch to source and shuffle dest->source
+    let markedBuf = bufnr( "%" )
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' curBuf
+    "Switch to dest and shuffle source->dest
+    exe curNum . "wincmd w"
+    "Hide and open so that we aren't prompted and keep history
+    exe 'hide buf' markedBuf 
+endfunction
+
+" Swap window buffers.
+function! SwapWindowBuffers()
+    if !exists("g:markedWinNum")
+        " set window marked for swap
+        let g:markedWinNum = winnr()
+        :echo "window marked for swap"
+    else
+        " mark destination
+        let curNum = winnr()
+        let curBuf = bufnr( "%" )
+        if g:markedWinNum == curNum
+            :echo "window unmarked for swap"
+        else
+            exe g:markedWinNum . "wincmd w"
+            " switch to source and shuffle dest->source
+            let markedBuf = bufnr( "%" )
+            " hide and open so that we aren't prompted and keep history
+            exe 'hide buf' curBuf
+            " switch to dest and shuffle source->dest
+            exe curNum . "wincmd w"
+            " hide and open so that we aren't prompted and keep history
+            exe 'hide buf' markedBuf
+            :echo "windows swapped"
+        endif
+        " unset window marked for swap
+        unlet g:markedWinNum
+    endif
+endfunction
+
+"noremap <leader><C-s> :call SwapWindowBuffers()<CR>
+"nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+"nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+
 " Pane resizing
 nnoremap <silent> - :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> = :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -414,7 +466,7 @@ function! NERDTreeQuit()
     endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
-noremap <leader>i :NERDTreeToggle<CR>
+noremap <leader>i :NERDTreeFind<CR>
 let g:NERDTreeQuitOnOpen = 1
 
 " Airline
@@ -503,3 +555,9 @@ hi CursorLineNR cterm=bold
 augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
+
+
+"-----------------
+" Counsyl make
+"-----------------
+noremap <leader>cp :!zmake<CR>
