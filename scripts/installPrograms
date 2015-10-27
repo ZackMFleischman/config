@@ -37,6 +37,7 @@ echo "Installing GUI Applications..."
 # Apps
 apps=(
     dropbox
+    bettertouchtool
     calibre
     kaleidoscope
     keepassx
