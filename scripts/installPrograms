@@ -58,6 +58,7 @@ apps=(
     skype
     evernote
     xee
+    slack
 )
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
