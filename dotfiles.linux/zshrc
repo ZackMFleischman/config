@@ -121,7 +121,7 @@ alias ac='cd ~/repos/config'
 ################
 # Counsyl Specific
 ################
-pathToWebsite='/home/zfleischman/repos'
+pathToWebsite='/home/zfleischman/nfs-share'
 alias w='cd $pathToWebsite/website'
 alias tc='start_tmux.counsyl'
 alias act='source $pathToWebsite/website/vendor/venv/bin/activate'
