@@ -9,4 +9,4 @@ if [ ! -d "~/.vim/colors" ]; then
 fi
 
 # Link the colorschemes
-ln -sfn ../vim_colorschemes/diffColorScheme.vim ~/.vim/colors/diffColorScheme.vim
+cp ../vim_colorschemes/diffColorScheme.vim ~/.vim/colors/diffColorScheme.vim
