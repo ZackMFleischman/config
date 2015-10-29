@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Create the Vim Colors directory if it doesn't exist
+if [ ! -d "~/.vim" ]; then
+    mkdir ~/.vim
+fi
+if [ ! -d "~/.vim/colors" ]; then
+    mkdir ~/.vim/colors
+fi
+
+# Link the colorschemes
+ln -sfn ../vim_colorschemes/diffColorScheme.vim ~/.vim/colors/diffColorScheme.vim
