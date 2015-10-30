@@ -1,0 +1,11 @@
+noremap ,c :action GotoClass<CR>
+noremap ,f :action GotoFile<CR>
+noremap ,s :action GotoSymbol<CR>
+noremap ,q :q<CR>
+noremap ,w :w<CR>
+noremap ,e :wq<CR>
+noremap ,v :vsplit<CR>
+noremap ,V :vsplit<CR><C-TAB>:q<CR>
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+
