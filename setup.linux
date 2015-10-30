@@ -35,5 +35,11 @@ else
     echo "My Scripts already installed."
 fi
 
+# Install Ag
+cd scripts
+source installAg.ubuntu
+cd ..
+
+
 echo ""
 echo "Done!"

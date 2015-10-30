@@ -1,0 +1,19 @@
+#!/bib/bash
+
+#
+# Script to install Ag, The Silver Searcher
+#
+
+echo "=> Installing Ag..."
+
+# Install Dependencies
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+
+cd ~/repos
+git clone https://github.com/ggreer/the_silver_searcher.git
+cd ~/repos/the_silver_searcher
+
+./build.sh
+sudo make install
+
+echo "=> Finished Installing Ag!"

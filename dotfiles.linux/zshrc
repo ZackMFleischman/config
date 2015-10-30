@@ -121,18 +121,19 @@ alias ac='cd ~/repos/config'
 ################
 # Counsyl Specific
 ################
-alias w='cd ~/repos/website'
+pathToWebsite='/home/zfleischman/nfs-share'
+alias w='cd $pathToWebsite/website'
 alias tc='start_tmux.counsyl'
-alias act='source ~/repos/website/vendor/venv/bin/activate'
-alias z='~/repos/website/counsyl/product/manage.py'
-alias ss='act;cd ~/repos/website/;make dev-setup;~/repos/website/counsyl/product/manage.py runserver 0.0.0.0:8000'
-alias f='cd ~/repos/website/counsyl/product'
+alias act='source $pathToWebsite/website/vendor/venv/bin/activate'
+alias z='$pathToWebsite/website/counsyl/product/manage.py'
+alias ss='act;cd $pathToWebsite/website/;make dev-setup;~/repos/website/counsyl/product/manage.py runserver 0.0.0.0:8000'
+alias f='cd $pathToWebsite/website/counsyl/product'
 alias goclone='ssh zfleischman@clone-web-phi.counsyl.com'
-alias selenium='~/repos/website/counsyl/product/manage.py test --retest --run-all --only-selenium-tests --with-seleniumnosefilter --selenium-config-preset=remote-chrome --selenium-remote-driver-url=http://10.0.2.2:9515 --selenium-liveserver-external-url=http://testv-dev.counsyl.dev:8081/ --liveserver=0.0.0.0:8081 -s'
-alias ztest='~/repos/website/counsyl/product/manage.py test --retest --run-all --nologcapture' 
-alias lint='pushd .>/dev/null;cd ~/repos/website;make gitlint;popd>/dev/null'
-source ~/repos/website/vendor/venv/bin/activate
-cd ~/repos/website/counsyl/product
+alias selenium='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --only-selenium-tests --with-seleniumnosefilter --selenium-config-preset=remote-chrome --selenium-remote-driver-url=http://10.0.2.2:9515 --selenium-liveserver-external-url=http://testv-dev.counsyl.dev:8081/ --liveserver=0.0.0.0:8081 -s'
+alias ztest='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --nologcapture' 
+alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
+source $pathToWebsite/website/vendor/venv/bin/activate
+cd $pathToWebsite/website/counsyl/product
 
 #################
 ## Functions
