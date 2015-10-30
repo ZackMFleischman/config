@@ -40,11 +40,6 @@ colorscheme wombat256mod
 " So we don't have to reach for escape to leave insert mode.
 inoremap jk <esc>
 
-" Enter key goes to the end. Useful for line navigation. Enter the line # then
-" press Enter
-nnoremap <CR> G
-nnoremap <leader><CR> <CR>
-
 " Switch mark jumpers
 nnoremap ' `
 nnoremap ` '
