@@ -27,7 +27,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 # Install Programs
-source scripts/installPrograms
+source scripts/installPrograms.mac
 
 # Install python programs
 echo "Installing Pygame..."

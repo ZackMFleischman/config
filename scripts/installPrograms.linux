@@ -1,0 +1,8 @@
+###############################
+# Install Command Line Programs
+###############################
+echo ""
+echo "Installing Linux command line programs..."
+
+sudo apt-get install tree
+
