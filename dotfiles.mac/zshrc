@@ -123,6 +123,7 @@ alias ac='cd ~/repos/config'
 # Counsyl Specific
 ################
 alias z='cd ~/repos/vagrant/boxes/testv-dev;(vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
+alias form='java -jar /Users/zfleischman/repos/formality/build/libs/formality-1.4.0.jar'
 
 
 #################
