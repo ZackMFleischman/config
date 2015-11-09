@@ -15,12 +15,9 @@ if [ $? -eq 0 ]; then
     exit 0
 fi
 
-# Create the new session with the first window named "main"
-tmux new-session -d -s "$SESSION_NAME" -n "main"
-
-# Main window gets vim and a shell split
-tmux send-keys -t "$SESSION_NAME" 'vim urls.py' Enter
-tmux split -h -p 35 -t "$SESSION_NAME"
+# Create the new session with the first window named "vim"
+tmux new-session -d -s "$SESSION_NAME" -n "vim"
+tmux send-keys -t "$SESSION_NAME" 'b' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
 
 # Window: shellplus
@@ -35,8 +32,11 @@ tmux send-keys -t "$SESSION_NAME" 'ss' Enter
 tmux neww -t "$SESSION_NAME" -n "prod"
 tmux send-keys -t "$SESSION_NAME" "ssh -t zfleischman@clone-web-phi.counsyl.com '/bin/bash'" Enter
 
+# Window: shell
+tmux neww -t "$SESSION_NAME" -n "shell"
+
 # Select first window
-tmux selectw -t "main"
+tmux selectw -t "vim"
 
 # Attach to it
 tmux attach -t "$SESSION_NAME"

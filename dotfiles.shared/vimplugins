@@ -56,7 +56,7 @@ Plugin 'https://github.com/rking/ag.vim.git'
 Plugin 'majutsushi/tagbar'
 
 " Syntastic
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Surround
 Plugin 'tpope/vim-surround'
