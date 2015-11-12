@@ -506,7 +506,7 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
 " Ag
-        noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
+noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
 noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
 noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
 let g:ag_qhandler="botright copen 30"
