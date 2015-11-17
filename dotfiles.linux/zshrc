@@ -99,6 +99,8 @@ alias lr='ccollab actionitems'
 # Resumé
 alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf'
 
+# BikeCommute
+alias bike='python ~/repos/BikeCommuter/BikeCommute.py'
 
 ################
 # Path Shortcuts
