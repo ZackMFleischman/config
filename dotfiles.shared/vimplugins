@@ -95,6 +95,9 @@ Plugin 'scrooloose/nerdcommenter'
 " Vim Javascript
 Plugin 'pangloss/vim-javascript'
 
+" Autotags
+Plugin 'craigemery/vim-autotag'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line

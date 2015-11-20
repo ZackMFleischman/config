@@ -93,6 +93,7 @@ alias reset='git reset --hard HEAD'
 alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
+alias tj='vim -t'
 
 # Code Collab
 alias lr='ccollab actionitems'

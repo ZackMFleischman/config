@@ -40,10 +40,6 @@ colorscheme wombat256mod
 " So we don't have to reach for escape to leave insert mode.
 inoremap jk <esc>
 
-" Switch mark jumpers
-nnoremap ' `
-nnoremap ` '
-
 " Switch go to beginning of line / end of whitespace
 nnoremap 0 ^
 nnoremap ^ 0
@@ -54,10 +50,30 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
+" Enter is jump to line
+:nnoremap <CR> G
+:nnoremap <leader><CR> <CR>
+
+
 """""""""""""
 " Marks
 """""""""""""
+" Set Mark
 noremap M m
+
+" Switch mark jumpers
+nnoremap ' `
+nnoremap ` '
+
+
+
+"""""""""""""""""
+" Persistent Undo
+"""""""""""""""""
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 """""""""""""
 " Tab Control
@@ -283,12 +299,9 @@ map <F7> :tabp<CR>  " Previous Tab
 " Replace text
 noremap <leader>R :%s//g<left><left>
 
-" Goto mark
-noremap gm m
-
 " Format whole file
-        noremap <leader><F1> gmzgg=G`z
-        noremap <leader><F2> =
+noremap <leader><F1> gmzgg=G`z
+noremap <leader><F2> =
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -511,7 +524,7 @@ let g:reprocessed_map_keys = 0
 
 " Ag
 noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
-noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
+"noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
 noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
 let g:ag_qhandler="botright copen 30"
 
@@ -559,6 +572,12 @@ augroup END
 
 
 "-----------------
-" Counsyl make
+" Counsyl Specific
 "-----------------
 noremap <leader>cp :!zmake<CR>
+set tags=~/repos/config/tags/website/tags
+
+"""""""""""""""""
+" Tags
+"""""""""""""""""
+:nnoremap <leader>tj :tj 
