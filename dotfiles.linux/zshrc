@@ -62,6 +62,7 @@ alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
 alias pudb='python -m pudb.run'
+alias pi='ping google.com'
 
 alias ve='virtualenv virt_env/virt1'
 

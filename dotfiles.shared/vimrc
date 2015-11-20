@@ -54,8 +54,12 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 " Navigate back a file
 noremap <leader>` <C-^>
 
+"""""""""""""
+" Marks
+"""""""""""""
+noremap M m
 
-""""""""""""s
+"""""""""""""
 " Tab Control
 """""""""""""
 " Goto Last Tab
