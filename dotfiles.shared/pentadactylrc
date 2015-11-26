@@ -107,9 +107,10 @@ map -modes=n,v <leader>g b1<CR>
 map -modes=n,v <leader>q :rehash<CR>
 
 """"""""""""""""""""""""""""""
-" Gmail 
+" Gmail / Inbox
 """"""""""""""""""""""""""""""
 set passkeys=mail.google.com:xarcjkeul?`~<CR>
+set passkeys=inbox.google.com:xarcjkeui?/zpmJKX<CR>
 
 " Go to inbox
 map -modes=n,v <leader>i <C-z>gi<Esc>
