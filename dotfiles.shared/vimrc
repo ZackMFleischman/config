@@ -84,9 +84,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 noremap <leader><TAB> :exe "tabn ".g:lasttab<CR>
 
 " Go left and right tabs and go directly to tab
-noremap <C-h> gT
-noremap <C-l> gt
-
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -100,7 +97,7 @@ noremap <leader>9 9gt
 " Open current split into new tab
 noremap <C-n> <C-w>T
 
-" Move tabs around
+" Move tabs around (These are mapped at the bottom)
 function! ShiftTabRight()
     let currTabNum = tabpagenr()
     let maxTabNum = tabpagenr('$')
@@ -119,10 +116,7 @@ function! ShiftTabLeft()
     else
         exe "tabm ".next
     endif
-            endfunction
-nnoremap <leader><F9> :call ShiftTabLeft()<CR>
-nnoremap <leader><F10>  :call ShiftTabRight()<CR>
-
+endfunction
 
 "-----------------------------
 " Code Folding 
@@ -549,6 +543,18 @@ noremap <leader>m :CtrlPMRU<CR>
 "==============================================================================
 " After the fact settings
 "==============================================================================
+
+"--------------------------------------
+" Move left and right to different tabs
+"--------------------------------------
+noremap <C-h> gT
+noremap <C-l> gt
+
+"-------------------------
+" Move tabs left and right
+"-------------------------
+nnoremap <C-j> :call ShiftTabLeft()<CR>
+nnoremap <C-k> :call ShiftTabRight()<CR>
 
 "-------------------------
 " Color Column at 80 chars¬
