@@ -8,6 +8,7 @@ function getDateFormatted {
     python ~/repos/scripts/util/dateFormatted.py
 }
 
+NEWLINE=$'\n'
 
 # Grab the current username 
 JUNKFOOD_CURRENT_USER_="%{$FG[025]%}[%{$FG[075]%}%n%{$reset_color%}"
@@ -16,10 +17,10 @@ JUNKFOOD_MACHINE_="%{$fg_bold[blue]%}%m%{$fg[white]%}%{$FG[025]%}]%{$reset_color
 
 # Grab the current filepath, use shortcuts: ~/Desktop
 # Append the current git branch, if in a git repository: ~aw@master
-JUNKFOOD_LOCA_="%{$fg[cyan]%}\$(mypath)%{$reset_color%}\$(git_prompt_info)%{$reset_color%} "
+JUNKFOOD_LOCA_="%{$fg[cyan]%}\$(mypath)%{$reset_color%}\${NEWLINE}\$(git_prompt_info)%{$reset_color%} "
 
 # For the git prompt, use a white @ and blue text for the branch name
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[075]%}(%{$fg_bold[magenta]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[075]%}(%{$fg_bold[magenta]%}"
 
 # Close it all off by resetting the color and styles.
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
