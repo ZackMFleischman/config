@@ -1,0 +1,23 @@
+require_relative '../../include/counsyl_config.rb'
+
+Vagrant.configure('2') do |config|
+
+  config.vm.hostname = 'testv-dev.counsyl.dev'
+  config.vm.network :private_network, ip: '192.168.22.74'
+  provision_counsyl config, 'testv_dev.pp',
+    box: 'precise64',
+    memsize: 4096
+
+  # UNCOMMENT THIS SECTION AFTER FIRST PROVISIONING
+  config.ssh.username = ENV['USER']
+  config.ssh.private_key_path = "~/.ssh/id_rsa"
+  config.ssh.forward_agent = true
+
+  # Read more on nfs mount_options (http://linux.die.net/man/5/nfs)
+  #
+  # Note: if you're having trouble with SASS refreshing, consider using 
+  # `actimeo=1`.
+  #
+  config.vm.synced_folder "#{ENV['HOME']}/testv-nfs", "/home/#{ENV['USER']}/nfs-share", type: 'nfs',  mount_options: ['rsize=32768,wsize=32768,intr,noatime,nodiratime']
+
+end
