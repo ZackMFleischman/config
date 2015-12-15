@@ -94,9 +94,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-" Open current split into new tab
-noremap <C-n> <C-w>T
-
 " Move tabs around (These are mapped at the bottom)
 function! ShiftTabRight()
     let currTabNum = tabpagenr()
@@ -547,14 +544,18 @@ noremap <leader>m :CtrlPMRU<CR>
 "--------------------------------------
 " Move left and right to different tabs
 "--------------------------------------
-noremap <C-h> gT
-noremap <C-l> gt
+noremap <C-p> gT
+noremap <C-n> gt
 
 "-------------------------
 " Move tabs left and right
 "-------------------------
-nnoremap <C-j> :call ShiftTabLeft()<CR>
-nnoremap <C-k> :call ShiftTabRight()<CR>
+nnoremap <C-e> :call ShiftTabLeft()<CR>
+nnoremap <C-r> :call ShiftTabRight()<CR>
+
+"-------------------------
+" Save Session
+nnoremap <leader>S :mksession ~/repos/config/vim_sessions/.vim<left><left><left><left>
 
 "-------------------------
 " Color Column at 80 chars¬
