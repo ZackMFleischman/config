@@ -138,7 +138,8 @@ alias ztest='$pathToWebsite/website/counsyl/product/manage.py test --retest --ru
 alias ztest_setup='dropdb test_counsyl_product'
 alias t='currentTests'
 alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
-alias fix='w;make dev-setup || make init;z cleandb'
+alias fix='w;make init;z cleandb'
+alias fixq='w;make dev-setup || make init;z cleandb'
 source $pathToWebsite/website/vendor/venv/bin/activate
 cd $pathToWebsite/website/counsyl/product
 
