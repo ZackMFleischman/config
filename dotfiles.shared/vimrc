@@ -560,10 +560,17 @@ nnoremap <leader>S :mksession ~/repos/config/vim_sessions/.vim<left><left><left>
 "-------------------------
 " Color Column at 80 chars¬
 "-------------------------
-set textwidth=80
 set colorcolumn=+1
 let &colorcolumn=join(range(80,999),",")
 highlight ColorColumn ctermbg=235
+
+"--------------
+" Line wrapping
+"--------------
+set nowrap
+set textwidth=0
+"set wrap
+"set textwidth=80
 
 "------------
 " Cursor Line¬
