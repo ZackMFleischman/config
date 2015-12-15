@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Copy the customized Vagrant file
+cp ~/repos/config/counsyl_config/testv-dev_vagrant_file/Vagrantfile ~/repos/vagrant/boxes/testv-dev/Vagrantfile
