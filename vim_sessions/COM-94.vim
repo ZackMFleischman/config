@@ -9,19 +9,17 @@ cnoremap <expr> <Plug>EasyClipCommandModePaste '' . EasyClip#GetDefaultReg()
 imap <expr> <Plug>EasyClipInsertModePaste '<Plug>PasteToggle' . EasyClip#GetDefaultReg() . '<Plug>PasteToggle'
 nnoremap  :call ShiftTabLeft()
 nnoremap  0?\s*class.*(.*)\s*:9kzt9j:nohlsearchf(b
-vnoremap  gT
-onoremap  gT
 nnoremap <NL> $/\s*def.*(.*)\s*:\|\s*class.*(.*)\s*:9kzt9j:nohlsearchf(b
 nnoremap  0?\s*def.*(.*)\s*:\|\s*class.*(.*)\s*:9kzt9j:nohlsearchf(b
 nnoremap  $/\s*class.*(.*)\s*:9kzt9j:nohlsearchf(b
-vnoremap  gt
-onoremap  gt
 nnoremap  G
 noremap  gt
 noremap  zz
-noremap  gT
+nnoremap <silent>  :CtrlP
+vnoremap  gT
+onoremap  gT
 nnoremap  :call NumberToggle()
-nnoremap  :call ShiftTabRight()
+nmap  <Plug>(RepeatRedo)
 nnoremap <silent>  :set nu rnu
 vnoremap  :set nu
 nmap  ca <Plug>NERDCommenterAltDelims
@@ -53,6 +51,7 @@ xmap <silent>  P <Plug>XEasyClipPasteUnformatted
 xmap <silent>  p <Plug>XEasyClipPasteUnformatted
 nnoremap  tj :tj 
 noremap  cp :!zmake
+nnoremap  S :mksession ~/repos/config/vim_sessions/.vim<Left><Left><Left><Left>
 noremap  m :CtrlPMRU
 noremap  b :CtrlPBuffer
 noremap  f :CtrlP
@@ -141,11 +140,13 @@ xmap ; <Plug>SneakNext
 omap ; <Plug>SneakNext
 nmap ; <Plug>SneakNext
 snoremap ; "_c;
-vnoremap < <gv
+snoremap < "_c<
+xnoremap < <gv
 nnoremap < <<
 snoremap = "_c=
 nnoremap <silent> = :exe "resize " . (winheight(0) * 2/3)
-vnoremap > >gv
+snoremap > "_c>
+xnoremap > >gv
 nnoremap > >>
 snoremap ? "_c?
 snoremap @ "_c@
@@ -158,6 +159,8 @@ snoremap D "_cD
 xnoremap <silent> D "_D
 nnoremap <silent> D "_D
 snoremap E "_cE
+xnoremap <silent> <expr> F sneak#reset('F')
+nnoremap <silent> <expr> F sneak#reset('F')
 snoremap F "_cF
 snoremap G "_cG
 snoremap H "_cH
@@ -165,7 +168,10 @@ snoremap I "_cI
 snoremap J "_cJ
 snoremap K "_cK
 snoremap L "_cL
-noremap M m
+snoremap M "_cM
+nnoremap M m
+xnoremap M m
+onoremap M m
 snoremap N "_cN
 snoremap O "_cO
 snoremap P "_cP
@@ -176,6 +182,8 @@ snoremap R "_cR
 snoremap S "_cS
 xmap S <Plug>VSurround
 nmap S L<Plug>Sneak_S
+xnoremap <silent> <expr> T sneak#reset('T')
+nnoremap <silent> <expr> T sneak#reset('T')
 snoremap T "_cT
 nmap U <Plug>(RepeatUndoLine)
 snoremap U "_cU
@@ -212,6 +220,8 @@ nnoremap <silent> dd "_dd
 xnoremap <silent> d "_d
 nnoremap <silent> d "_d
 snoremap e "_ce
+xnoremap <silent> <expr> f sneak#reset('f')
+nnoremap <silent> <expr> f sneak#reset('f')
 snoremap f "_cf
 nmap gx <Plug>NetrwBrowseX
 xmap gS <Plug>VgSurround
@@ -242,6 +252,8 @@ snoremap r "_cr
 snoremap s "_cs
 xnoremap <silent> s "_s
 nmap s H<Plug>Sneak_s
+xnoremap <silent> <expr> t sneak#reset('t')
+nnoremap <silent> <expr> t sneak#reset('t')
 snoremap t "_ct
 nmap u <Plug>(RepeatUndo)
 snoremap u "_cu
@@ -407,7 +419,6 @@ set noswapfile
 set tabline=%!MyTabLine()
 set tabstop=4
 set tags=~/repos/config/tags/website/tags
-set textwidth=80
 set undodir=~/.vim/undodir
 set undofile
 set viminfo=%,'100,<50,s10,h
@@ -420,23 +431,24 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/nfs-share/website/counsyl/product
+cd ~/repos/scripts
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +142 ~/.zshrc
-badd +1 settings_l
-badd +22 site_media/js/housecall/mp/checklist.coffee
-badd +3 housecall/templates/housecall/mp/report_editor.html
-badd +3 housecall/templates/housecall/mp/_report_editor_patient_info.html
-badd +119 housecall/static/housecall/css/report_editor.css
-badd +550 ~/.vimrc
-badd +46 assay/fragilex/batch.py
-badd +0 ~/.psql_history
-badd +0 housecall/views/healthcare.py
+badd +4 util/bu
+badd +1 ~/.zshrc
+badd +1 ~/nfs-share/website/counsyl/product/settings_l
+badd +23 ~/nfs-share/website/counsyl/product/site_media/js/housecall/mp/checklist.coffee
+badd +33 ~/nfs-share/website/counsyl/product/housecall/templates/housecall/mp/report_editor.html
+badd +4 ~/nfs-share/website/counsyl/product/housecall/templates/housecall/mp/_report_editor_patient_info.html
+badd +117 ~/nfs-share/website/counsyl/product/housecall/static/housecall/css/report_editor.css
+badd +600 ~/.vimrc
+badd +1 ~/nfs-share/website/counsyl/product/assay/fragilex/batch.py
+badd +1 ~/.psql_history
+badd +1339 ~/nfs-share/website/counsyl/product/housecall/views/healthcare.py
 silent! argdel *
-edit housecall/views/healthcare.py
+edit ~/nfs-share/website/counsyl/product/housecall/views/healthcare.py
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -558,20 +570,21 @@ setlocal syntax=python
 endif
 setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=80
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+set nowrap
+setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 1339 - ((24 * winheight(0) + 27) / 55)
+let s:l = 1339 - ((27 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1339
-normal! 08l
-tabedit housecall/templates/housecall/mp/report_editor.html
+normal! 011l
+tabedit ~/nfs-share/website/counsyl/product/housecall/templates/housecall/mp/report_editor.html
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -671,9 +684,9 @@ setlocal noshortname
 setlocal smartindent
 setlocal softtabstop=4
 setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellcapcheck=
 setlocal spellfile=
-setlocal spelllang=en
+setlocal spelllang=
 setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
@@ -683,20 +696,23 @@ setlocal syntax=htmldjango
 endif
 setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=80
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+set nowrap
+setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 3 - ((2 * winheight(0) + 27) / 55)
+32
+normal zo
+let s:l = 32 - ((31 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 024l
-tabedit housecall/templates/housecall/mp/_report_editor_patient_info.html
+32
+normal! 06l
+tabedit ~/nfs-share/website/counsyl/product/housecall/templates/housecall/mp/_report_editor_patient_info.html
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -808,12 +824,13 @@ setlocal syntax=html
 endif
 setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=80
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+set nowrap
+setlocal nowrap
 setlocal wrapmargin=0
 let s:l = 4 - ((3 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
@@ -821,7 +838,7 @@ exe s:l
 normal! zt
 4
 normal! 0
-tabedit site_media/js/housecall/mp/checklist.coffee
+tabedit ~/nfs-share/website/counsyl/product/site_media/js/housecall/mp/checklist.coffee
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -892,7 +909,7 @@ setlocal nolinebreak
 setlocal nolisp
 set list
 setlocal list
-setlocal makeprg=coffee\ -c\ \ \ $*\ site_media/js/housecall/mp/checklist.coffee
+setlocal makeprg=coffee\ -c\ \ \ $*\ ~/nfs-share/website/counsyl/product/site_media/js/housecall/mp/checklist.coffee
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
@@ -927,24 +944,21 @@ setlocal syntax=coffee
 endif
 setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=80
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+set nowrap
+setlocal nowrap
 setlocal wrapmargin=0
-10
-normal zo
-10
-normal zo
 let s:l = 23 - ((22 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 23
 normal! 03l
-tabedit housecall/static/housecall/css/report_editor.css
+tabedit ~/nfs-share/website/counsyl/product/housecall/static/housecall/css/report_editor.css
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -1050,20 +1064,21 @@ setlocal syntax=css
 endif
 setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=80
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+set nowrap
+setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 117 - ((52 * winheight(0) + 27) / 55)
+let s:l = 117 - ((46 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 117
 normal! 0
-tabnext 1
+tabnext 2
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

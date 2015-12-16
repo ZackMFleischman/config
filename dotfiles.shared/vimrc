@@ -595,3 +595,6 @@ set tags=~/repos/config/tags/website/tags
 " Tags
 """""""""""""""""
 :nnoremap <leader>tj :tj 
+
+
+set tw=0

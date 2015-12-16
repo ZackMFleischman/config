@@ -17,7 +17,7 @@ JUNKFOOD_MACHINE_="%{$fg_bold[blue]%}%m%{$fg[white]%}%{$FG[025]%}]%{$reset_color
 
 # Grab the current filepath, use shortcuts: ~/Desktop
 # Append the current git branch, if in a git repository: ~aw@master
-JUNKFOOD_LOCA_="%{$fg[cyan]%}\$(mypath)%{$reset_color%}\${NEWLINE}\$(git_prompt_info)%{$reset_color%} "
+JUNKFOOD_LOCA_="%{$fg[cyan]%}\$(mypath)%{$reset_color%} \$(git_prompt_info)\$(put_spacing)\${NEWLINE}%{$FG[075]%}>%{$reset_color%} "
 
 # For the git prompt, use a white @ and blue text for the branch name
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[075]%}(%{$fg_bold[magenta]%}"
@@ -33,4 +33,4 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[075]%}) ✗"
 
 # Put it all together!
 PROMPT="$JUNKFOOD_CURRENT_USER_%{$FG[025]%}@$JUNKFOOD_MACHINE_$JUNKFOOD_LOCA_"
-RPROMPT="%(?.%{$FG[075]%}\$(getDateFormatted)%{$reset_color%}.%{$FG[105]%}Error: %?%{$reset_color%})"
+RPROMPT="%(?..%{$FG[105]%}Error: %?%{$reset_color%})"
