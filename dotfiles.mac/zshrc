@@ -20,13 +20,16 @@ HELPDIR=/usr/local/share/zsh/help
 # zsh options
 setopt no_histverify
 
+DISABLE_AUTO_TITLE=true
+
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$PATH:/usr/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-# export CDPATH=".:/Users/zfleischman/repos/farm2"
+export PATH="$PATH:/usr/texbin:$HOME/bin"
+export PYTHONPATH="$HOME/repos/scripts/python:$HOME/repos/scripts/django"
+#export MANPATH="/usr/local/man:$MANPATH"
+#export CDPATH=".:/Users/zfleischman/repos/farm2"
 
 # Source Scripts
 source ~/repos/scripts/util/findfile
@@ -61,6 +64,8 @@ alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
 alias pudb='python -m pudb.run'
+alias bi='brew install'
+alias bu='brew uninstall'
 
 alias ve='virtualenv virt_env/virt1'
 

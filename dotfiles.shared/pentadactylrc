@@ -14,6 +14,9 @@ highlight Hint font: bold 10px "Droid Sans Mono", monospace !important; margin: 
 command! -nargs=1 S tabopen reddit.com/r/<args>
 command! -nargs=1 s open reddit.com/r/<args>
 
+" Jira
+map -count -modes=n,v J <count>:tabopen<Space>j<Space>
+
 " Counsyl Test Page
 command! -nargs=1 CounsylOpen open http://testv-dev.counsyl.dev:8000/<args>
 command! -nargs=1 CounsylTab tabopen http://testv-dev.counsyl.dev:8000/<args>
