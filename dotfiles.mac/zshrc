@@ -49,7 +49,9 @@ alias ch='open -a /Applications/Google\ Chrome.app'
 alias ij='open -a /Applications/IntelliJ\ IDEA\ 12.app'
 alias vlc='open -a /Applications/VLC.app'
 
-# Command Shortcuts
+#
+# Command aliases
+# 
 alias sz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
 alias eg='vim ~/.gitconfig'
@@ -64,8 +66,10 @@ alias mem='top -o mem'
 alias cpu='top -o cpu'
 alias x='chmod 755 '
 alias pudb='python -m pudb.run'
-alias bi='brew install'
-alias bu='brew uninstall'
+alias bin='brew install'
+alias bun='brew uninstall'
+# Delete pyc files in directory (recursively)
+alias pyc='find . -name "*.pyc" -type f -delete'
 
 alias ve='virtualenv virt_env/virt1'
 
