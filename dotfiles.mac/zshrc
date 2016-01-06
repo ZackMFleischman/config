@@ -70,6 +70,7 @@ alias bin='brew install'
 alias bun='brew uninstall'
 # Delete pyc files in directory (recursively)
 alias pyc='find . -name "*.pyc" -type f -delete'
+alias pydocs='pydoc -p 9999'
 
 alias ve='virtualenv virt_env/virt1'
 
