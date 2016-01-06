@@ -134,6 +134,14 @@ alias form='java -jar /Users/zfleischman/repos/formality/build/libs/formality-1.
 #################
 ## Functions
 
+# calc (Calculator)
+calc () {
+    bc <<< "$@"
+}
+calcl () {
+    bc -l <<< "$@"
+}
+
 # Extract from a zipped file
 extract () {
     if [ -f $1 ] ; then
