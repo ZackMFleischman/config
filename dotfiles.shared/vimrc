@@ -46,6 +46,8 @@ nnoremap ^ 0
 
 " Remove trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<CR>
+autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
 
 " Navigate back a file
 noremap <leader>` <C-^>
@@ -380,6 +382,8 @@ function! NumberToggle()
 endfunc
 nnoremap <C-q> :call NumberToggle()<cr>
 
+" Set visual block mode
+:nnoremap <silent> <leader>V <C-v>
 
 " Diff Color Scheme
 if &diff
