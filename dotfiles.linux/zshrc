@@ -145,7 +145,7 @@ alias t='currentTests'
 alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
 alias fix='w;make init;z cleandb'
 alias fixq='w;make dev-setup || make init;z cleandb'
-alias sp='z shellplus'
+alias sp='z zshellplus'
 source $pathToWebsite/website/vendor/venv/bin/activate
 cd $pathToWebsite/website/counsyl/product
 
