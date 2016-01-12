@@ -66,6 +66,7 @@ alias pudb='python -m pudb.run'
 alias pi='ping google.com'
 alias py='ipython -i ~/repos/scripts/python/zutil.py'
 alias pyc='find . -name "*.pyc" -type f -delete'
+alias zutil='vim ~/repos/scripts/python/zutil.py'
 
 alias ve='virtualenv virt_env/virt1'
 
