@@ -20,6 +20,9 @@ tmux new-session -d -s "$SESSION_NAME" -n "vim"
 tmux send-keys -t "$SESSION_NAME" 'b' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
 
+# Window: shell
+tmux neww -t "$SESSION_NAME" -n "shell"
+
 # Window: shellplus
 tmux neww -t "$SESSION_NAME" -n "shellplus"
 tmux send-keys -t "$SESSION_NAME" 'z shellplus' Enter 
@@ -31,9 +34,6 @@ tmux send-keys -t "$SESSION_NAME" 'ss' Enter
 # Window: prod shellplus
 tmux neww -t "$SESSION_NAME" -n "prod"
 tmux send-keys -t "$SESSION_NAME" "ssh -t zfleischman@clone-web-phi.counsyl.com '/bin/bash'" Enter
-
-# Window: shell
-tmux neww -t "$SESSION_NAME" -n "shell"
 
 # Select first window
 tmux selectw -t "vim"
