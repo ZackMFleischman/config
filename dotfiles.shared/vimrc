@@ -588,6 +588,10 @@ augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
 
+"-----------------"
+" No PEP8
+"-----------------"
+nnoremap <leader>nn A<space><space># nopep8<ESC>^
 
 "-----------------
 " Counsyl Specific
