@@ -27,7 +27,7 @@ DISABLE_AUTO_TITLE=true
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS"
 export PATH="$PATH:/usr/texbin"
-export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/zpython:$HOME/repos/scripts/django"
 export PYTHONDONTWRITEBYTECODE=1
 
 # Source Scripts
@@ -65,9 +65,9 @@ alias cpu='top -o cpu'
 alias x='chmod 755 '
 alias pudb='python -m pudb.run'
 alias pi='ping google.com'
-alias py='ipython -i ~/repos/scripts/python/zutil.py'
+alias py='ipython -i ~/repos/scripts/zpython/zutil.py'
 alias pyc='find . -name "*.pyc" -type f -delete'
-alias zutil='vim ~/repos/scripts/python/zutil.py'
+alias zutil='vim ~/repos/scripts/zpython/zutil.py'
 
 alias ve='virtualenv virt_env/virt1'
 
