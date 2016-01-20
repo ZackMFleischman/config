@@ -27,7 +27,8 @@ DISABLE_AUTO_TITLE=true
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS"
 export PATH="$PATH:/usr/texbin"
-export PYTHONPATH="$HOME/repos/scripts/python:$HOME/repos/scripts/django"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django"
+export PYTHONDONTWRITEBYTECODE=1
 
 # Source Scripts
 source ~/repos/scripts/util/findfile
@@ -141,8 +142,8 @@ alias f='cd $pathToWebsite/website/counsyl/product'
 alias goclone='ssh zfleischman@clone-web-phi.counsyl.com'
 alias selenium='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --only-selenium-tests --with-seleniumnosefilter --selenium-config-preset=remote-chrome --selenium-remote-driver-url=http://10.0.2.2:9515 --selenium-liveserver-external-url=http://testv-dev.counsyl.dev:8081/ --liveserver=0.0.0.0:8081 -s'
 alias ztest='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --nologcapture --settings=settings_test'
-alias ztest_reset='dropdb test_counsyl_product'
-alias ztestc='ztest_reset;ztest'
+alias drop='dropdb test_counsyl_product'
+alias ztestc='drop;ztest'
 alias t='currentTests'
 alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
 alias fix='w;make init;z cleandb'
