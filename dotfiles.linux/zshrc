@@ -68,6 +68,7 @@ alias pi='ping google.com'
 alias py='ipython -i ~/repos/scripts/zpython/zutil.py'
 alias pyc='find . -name "*.pyc" -type f -delete'
 alias zutil='vim ~/repos/scripts/zpython/zutil.py'
+alias spi='vim ~/repos/scripts/zpython/counsyl_shellplus_init.py'
 
 alias ve='virtualenv virt_env/virt1'
 
