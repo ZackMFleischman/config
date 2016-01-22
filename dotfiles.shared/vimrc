@@ -289,6 +289,9 @@ map <F6> :tabedit
 map <F8> :tabn<CR>  " Next Tab
 map <F7> :tabp<CR>  " Previous Tab
 
+" Swap Splits
+nnoremap <leader>P <C-w>r
+
 " Replace text
 noremap <leader>R :%s//g<left><left>
 
@@ -593,11 +596,20 @@ augroup END
 "-----------------"
 nnoremap <leader>nn A<space><space># nopep8<ESC>^
 
+"-----------------"
+" Set Breakpoint
+"-----------------"
+nnoremap <leader>sb oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
+
+" Move split into a new tab and then go back (Depends on <leader>TAB mapping)
+map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
+
 "-----------------
 " Counsyl Specific
 "-----------------
 noremap <leader>cp :!zmake<CR>
 set tags=~/repos/config/tags/website/tags
+
 
 """""""""""""""""
 " Tags
