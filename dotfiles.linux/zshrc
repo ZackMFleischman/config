@@ -27,7 +27,7 @@ DISABLE_AUTO_TITLE=true
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS"
 export PATH="$PATH:/usr/texbin"
-export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/zpython:$HOME/repos/scripts/django"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/zfleischman/util:$HOME/repos/zfleischman/shellplus:$HOME/repos/scripts/zpython:$HOME/repos/scripts/django"
 export PYTHONDONTWRITEBYTECODE=1
 
 # Source Scripts

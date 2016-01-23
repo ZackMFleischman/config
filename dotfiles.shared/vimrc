@@ -604,6 +604,9 @@ nnoremap <leader>sb oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 " Move split into a new tab and then go back (Depends on <leader>TAB mapping)
 map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
 
+" Paste at the end of the line
+nmap <leader>A A<space><ESC>p
+
 "-----------------
 " Counsyl Specific
 "-----------------
