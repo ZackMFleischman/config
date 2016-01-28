@@ -110,6 +110,12 @@ alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resum
 
 
 ################
+# Servers
+################
+alias bro='ssh -i ~/.ssh/zack-bro-your-bros-ssh-keys.pem ubuntu@zack-dev.broyourbros.com'
+
+
+################
 # Path Shortcuts
 ################
 
