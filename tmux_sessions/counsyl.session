@@ -26,7 +26,7 @@ tmux neww -t "$SESSION_NAME" -n "shell"
 # Window: shellplus
 tmux neww -t "$SESSION_NAME" -n "shellplus"
 tmux send-keys -t "$SESSION_NAME" 'sp' Enter 
-tmux send-keys -t "$SESSION_NAME" '%run ~/repos/scripts/zpython/counsyl_shellplus_init.py' Enter 
+tmux send-keys -t "$SESSION_NAME" '%run ~/repos/zfleischman/shellplus/init.py' Enter 
 
 # Window: server
 tmux neww -t "$SESSION_NAME" -n "server"
