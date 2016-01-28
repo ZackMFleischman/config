@@ -114,6 +114,9 @@ alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resum
 # BikeCommute
 alias bike='python ~/repos/BikeCommuter/BikeCommute.py'
 
+# Growl notifier
+alias growlr='ssh zfleischman@172.16.1.121 /Users/zfleischman/repos/scripts/osx/growl'
+
 ################
 # Path Shortcuts
 ################
