@@ -56,6 +56,10 @@ noremap <leader>` <C-^>
 :nnoremap <CR> G
 :nnoremap <leader><CR> <CR>
 
+" Jump back and forward
+:nnoremap <TAB> <C-o>
+:nnoremap <S-TAB> <TAB>
+
 
 """""""""""""
 " Marks
@@ -338,7 +342,7 @@ set expandtab   " use spaces instead of tabs.
 set smarttab    " let's tab key insert 'tab stops', and bksp deletes tabs.
 set shiftround  " tab / shifting moves to closest tabstop.
 set autoindent  " Match indents on new lines.
-set smartindent " Intellegently dedent / indent new lines based on rules.
+set cindent     " Intellegently dedent / indent new lines based on rules.
 
 " Show Whitespace
 nmap <leader>\ :set list!<CR>
