@@ -396,6 +396,7 @@ nnoremap <C-q> :call NumberToggle()<cr>
 if &diff
     colorscheme diffColorScheme
     noremap <leader>q :qa!<CR>   " Force Quit All
+    au BufReadPost * :goto 1
 endif
 
 
