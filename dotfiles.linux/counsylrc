@@ -24,10 +24,12 @@ alias fixq='w;make dev-setup || make init;z cleandb'
 alias sp='z zshellplus'
 alias spi='vim ~/repos/scripts/zpython/counsyl_shellplus_init.py'
 alias ec='vim ~/.counsylrc'
-alias zz='cd ~/repos/zfleischman'
+alias mw='cd ~/repos/zfleischman'
 
 act
 cd $pathToWebsite/website/counsyl/product
 
-# Generate the current list of models
-models
+# Generate the current list of models, methods and classes
+generate_cache_models
+generate_cache_classes
+generate_cache_methods

@@ -618,6 +618,11 @@ nmap <leader>A A<space><ESC>p
 noremap <leader>cp :!zmake<CR>
 set tags=~/repos/config/tags/website/tags
 
+" Navigate to classes
+nnoremap <leader>gc :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class CustomerProfile(<CR>:noh<CR>zt2k2j
+nnoremap <leader>gp :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class Person(<CR>:noh<CR>zt2k2j
+nnoremap <leader>ga :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/api/models.py<CR> /class APIOrder(<CR>:noh<CR>zt2k2j
+nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
 
 """""""""""""""""
 " Tags
