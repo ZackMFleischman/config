@@ -109,6 +109,9 @@ alias lr='ccollab actionitems'
 alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf'
 
 
+# Fin
+alias fin='python3 ~/repos/FinMessenger/Fin.py'
+
 ################
 # Servers
 ################
