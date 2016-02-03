@@ -119,6 +119,9 @@ alias bike='python ~/repos/BikeCommuter/BikeCommute.py'
 # Growl notifier
 alias growlr='ssh zfleischman@172.16.1.121 /Users/zfleischman/repos/scripts/osx/growl'
 
+# Fin
+alias fin='python ~/repos/FinMessenger/Fin.py'
+
 ################
 # Path Shortcuts
 ################
