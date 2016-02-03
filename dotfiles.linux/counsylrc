@@ -1,6 +1,9 @@
 ################
 # Counsyl Specific
 ################
+COUNSYL_SCRIPT_PATHS=$(find ~/repos/zfleischman/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
+export PATH="$PATH:$COUNSYL_SCRIPT_PATHS"
+
 pathToWebsite='/home/zfleischman/nfs-share'
 
 alias w='cd $pathToWebsite/website'
@@ -25,3 +28,6 @@ alias zz='cd ~/repos/zfleischman'
 
 act
 cd $pathToWebsite/website/counsyl/product
+
+# Generate the current list of models
+models
