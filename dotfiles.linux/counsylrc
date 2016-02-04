@@ -1,6 +1,9 @@
 ################
 # Counsyl Specific
 ################
+COUNSYL_SCRIPT_PATHS=$(find ~/repos/zfleischman/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
+export PATH="$PATH:$COUNSYL_SCRIPT_PATHS"
+
 pathToWebsite='/home/zfleischman/nfs-share'
 
 alias w='cd $pathToWebsite/website'
@@ -21,7 +24,12 @@ alias fixq='w;make dev-setup || make init;z cleandb'
 alias sp='z zshellplus'
 alias spi='vim ~/repos/scripts/zpython/counsyl_shellplus_init.py'
 alias ec='vim ~/.counsylrc'
-alias zz='cd ~/repos/zfleischman'
+alias mw='cd ~/repos/zfleischman'
 
 act
 cd $pathToWebsite/website/counsyl/product
+
+# Generate the current list of models, methods and classes
+generate_cache_models
+generate_cache_classes
+generate_cache_methods
