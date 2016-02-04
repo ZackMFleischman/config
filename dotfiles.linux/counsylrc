@@ -1,35 +1,57 @@
 ################
-# Counsyl Specific
+# Counsyl Specific Aliases and Commands
 ################
+pathToWebsite='/home/zfleischman/nfs-share'
+
+# Set path to counsyl related scripts repo
 COUNSYL_SCRIPT_PATHS=$(find ~/repos/zfleischman/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="$PATH:$COUNSYL_SCRIPT_PATHS"
 
-pathToWebsite='/home/zfleischman/nfs-share'
+# Edit this file
+alias ec='vim ~/.counsylrc'
 
-alias w='cd $pathToWebsite/website'
+# Django manage.py
+alias z='$pathToWebsite/website/counsyl/product/manage.py'
+
 alias tc='start_tmux.counsyl'
 alias act='source $pathToWebsite/website/vendor/venv/bin/activate'
-alias z='$pathToWebsite/website/counsyl/product/manage.py'
+
+# Start Server
 alias ss='act;cd $pathToWebsite/website/;make dev-setup;~/repos/website/counsyl/product/manage.py runserver 0.0.0.0:8000 --novalidate'
+
+# Paths
 alias f='cd $pathToWebsite/website/counsyl/product'
+alias w='cd $pathToWebsite/website'
+alias mw='cd ~/repos/zfleischman'
+
+# SSH into the Prod Database Clone and start a shellplus
 alias prod='ssh zfleischman@clone-web-phi.counsyl.com "/bin/bash"'
+
+# Testing
 alias selenium='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --only-selenium-tests --with-seleniumnosefilter --selenium-config-preset=remote-chrome --selenium-remote-driver-url=http://10.0.2.2:9515 --selenium-liveserver-external-url=http://testv-dev.counsyl.dev:8081/ --liveserver=0.0.0.0:8081 -s'
 alias ztest='$pathToWebsite/website/counsyl/product/manage.py test --retest --run-all --nologcapture --settings=settings_test'
 alias drop='dropdb test_counsyl_product'
 alias ztestc='drop;ztest'
-alias t='currentTests'
-alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
+alias tc='drop;t'
+
+# Fix the world
 alias fix='w;make init;z cleandb'
 alias fixq='w;make dev-setup || make init;z cleandb'
+
+# Run the linter
+alias lint='pushd .>/dev/null;cd $pathToWebsite/website;make gitlint;popd>/dev/null'
+
+# Start a shellplus
 alias sp='z zshellplus'
 alias spi='vim ~/repos/scripts/zpython/counsyl_shellplus_init.py'
-alias ec='vim ~/.counsylrc'
-alias mw='cd ~/repos/zfleischman'
-
-act
-cd $pathToWebsite/website/counsyl/product
 
 # Generate the current list of models, methods and classes
 generate_cache_models
 generate_cache_classes
 generate_cache_methods
+
+# Run the activate script
+act
+
+# Start in the right directory
+cd $pathToWebsite/website/counsyl/product
