@@ -102,6 +102,9 @@ alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 
+# Current IP Address
+alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -1"
+
 # Code Collab
 alias lr='ccollab actionitems'
 
@@ -141,7 +144,9 @@ alias ac='cd ~/repos/config'
 ################
 # Counsyl Specific
 ################
-alias z='cd ~/repos/vagrant/boxes/testv-dev;(vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
+setgrowlrip_command="echo 'export GROWLR_IP=`myip`' > ~/.growlrc"
+alias setgrowlrip='(cd ~/repos/vagrant/boxes/testv-dev && vagrant ssh -- -t "$setgrowlrip_command")'
+alias z='cd ~/repos/vagrant/boxes/testv-dev;(setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
 alias form='java -jar /Users/zfleischman/repos/formality/build/libs/formality-1.4.0.jar'
 
 
