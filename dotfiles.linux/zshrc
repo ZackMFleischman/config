@@ -20,6 +20,9 @@ HELPDIR=/usr/local/share/zsh/help
 # zsh options
 setopt no_histverify
 
+# My Environment Variables
+export MINE=`cat ~/.mine`
+
 # Tmux window naming
 DISABLE_AUTO_TITLE=true
 
@@ -108,6 +111,10 @@ alias reset='git reset --hard HEAD'
 alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
+alias cm='git commit --author="Zack Fleischman <zFleischman@gmail.com>"'
+alias aa='git commit --amend --author "Zack Fleischman <zFleischman@gmail.com>" --no-edit'
+
+# Vim Tag Jump
 alias tj='vim -t'
 
 # Code Collab

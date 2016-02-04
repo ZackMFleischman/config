@@ -33,6 +33,8 @@ alias ztest='$pathToWebsite/website/counsyl/product/manage.py test --retest --ru
 alias cleant='dropdb test_counsyl_product'
 alias ztestc='cleant;ztest'
 alias tc='cleant;t'
+alias lengthy='(f && lambda-zack)'
+alias uitests='(f && lambda-zack --ui)'
 
 # Fix the world
 alias fix='w;make init;z cleandb'

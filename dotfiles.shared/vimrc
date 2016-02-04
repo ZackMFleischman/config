@@ -293,9 +293,6 @@ map <F6> :tabedit
 map <F8> :tabn<CR>  " Next Tab
 map <F7> :tabp<CR>  " Previous Tab
 
-" Swap Splits
-nnoremap <leader>P <C-w>r
-
 " Replace text
 noremap <leader>R :%s//g<left><left>
 
@@ -610,6 +607,7 @@ nnoremap <leader>sb oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
 
 " Paste at the end of the line
+nmap <leader>P A<ESC>p
 nmap <leader>A A<space><ESC>p
 
 "-----------------
