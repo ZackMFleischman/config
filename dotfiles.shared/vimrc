@@ -557,14 +557,8 @@ noremap <C-p> gT
 noremap <C-n> gt
 
 "-------------------------
-" Move tabs left and right
-"-------------------------
-nnoremap <C-e> :call ShiftTabLeft()<CR>
-nnoremap <C-r> :call ShiftTabRight()<CR>
-
-"-------------------------
 " Save Session
-nnoremap <leader>S :mksession ~/repos/config/vim_sessions/.vim<left><left><left><left>
+nnoremap <leader>S :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
 
 "-------------------------
 " Color Column at 80 chars¬
@@ -629,3 +623,9 @@ nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/
 
 
 set tw=0
+
+"-------------------------
+" Move tabs left and right
+"-------------------------
+nnoremap <C-n> :call ShiftTabLeft()<CR>
+nnoremap <C-m> :call ShiftTabRight()<CR>
