@@ -19,7 +19,6 @@ fi
 tmux new-session -d -s "$SESSION_NAME" -n "vim"
 tmux send-keys -t "$SESSION_NAME" 'b' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
-tmux send-keys -t "$SESSION_NAME" 'com ' Enter 
 
 # Window: shell
 tmux neww -t "$SESSION_NAME" -n "zsh"
