@@ -145,8 +145,8 @@ alias ac='cd ~/repos/config'
 # Counsyl Specific
 ################
 setgrowlrip_command="echo 'export GROWLR_IP=`myip`' > ~/.growlrc"
-alias setgrowlrip='(cd ~/repos/vagrant/boxes/testv-dev && vagrant ssh -- -t "$setgrowlrip_command")'
-alias z='cd ~/repos/vagrant/boxes/testv-dev;(setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
+alias sg='(cd ~/repos/vagrant/boxes/testv-dev && vagrant ssh -- -t "$setgrowlrip_command")'
+alias z='cd ~/repos/vagrant/boxes/testv-dev;(setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && sg && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
 alias form='java -jar /Users/zfleischman/repos/formality/build/libs/formality-1.4.0.jar'
 
 
