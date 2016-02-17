@@ -627,5 +627,5 @@ set tw=0
 "-------------------------
 " Move tabs left and right
 "-------------------------
-nnoremap <C-n> :call ShiftTabLeft()<CR>
-nnoremap <C-m> :call ShiftTabRight()<CR>
+"nnoremap <C-Left> :call ShiftTabLeft()<CR>
+"nnoremap <C-Right> :call ShiftTabRight()<CR>
