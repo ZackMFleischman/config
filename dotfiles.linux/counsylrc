@@ -53,7 +53,7 @@ generate_cache_classes
 generate_cache_methods
 
 # Run the activate script
-act
+#act
 
 # Start in the right directory
 cd $pathToWebsite/website/counsyl/product
