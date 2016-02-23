@@ -48,9 +48,9 @@ alias sp='z zshellplus'
 alias spi='vim ~/repos/scripts/zpython/counsyl_shellplus_init.py'
 
 # Generate the current list of models, methods and classes
-generate_cache_models
-generate_cache_classes
-generate_cache_methods
+(generate_cache_models&)
+(generate_cache_classes&)
+(generate_cache_methods&)
 
 # Run the activate script
 act

@@ -194,5 +194,4 @@ bindkey '^Z' fancy-ctrl-z
 
 ###################
 ## External Sources
-###################
 source ~/.counsylrc
