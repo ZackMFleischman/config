@@ -114,6 +114,7 @@ alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 alias cm='git commit --author="Zack Fleischman <zFleischman@gmail.com>"'
 alias aa='git commit --amend --author "Zack Fleischman <zFleischman@gmail.com>" --no-edit'
+alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | grep --color=always -i'
 
 # Vim Tag Jump
 alias tj='vim -t'
