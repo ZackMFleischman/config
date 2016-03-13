@@ -265,8 +265,8 @@ noremap <leader>s <C-w>s<C-w>j    " create new hsplit, and switch to it.
 " Saving and Quiting
 noremap <leader>w :w<CR>    " Save
 noremap <leader>e :wq<CR>   " Save and quit
-noremap <leader>q :q!<CR>   " Force Quit
-noremap <leader>Q :qa!<CR>   " Force Quit All
+noremap <leader>q :q<CR>    "  Quit
+noremap <leader>Q :qa!<CR>  " Force Quit All
 
 " Snap to def and classes
 nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
