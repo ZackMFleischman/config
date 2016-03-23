@@ -129,7 +129,7 @@ alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resum
 alias bike='python ~/repos/BikeCommuter/BikeCommute.py'
 
 # Growl notifier
-alias g='ssh -oStrictHostKeyChecking=no zfleischman@$GROWLR_IP /Users/zfleischman/repos/scripts/osx/growl'
+alias g='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null zfleischman@$GROWLR_IP /Users/zfleischman/repos/scripts/osx/growl 2> /dev/null'
 
 # Fin
 alias fin='python ~/repos/FinMessenger/Fin.py'
