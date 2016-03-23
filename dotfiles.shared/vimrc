@@ -48,6 +48,7 @@ nnoremap ^ 0
 nnoremap <leader>W :%s/\s\+$//<CR>
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.css :%s/\s\+$//e
 
 " Navigate back a file
 noremap <leader>` <C-^>
@@ -186,6 +187,8 @@ vnoremap > >gv
 """"""""
 nnoremap <leader>} :set paste<CR>
 nnoremap <leader>{ :set nopaste<CR>
+
+noremap <C-t> <C-w><C-r>
 
 """"""""
 " Splits
