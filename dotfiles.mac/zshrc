@@ -146,7 +146,8 @@ alias ac='cd ~/repos/config'
 ################
 setgrowlrip_command="echo 'export GROWLR_IP=`myip`' > ~/.growlrc"
 alias sg='(cd ~/repos/vagrant/boxes/testv-dev && vagrant ssh -- -t "$setgrowlrip_command")'
-alias z='cd ~/repos/vagrant/boxes/testv-dev;(setgrowlrip && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && sg && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
+sg # just set this up each time we open a local mac console. TODO: Migrate this to a .zshrc.mac file
+alias z='cd ~/repos/vagrant/boxes/testv-dev;(sg && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")||(vagrant up && sg && vagrant ssh -- -t "/bin/bash ~/repos/scripts/util/start_tmux.counsyl")'
 alias form='java -jar /Users/zfleischman/repos/formality/build/libs/formality-1.4.0.jar'
 
 
