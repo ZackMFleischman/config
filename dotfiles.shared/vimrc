@@ -553,12 +553,6 @@ noremap <leader>m :CtrlPMRU<CR>
 " After the fact settings
 "==============================================================================
 
-"--------------------------------------
-" Move left and right to different tabs
-"--------------------------------------
-noremap <C-p> gT
-noremap <C-n> gt
-
 "-------------------------
 " Save Session
 nnoremap <leader>S :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
@@ -630,5 +624,7 @@ set tw=0
 "-------------------------
 " Move tabs left and right
 "-------------------------
-"nnoremap <C-Left> :call ShiftTabLeft()<CR>
-"nnoremap <C-Right> :call ShiftTabRight()<CR>
+nnoremap <C-i> :call ShiftTabLeft()<CR>
+nnoremap <C-o> :call ShiftTabRight()<CR>
+noremap <C-n> gT
+noremap <C-m> gt
