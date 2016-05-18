@@ -37,6 +37,7 @@ echo "Installing GUI Applications..."
 # Apps
 apps=(
     dropbox
+    box-sync
     bettertouchtool
     keyboard-maestro
     xquartz
