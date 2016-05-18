@@ -39,6 +39,7 @@ Plugin 'https://github.com/scrooloose/nerdtree.git'
 
 " Airline
 Plugin 'https://github.com/bling/vim-airline.git'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Fugitive
 Plugin 'https://github.com/tpope/vim-fugitive.git'
