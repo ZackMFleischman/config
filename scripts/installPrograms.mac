@@ -38,6 +38,7 @@ echo "Installing GUI Applications..."
 apps=(
     dropbox
     bettertouchtool
+    keyboard-maestro
     xquartz
     calibre
     kaleidoscope
