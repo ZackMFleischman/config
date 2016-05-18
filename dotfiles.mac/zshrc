@@ -101,6 +101,9 @@ alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 
+# Notifications
+alias n='~/repos/scripts/osx/notify'
+
 # Current IP Address
 alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -1"
 
@@ -139,6 +142,7 @@ alias q='cd ~/repos/scripts'
 
 # Config
 alias ac='cd ~/repos/config'
+
 
 ################
 # Counsyl Specific
@@ -195,4 +199,3 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-
