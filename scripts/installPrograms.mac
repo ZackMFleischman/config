@@ -60,6 +60,7 @@ apps=(
     evernote
     xee
     slack
+    seil
 )
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
