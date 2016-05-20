@@ -101,6 +101,10 @@ alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 
+# Brew Cask Install/Search
+alias ci='brew cask install' 
+alias cs='brew cask search' 
+
 # Notifications
 alias n='~/repos/scripts/osx/notify'
 
