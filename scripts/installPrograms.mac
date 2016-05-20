@@ -9,6 +9,7 @@ binaries=(
     rename
     zopfli
     ffmpeg
+    python
     python3
     ctags
     trash
