@@ -185,7 +185,7 @@ vnoremap > >gv
 """"""""
 " Paste
 """"""""
-nnoremap <leader>} :set paste<CR>
+nnoremap <leader>} :set paste<CR>i
 nnoremap <leader>{ :set nopaste<CR>
 
 noremap <C-t> <C-w><C-r>
