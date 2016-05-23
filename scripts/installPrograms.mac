@@ -6,6 +6,7 @@ echo "Installing command line programs..."
 binaries=(
     git
     graphicsmagick
+    gpg
     rename
     zopfli
     ffmpeg
