@@ -25,7 +25,6 @@ DISABLE_AUTO_TITLE=true
 # Paths
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:/usr/local/homebrew/bin:$SCRIPT_PATHS"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$PATH:/usr/texbin:$HOME/bin"
 export PYTHONPATH="$HOME/repos/scripts/python:$HOME/repos/scripts/django"
 #export MANPATH="/usr/local/man:$MANPATH"
@@ -61,7 +60,6 @@ alias ez='vim ~/.zshrc'
 alias eg='vim ~/.gitconfig'
 alias ev='vim ~/.vimrc'
 alias ep='vim ~/.vimplugins'
-alias ls="echo -e '\e[1;30m'`pwd`; echo -en '\e[0m';ls --color=tty"
 alias ll='ls -la'
 alias pp='prettyprint'
 alias htop='sudo htop'
