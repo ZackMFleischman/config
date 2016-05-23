@@ -31,6 +31,10 @@ export PYTHONPATH="$HOME/repos/scripts/python:$HOME/repos/scripts/django"
 #export MANPATH="/usr/local/man:$MANPATH"
 #export CDPATH=".:/Users/zfleischman/repos/farm2"
 
+# virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Source Scripts
 source ~/repos/scripts/util/findfile
 source ~/repos/scripts/util/exportColors
