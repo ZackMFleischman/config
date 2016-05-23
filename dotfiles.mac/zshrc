@@ -70,7 +70,6 @@ alias bun='brew uninstall'
 # Delete pyc files in directory (recursively)
 alias pyc='find . -name "*.pyc" -type f -delete'
 alias pydocs='pydoc -p 9999'
-alias act='source venv/bin/activate'
 
 # Git
 alias d='git difftool'
@@ -137,15 +136,19 @@ alias a='cd ~/repos'
 alias w='cd ~/repos/wonderdome'
 alias wm='cd ~/repos/wonderdome/src/playasophy/wonderdome/mode'
 
-# Farm2
-alias f='cd ~/repos/farm2;pwd'
-
 # Scripts
 alias q='cd ~/repos/scripts'
 
 # Config
 alias ac='cd ~/repos/config'
 
+################
+# Savvy Specific
+################
+alias z='python ~/repos/website/savvysite/manage.py'
+alias f='cd ~/repos/website'
+alias act='source ~/repos/website/venv/bin/activate'
+f;act
 
 ################
 # Counsyl Specific
