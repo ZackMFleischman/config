@@ -151,7 +151,7 @@ alias ac='cd ~/repos/config'
 ################
 alias z='python ~/repos/website/savvysite/manage.py'
 alias f='cd ~/repos/website'
-alias act='source ~/repos/website/venv/bin/activate'
+alias act='workon savvy_env'
 f;act
 
 ################
