@@ -149,6 +149,10 @@ alias ac='cd ~/repos/config'
 ################
 alias z='python ~/repos/website/manage.py'
 alias f='cd ~/repos/website'
+alias dev='workon savvy_dev'
+alias devbin='dev;cd $VIRTUAL_ENV/bin'
+alias prod='workon savvy_prod'
+alias prodbin='prod;cd $VIRTUAL_ENV/bin'
 f;workon savvy_dev
 
 ################
