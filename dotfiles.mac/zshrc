@@ -103,6 +103,8 @@ alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 
+alias tmux='tmux -2'
+
 # Brew Cask Install/Search
 alias ci='brew cask install' 
 alias cs='brew cask search' 

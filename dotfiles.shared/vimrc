@@ -579,7 +579,7 @@ augroup CLNRSet
 augroup END
 
 "-----------------"
-" No PEP8
+" Add No PEP8
 "-----------------"
 nnoremap <leader>nn A<space><space># nopep8<ESC>^
 
@@ -595,18 +595,16 @@ map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
 nmap <leader>P A<ESC>p
 nmap <leader>A A<space><ESC>p
 
-" Navigate to classes
-nnoremap <leader>gc :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class CustomerProfile(<CR>:noh<CR>zt2k2j
-nnoremap <leader>gp :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class Person(<CR>:noh<CR>zt2k2j
-nnoremap <leader>ga :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/api/models.py<CR> /class APIOrder(<CR>:noh<CR>zt2k2j
-nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
+" Navigate to specific classes
+"nnoremap <leader>gc :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class CustomerProfile(<CR>:noh<CR>zt2k2j
+"nnoremap <leader>gp :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class Person(<CR>:noh<CR>zt2k2j
+"nnoremap <leader>ga :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/api/models.py<CR> /class APIOrder(<CR>:noh<CR>zt2k2j
+"nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
 
 """""""""""""""""
 " Tags
 """""""""""""""""
 :nnoremap <leader>tj :tj 
-
-
 set tw=0
 
 "-------------------------
@@ -620,4 +618,4 @@ noremap <C-n> gt
 "-----------------------
 " No idea what this does
 "-----------------------
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

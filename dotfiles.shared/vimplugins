@@ -17,19 +17,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'https://github.com/tpope/vim-repeat.git'
 Plugin 'https://github.com/svermeulen/vim-easyclip.git' 
 
-" Clojure Syntax Highlighting and Indenting 
-Plugin 'https://github.com/guns/vim-clojure-static.git'
-Plugin 'https://github.com/guns/vim-clojure-highlight.git'
-
 " Rainbow Parens Improved
 " Needs: let g:rainbow_active = 1
 Plugin 'https://github.com/luochen1990/rainbow.git'
-
-" Fireplace (Clojure REPL)
-Plugin 'https://github.com/tpope/vim-fireplace.git'
-
-" ParEdit 
-Plugin 'https://github.com/vim-scripts/paredit.vim.git'
 
 " Ctrl-P
 Plugin 'https://github.com/kien/ctrlp.vim.git'
@@ -47,9 +37,6 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 " Vim Sneak
 Plugin 'justinmk/vim-sneak'
 
-" Processing
-Plugin 'goonzoid/vim-reprocessed'
-
 " AG
 Plugin 'https://github.com/rking/ag.vim.git'
 
@@ -62,33 +49,14 @@ Plugin 'scrooloose/syntastic'
 " Surround
 Plugin 'tpope/vim-surround'
 
-" Python Mode
-" Plugin 'klen/python-mode'
-
-" Jedi Vim
-Plugin 'https://github.com/davidhalter/jedi-vim.git'
-
 " Supertab
 Plugin 'ervandew/supertab'
-
-" YouCompleteMe
-" Plugin 'Valloric/YouCompleteMe'
-
-" Coffee Script
-Plugin 'kchmck/vim-coffee-script'
 
 " SimpylFold 
 " Plugin 'tmhedberg/SimpylFold'
 
-
 " Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
-
-" Unite
-" Plugin 'Shougo/unite.vim'
-
-" Sparkup (html formatting)
-Plugin 'rstacruz/sparkup'
 
 " Nerd Commenter
 Plugin 'scrooloose/nerdcommenter'
