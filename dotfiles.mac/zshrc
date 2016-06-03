@@ -72,6 +72,8 @@ alias bun='brew uninstall'
 # Delete pyc files in directory (recursively)
 alias pyc='find . -name "*.pyc" -type f -delete'
 alias pydocs='pydoc -p 9999'
+alias h='heroku'
+alias hp='git push heroku master'
 
 # Git
 alias d='git difftool'
@@ -147,13 +149,14 @@ alias ac='cd ~/repos/config'
 ################
 # Savvy Specific
 ################
-alias z='python ~/repos/website/manage.py'
-alias f='cd ~/repos/website'
-alias dev='workon savvy_dev'
+alias z='python ~/repos/fierce/manage.py'
+alias f='cd ~/repos/fierce'
+alias de='deactivate'
+alias dev='workon dev'
 alias devbin='dev;cd $VIRTUAL_ENV/bin'
-alias prod='workon savvy_prod'
+alias prod='workon prod'
 alias prodbin='prod;cd $VIRTUAL_ENV/bin'
-f;workon savvy_dev
+f;workon dev
 
 ################
 # Counsyl Specific

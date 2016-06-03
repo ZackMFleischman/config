@@ -3,39 +3,41 @@
 " Author: Zack Fleischman
 "
 
+"------------------------
+" My Leader Key is Space!
+"------------------------
 " Remap leader to the space bar. Do this before sourcing any mappings
 let mapleader="\<Space>"
 
 "-----------------------
 " Sourcing External Files
 "-----------------------
-
 " Plugins 
 source ~/.vimplugins
 au BufReadPost .vimplugins set syntax=sh
 
-" Code Folding
-"au BufReadPost .vim_folding set syntax=sh
-"au BufReadPost *.py source ~/.vim_folding
-"source ~/.vim_folding
-
-
 "---------------------------
-
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Turn off smart indent for Python (# comments get messed up)
-au! FileType python setl nosmartindent
-
+" Color Scheme
 "---------------------------
-
 colorscheme wombat256mod
 
 "---------------------------
+" Python specific stuff
+"---------------------------
+" Turn off smart indent for Python (# comments get messed up)
+au! FileType python setl nosmartindent
 
-" ===========================
-" KEY MAPPINGS
-" ===========================
+" Snap to def and classes
+nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-k> 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-h> 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+nnoremap <C-l> $/\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+noremap <leader>o 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
+noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
+
+"================
+" Custom Settings
+"================
 
 " So we don't have to reach for escape to leave insert mode.
 inoremap jk <esc>
@@ -53,7 +55,7 @@ autocmd BufWritePre *.css :%s/\s\+$//e
 " Navigate back a file
 noremap <leader>` <C-^>
 
-" Enter is jump to line
+" 'Enter' is jump to line
 :nnoremap <CR> G
 :nnoremap <leader><CR> <CR>
 
@@ -62,9 +64,9 @@ noremap <leader>` <C-^>
 :nnoremap <S-TAB> <TAB>
 
 
-"""""""""""""
+"------
 " Marks
-"""""""""""""
+"------
 " Set Mark
 noremap M m
 
@@ -73,24 +75,23 @@ nnoremap ' `
 nnoremap ` '
 
 
-
-"""""""""""""""""
+"----------------
 " Persistent Undo
-"""""""""""""""""
+"----------------
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
-"""""""""""""
-" Tab Control
-"""""""""""""
+"------------
+" Tabs
+"------------
 " Goto Last Tab
 let g:lasttab = tabpagenr()
 au TabLeave * let g:lasttab = tabpagenr()
 noremap <leader><TAB> :exe "tabn ".g:lasttab<CR>
 
-" Go left and right tabs and go directly to tab
+" Goto Tab Number
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -100,6 +101,13 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
+
+" Open in tab 
+map <F6> :tabedit 
+
+" Nav to next/prev tab
+map <F8> :tabn<CR>  " Next Tab
+map <F7> :tabp<CR>  " Previous Tab
 
 " Move tabs around (These are mapped at the bottom)
 function! ShiftTabRight()
@@ -121,6 +129,50 @@ function! ShiftTabLeft()
         exe "tabm ".next
     endif
 endfunction
+
+" Set Tab Labels
+if exists("+showtabline")
+    function! MyTabLine()
+        let s = ''
+        let wn = ''
+        let t = tabpagenr()
+        let i = 1
+        while i <= tabpagenr('$')
+            let buflist = tabpagebuflist(i)
+            let winnr = tabpagewinnr(i)
+            let s .= '%' . i . 'T'
+            let s .= (i == t ? '%1*' : '%2*')
+            let s .= ' '
+            let wn = tabpagewinnr(i,'$')
+
+            let s .= '%#TabNum#'
+            let s .= i
+            let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+            let bufnr = buflist[winnr - 1]
+            let file = bufname(bufnr)
+            let buftype = getbufvar(bufnr, 'buftype')
+            if buftype == 'nofile'
+                if file =~ '\/.'
+                    let file = substitute(file, '.*\/\ze.', '', '')
+                endif
+            else
+                let file = fnamemodify(file, ':p:t')
+            endif
+            if file == ''
+                let file = '[No Name]'
+            endif
+            let s.= ' ' . file . ' '
+            let i = i + 1
+        endwhile
+        let s .= '%T%#TabLineFill#%='
+        let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+        return s
+    endfunction
+    set stal=2
+    set tabline=%!MyTabLine()
+    set showtabline=1
+    highlight link TabNum Special
+endif
 
 "-----------------------------
 " Code Folding 
@@ -173,31 +225,32 @@ set foldtext=CustomFoldText()
 " Fold Method
 set foldmethod=indent
 
-""""""""""""""
+"------------
 " Indentation
-""""""""""""""
+"------------
 nnoremap < <<
 nnoremap > >>
 vnoremap < <gv
 vnoremap > >gv
 
 
-""""""""
-" Paste
-""""""""
+"-----------
+" Paste Mode
+"-----------
 nnoremap <leader>} :set paste<CR>i
 nnoremap <leader>{ :set nopaste<CR>
 
-noremap <C-t> <C-w><C-r>
-
-""""""""
+"-------
 " Splits
-""""""""
+"-------
 " Bindings for easy split nav (Control and Command)
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
+
+" Swap Splits
+noremap <C-t> <C-w><C-r>
 
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
@@ -271,38 +324,34 @@ noremap <leader>e :wq<CR>   " Save and quit
 noremap <leader>q :q<CR>    "  Quit
 noremap <leader>Q :qa!<CR>  " Force Quit All
 
-" Snap to def and classes
-nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-k> 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-h> 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-l> $/\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-noremap <leader>o 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
-noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
+" Go back and center screen
 noremap <C-o> <C-o>zz
 
-
-" Undo
-noremap <leader>u <C-r>     " Undo
+" Redo
+noremap <leader>u <C-r> 
 
 " Modify .vimrc
 noremap <leader>t :vsplit<CR>:e ~/.vimrc<CR>           " Edit .vimrc
-noremap <leader>T :source ~/.vimrc<CR>      " Apply .vimrc
+noremap <leader>T :source ~/.vimrc<CR>                 " Apply .vimrc
 
 " Turns off search highlight
 noremap <leader>; :nohlsearch<CR>
 
-" Tabs
-map <F6> :tabedit 
-map <F8> :tabn<CR>  " Next Tab
-map <F7> :tabp<CR>  " Previous Tab
-
 " Replace text
 noremap <leader>R :%s//g<left><left>
 
-" Format whole file
-noremap <leader><F1> gmzgg=G`z
+"-----------
+" Formatting
+"-----------
+" Format selection
 noremap <leader><F2> =
 
+" Format whole file
+noremap <leader><F1> gmzgg=G`z
+
+"--------------
+" Save location
+"--------------
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -312,14 +361,14 @@ autocmd BufReadPost *
 set viminfo^=%
 
 "====================
-" Settings
+" Standard Settings
 "====================
 
 " Syntax highlighting
-syntax on   
+syntax on
 
 " Show line numbers
-set number  
+set number
 
 " Disable errorbells
 set visualbell
@@ -327,7 +376,6 @@ set t_vb=
 
 " History Count
 set history=1000
-set undolevels=1000
 
 " Visual Menu for file completion
 set wildmenu
@@ -372,27 +420,18 @@ set t_Co=256
 " Allow the cursor to go anywhere in visual block mode.
 set virtualedit+=block
 
-" Set relative line numbers in visual mode
-:nnoremap <silent> v :<C-u>set nonu rnu<CR>v
-:nnoremap <silent> V :<C-u>set nonu rnu<CR>V
-:nnoremap <silent> <C-v> :<C-u>set nu rnu<CR><C-v>
-:nnoremap <silent> gv :<C-u>set nu rnu<CR>gv
-vnoremap <Esc> <Esc>:set nu<CR>
-:autocmd CursorMoved * if mode() !~# "[vV\<C-v>]" | set nu | endif
+" Set relative line numbers in visual mode.
+nnoremap <silent> v :<C-u>set rnu<CR>v
+nnoremap <silent> V :<C-u>set rnu<CR>V
+nnoremap <silent> <leader>V :<C-u>set rnu<CR><C-v>
+nnoremap <silent> gv :<C-u>set rnu<CR>gv
+vnoremap <Esc> <Esc>:set nornu nu<CR>
+:autocmd CursorMoved * if mode() !~# "[vV\<C-v>]" | set nornu nu | endif
+nnoremap <leader>N :set rnu<CR>
 
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-    else
-        set relativenumber
-    endif
-endfunc
-nnoremap <C-q> :call NumberToggle()<cr>
-
-" Set visual block mode
-:nnoremap <silent> <leader>V <C-v>
-
-" Diff Color Scheme
+"-------------------------
+" Visual Diff Color Scheme
+"-------------------------
 if &diff
     colorscheme diffColorScheme
     noremap <leader>q :qa!<CR>   " Force Quit All
@@ -400,60 +439,15 @@ if &diff
 endif
 
 
-" Set Tab Labels
-if exists("+showtabline")
-    function! MyTabLine()
-        let s = ''
-        let wn = ''
-        let t = tabpagenr()
-        let i = 1
-        while i <= tabpagenr('$')
-            let buflist = tabpagebuflist(i)
-            let winnr = tabpagewinnr(i)
-            let s .= '%' . i . 'T'
-            let s .= (i == t ? '%1*' : '%2*')
-            let s .= ' '
-            let wn = tabpagewinnr(i,'$')
-
-            let s .= '%#TabNum#'
-            let s .= i
-            let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
-            let bufnr = buflist[winnr - 1]
-            let file = bufname(bufnr)
-            let buftype = getbufvar(bufnr, 'buftype')
-            if buftype == 'nofile'
-                if file =~ '\/.'
-                    let file = substitute(file, '.*\/\ze.', '', '')
-                endif
-            else
-                let file = fnamemodify(file, ':p:t')
-            endif
-            if file == ''
-                let file = '[No Name]'
-            endif
-            let s.= ' ' . file . ' '
-            let i = i + 1
-        endwhile
-        let s .= '%T%#TabLineFill#%='
-        let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
-        return s
-    endfunction
-    set stal=2
-    set tabline=%!MyTabLine()
-    set showtabline=1
-    highlight link TabNum Special
-endif
-
-
-"=========================================
+"================
 " PLUGIN MAPPINGS
-" ========================================
+"================
 
 " Vundle
 noremap <leader>al :PluginList<CR>      " pulls up plugins
-noremap <leader>ai :PluginInstall<CR>      " installs plugins
-noremap <leader>ac :PluginClean<CR>      " cleans plugins
-noremap <leader>as :PluginSearch!<CR>      " searches plugins
+noremap <leader>ai :PluginInstall<CR>   " installs plugins
+noremap <leader>ac :PluginClean<CR>     " cleans plugins
+noremap <leader>as :PluginSearch!<CR>   " searches plugins
 
 " Rainbow Parens
 let g:rainbow_active = 1
@@ -526,9 +520,9 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
 " Ag
-noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
+"noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
 "noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
-noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
+"noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
 let g:ag_qhandler="botright copen 30"
 
 " Ctrl-P
@@ -555,7 +549,7 @@ noremap <leader>m :CtrlPMRU<CR>
 
 "-------------------------
 " Save Session
-nnoremap <leader>S :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
+"nnoremap <leader>S :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
 
 "-------------------------
 " Color Column at 80 chars¬
@@ -601,12 +595,6 @@ map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
 nmap <leader>P A<ESC>p
 nmap <leader>A A<space><ESC>p
 
-"-----------------
-" Counsyl Specific
-"-----------------
-noremap <leader>cp :!zmake<CR>
-set tags=~/repos/config/tags/website/tags
-
 " Navigate to classes
 nnoremap <leader>gc :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class CustomerProfile(<CR>:noh<CR>zt2k2j
 nnoremap <leader>gp :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class Person(<CR>:noh<CR>zt2k2j
@@ -628,3 +616,8 @@ nnoremap <C-f> :call ShiftTabLeft()<CR>
 nnoremap <C-g> :call ShiftTabRight()<CR>
 noremap <C-b> gT
 noremap <C-n> gt
+
+"-----------------------
+" No idea what this does
+"-----------------------
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
