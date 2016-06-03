@@ -56,12 +56,15 @@ autocmd BufWritePre *.css :%s/\s\+$//e
 noremap <leader>` <C-^>
 
 " 'Enter' is jump to line
-:nnoremap <CR> G
-:nnoremap <leader><CR> <CR>
+nnoremap <CR> G
+nnoremap <leader><CR> <CR>
 
 " Jump back and forward
-:nnoremap <TAB> <C-o>
-:nnoremap <S-TAB> <TAB>
+nnoremap <TAB> <C-o>
+nnoremap <S-TAB> <TAB>
+
+" Print file name
+nnoremap <leader>L :echo expand('%:p')<CR>
 
 
 "------

@@ -1,0 +1,11 @@
+################
+# Savvy Specific Commands
+################
+alias z='python ~/repos/fierce/manage.py'
+alias f='cd ~/repos/fierce'
+alias de='deactivate'
+alias dev='workon dev'
+alias devbin='dev;cd $VIRTUAL_ENV/bin'
+alias prod='workon prod'
+alias prodbin='prod;cd $VIRTUAL_ENV/bin'
+f;workon dev
