@@ -20,12 +20,16 @@ binaries=(
     htop
     vim
     tree
+    postgresql
     zsh
     the_silver_searcher
     ack
     mercurial
 )
 brew install ${binaries[@]}
+
+# Start Postgres Server
+brew services start postgresql
 
 # Install GUI Programs
 ###############################
@@ -68,3 +72,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 brew cask install --appdir="/Applications" ${apps[@]}
+
+# Install python programs
+pip install virtualenv
+pip install virtualenvwrapper
