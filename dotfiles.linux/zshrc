@@ -13,8 +13,12 @@ fi
 . /usr/share/autojump/autojump.sh
 
 
+
 ################################
 # Linux Specific Command Aliases
 ################################
+# Backup Script
+alias bu='bp;backup.linux'
+
 # Growl notifier (from vagrant linux box)
 alias g='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null zfleischman@$GROWLR_IP /Users/zfleischman/repos/scripts/osx/growl 2> /dev/null'

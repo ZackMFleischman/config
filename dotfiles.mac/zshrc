@@ -22,6 +22,9 @@ alias vlc='open -a /Applications/VLC.app'
 # Tmux for it to work right with mac terminal colors
 alias tmux='tmux -2'
 
+# Backup Script
+alias bu='bp;backup.mac'
+
 # Homebrew
 alias bin='brew install'
 alias bun='brew uninstall'
