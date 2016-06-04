@@ -1,0 +1,3 @@
+Quit iTerm
+Run defaults read com.googlecode.iterm2 or killall cfprefsd
+Open iTerm
