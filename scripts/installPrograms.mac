@@ -25,6 +25,7 @@ binaries=(
     the_silver_searcher
     ack
     mercurial
+    heroku
 )
 brew install ${binaries[@]}
 
