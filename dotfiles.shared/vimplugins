@@ -78,6 +78,9 @@ Plugin 'nvie/vim-flake8'
 " Python Indenter
 Plugin 'hynek/vim-python-pep8-indent'
 
+" Vim + Tmux pane switching
+Plugin 'christoomey/vim-tmux-navigator'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line

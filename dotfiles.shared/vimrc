@@ -29,10 +29,10 @@ au! FileType python setl nosmartindent
 set encoding=utf-8
 
 " Snap to def and classes
-nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-k> 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-h> 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
-nnoremap <C-l> $/\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+"nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+"nnoremap <C-k> 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+"nnoremap <C-h> 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
+"nnoremap <C-l> $/\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
 noremap <leader>o 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 
@@ -253,10 +253,10 @@ nnoremap <leader>{ :set nopaste<CR>
 " Splits
 "-------
 " Bindings for easy split nav (Control and Command)
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+"nnoremap <leader>h <C-w>h
+"nnoremap <leader>j <C-w>j
+"nnoremap <leader>k <C-w>k
+"nnoremap <leader>l <C-w>l
 
 " Swap Splits
 noremap <C-t> <C-w><C-r>
