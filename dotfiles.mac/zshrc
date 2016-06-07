@@ -19,6 +19,10 @@ alias vlc='open -a /Applications/VLC.app'
 ##############################
 # Mac Specific Command Aliases
 ##############################
+
+# Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
 # Tmux for it to work right with mac terminal colors
 alias tmux='tmux -2'
 

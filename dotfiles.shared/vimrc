@@ -63,7 +63,7 @@ nnoremap <leader><CR> <CR>
 nnoremap <TAB> <C-o>
 nnoremap <S-TAB> <TAB>
 
-" Print file name
+" Print filename
 nnoremap <leader>L :echo expand('%:p')<CR>
 
 
