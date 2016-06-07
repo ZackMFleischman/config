@@ -25,7 +25,8 @@ Plugin 'https://github.com/svermeulen/vim-easyclip.git'
 Plugin 'https://github.com/luochen1990/rainbow.git'
 
 " Ctrl-P (Finding files)
-Plugin 'https://github.com/kien/ctrlp.vim.git'
+" Plugin 'https://github.com/kien/ctrlp.vim.git'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
 
 " NERD Tree (Tree directory view)
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -41,7 +42,8 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'justinmk/vim-sneak'
 
 " AG (Silver searcher)
-Plugin 'https://github.com/rking/ag.vim.git'
+" Plugin 'https://github.com/rking/ag.vim.git'
+Plugin 'https://github.com/gabesoft/vim-ags'
 
 " Tagbar (Symbols and file structure on the right <leader>o)
 Plugin 'majutsushi/tagbar'
@@ -52,8 +54,8 @@ Plugin 'scrooloose/syntastic'
 " Surround (surround movement with something)
 Plugin 'tpope/vim-surround'
 
-" Supertab (tab complete everything)
-Plugin 'ervandew/supertab'
+" (deprecated by YouCompleteMe) Supertab (tab complete everything)
+" Plugin 'ervandew/supertab'
 
 " Awesome Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
@@ -64,8 +66,14 @@ Plugin 'scrooloose/nerdcommenter'
 " Vim Javascript
 Plugin 'pangloss/vim-javascript'
 
-" Autotags
+" Autotags (recompiles c-tags)
 Plugin 'craigemery/vim-autotag'
+
+" YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
+Plugin 'Valloric/YouCompleteMe'
+
+" flake8
+Plugin 'nvie/vim-flake8'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

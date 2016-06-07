@@ -58,6 +58,7 @@ noremap <leader>` <C-^>
 " 'Enter' is jump to line
 nnoremap <CR> G
 nnoremap <leader><CR> <CR>
+:autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 " Jump back and forward
 nnoremap <TAB> <C-o>
@@ -522,26 +523,68 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>1 :RunCurrentSketch<cr>
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
+" Ags
+noremap <leader>x :Ags -C 0 <cword> /fierce/<CR>
+noremap <leader>X :Ags -C 3 <cword> /fierce/<CR>
+noremap <leader>a : /fierce/<C-b>Ags -C 0 
+noremap <leader>z :AgsQuit<CR>
+noremap <leader>Z :AgsLast<CR>
+" Let 'ot' open in a new tab
+autocmd FileType agsv nnoremap <buffer> ot
+  \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
+" Make it play nice with rainbow parens extension
+let g:rainbow_conf = {
+      \ 'separately' : { 'agsv' : 0, 'agse' : 0 }
+      \ }
+
 " Ag
-"noremap <leader>x :Ag <cword> ~/repos/website/counsyl/product<CR>
+"noremap <leader>x :Ag <cword>
 "noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
 "noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
-let g:ag_qhandler="botright copen 30"
+"let g:ag_qhandler="botright copen 30"
+"let g:ag_working_path_mode="r"
+
+" YouCompleteMe
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview
+noremap <leader>d :YcmCompleter GoTo<CR>
+noremap <leader>D :YcmCompleter GoToDeclaration<CR>
+noremap <leader>n :YcmCompleter GoToReferences<CR>
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
 
 " Ctrl-P
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = ''
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_by_filename = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_height = 40
+let g:ctrlp_max_height = 20
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [';'],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ 'AcceptSelection("v")': ["'", '<c-v>'],
   \ }
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-let g:ctrlp_custom_ignore = '.git'
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore "\.git$\|\.hg$\|\.oh-my-zsh$\|\.svn$" -g ""'
+
+"let g:ctrlp_custom_ignore = '.git'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 noremap <leader>f :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>m :CtrlPMRU<CR>
@@ -584,7 +627,7 @@ augroup END
 "-----------------"
 " Add No PEP8
 "-----------------"
-nnoremap <leader>nn A<space><space># nopep8<ESC>^
+"nnoremap <leader>nn A<space><space># nopep8<ESC>^
 
 "-----------------"
 " Set Breakpoint
