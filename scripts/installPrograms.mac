@@ -26,6 +26,7 @@ binaries=(
     ack
     mercurial
     heroku
+    preattach-to-user-namespace
 )
 brew install ${binaries[@]}
 

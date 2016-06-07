@@ -350,10 +350,10 @@ noremap <leader>R :%s//g<left><left>
 " Formatting
 "-----------
 " Format selection
-noremap <leader><F2> =
+noremap ≠ =
 
 " Format whole file
-noremap <leader><F1> gmzgg=G`z
+noremap – mzggVG=`z
 
 "--------------
 " Save location
@@ -630,6 +630,7 @@ augroup END
 " Add No PEP8
 "-----------------"
 "nnoremap <leader>nn A<space><space># nopep8<ESC>^
+nnoremap π A<space><space># nopep8<ESC>^
 
 "-----------------"
 " Set Breakpoint
