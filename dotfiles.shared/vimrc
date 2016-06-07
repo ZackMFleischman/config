@@ -121,9 +121,10 @@ function! ShiftTabRight()
     if currTabNum == maxTabNum
         exe "tabm 0"
     else
-        exe "tabm ".currTabNum
+        exe "tabm ".(currTabNum+1)
     endif
 endfunction
+
 function! ShiftTabLeft()
     let currTabNum = tabpagenr()
     let maxTabNum = tabpagenr('$')
@@ -654,15 +655,15 @@ nmap <leader>A A<space><ESC>p
 :nnoremap <leader>tj :tj 
 set tw=0
 
-"-------------------------
-" Move tabs left and right
-"-------------------------
-nnoremap <C-f> :call ShiftTabLeft()<CR>
-nnoremap <C-g> :call ShiftTabRight()<CR>
-noremap <C-b> gT
-noremap <C-n> gt
-
 "-----------------------
 " No idea what this does
 "-----------------------
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"-------------------------
+" Move tabs left and right
+"-------------------------
+nnoremap ≤ :call ShiftTabLeft()<CR>
+nnoremap ≥ :call ShiftTabRight()<CR>
+noremap <C-b> gT
+noremap <C-n> gt
