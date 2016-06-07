@@ -13,6 +13,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+""""""""""""""""""""""""
+" General Vim Plugins
+""""""""""""""""""""""""
 " Easy Clip (cycle paste and m==cut command)
 Plugin 'https://github.com/tpope/vim-repeat.git'
 Plugin 'https://github.com/svermeulen/vim-easyclip.git' 
@@ -21,44 +24,41 @@ Plugin 'https://github.com/svermeulen/vim-easyclip.git'
 " Needs: let g:rainbow_active = 1
 Plugin 'https://github.com/luochen1990/rainbow.git'
 
-" Ctrl-P
+" Ctrl-P (Finding files)
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 
-" NERD Tree
+" NERD Tree (Tree directory view)
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 
-" Airline
+" Airline (Status bar)
 Plugin 'https://github.com/bling/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Fugitive
+" Fugitive (Git support)
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 
-" Vim Sneak
+" Vim Sneak (s to jump)
 Plugin 'justinmk/vim-sneak'
 
-" AG
+" AG (Silver searcher)
 Plugin 'https://github.com/rking/ag.vim.git'
 
-" Tagbar
+" Tagbar (Symbols and file structure on the right <leader>o)
 Plugin 'majutsushi/tagbar'
 
-" Syntastic
+" Syntastic (Syntax highlighting)
 Plugin 'scrooloose/syntastic'
 
-" Surround
+" Surround (surround movement with something)
 Plugin 'tpope/vim-surround'
 
-" Supertab
+" Supertab (tab complete everything)
 Plugin 'ervandew/supertab'
 
-" SimpylFold 
-" Plugin 'tmhedberg/SimpylFold'
-
-" Color Scheme
+" Awesome Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
 
-" Nerd Commenter
+" Nerd Commenter (leader c to comment)
 Plugin 'scrooloose/nerdcommenter'
 
 " Vim Javascript

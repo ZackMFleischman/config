@@ -8,4 +8,6 @@ alias dev='workon dev'
 alias devbin='dev;cd $VIRTUAL_ENV/bin'
 alias prod='workon prod'
 alias prodbin='prod;cd $VIRTUAL_ENV/bin'
+alias dbpull='heroku pg:pull DATABASE_URL fierce'
+alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
 f;workon dev
