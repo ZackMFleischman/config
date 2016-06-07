@@ -1,6 +1,7 @@
 ################
 # Savvy Specific Commands
 ################
+alias sa='~/repos/config/tmux_sessions/savvy.session'
 alias z='python ~/repos/fierce/manage.py'
 alias f='cd ~/repos/fierce'
 alias de='deactivate'

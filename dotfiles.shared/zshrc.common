@@ -126,6 +126,7 @@ alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '(
 alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf' # Build my resumé
 alias tj='vim -t' # Vim Tag Jump
 alias bike='python ~/repos/BikeCommuter/BikeCommute.py' # Bike Commute app
+alias tags='f;ctags -R .' # Generate tags for a git project
 
 
 #################

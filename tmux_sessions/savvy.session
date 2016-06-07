@@ -1,0 +1,52 @@
+#!/bin/bash
+
+tmux start-server
+
+SESSION_NAME="savvy"
+if [[ ! -z "$TMUX" ]] || [[ ! -z "$TMUX_PANE" ]]; then
+    echo "Already inside a tmux session!"
+    exit 1
+fi
+
+# If session already exists, do nothing.
+tmux -q has-session -t "$SESSION_NAME" > /dev/null
+if [ $? -eq 0 ]; then
+    tmux attach -t "$SESSION_NAME"
+    exit 0
+fi
+
+# Create the new session with the first window named "zsh"
+tmux new-session -d -s "$SESSION_NAME" -n "zsh"
+tmux send-keys -t "$SESSION_NAME" 'b' Enter 
+tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
+
+# Window: vim
+tmux neww -t "$SESSION_NAME" -n "vim"
+tmux send-keys -t "$SESSION_NAME" 'vim' Enter 
+
+# Window: vim
+tmux neww -t "$SESSION_NAME" -n "ipython"
+tmux send-keys -t "$SESSION_NAME" 'z shell' Enter 
+
+# Window: shellplus
+#tmux neww -t "$SESSION_NAME" -n "shellplus"
+#tmux send-keys -t "$SESSION_NAME" 'sp' Enter 
+#tmux send-keys -t "$SESSION_NAME" '%run ~/repos/zfleischman/shellplus/init.py' Enter 
+
+# Window: psql
+tmux neww -t "$SESSION_NAME" -n "psql"
+tmux send-keys -t "$SESSION_NAME" 'psql fierce' Enter 
+
+# Window: server
+tmux neww -t "$SESSION_NAME" -n "server"
+tmux send-keys -t "$SESSION_NAME" 'z runserver' Enter 
+
+# Window: prod shellplus
+#tmux neww -t "$SESSION_NAME" -n "prod"
+#tmux send-keys -t "$SESSION_NAME" "ssh -t zfleischman@clone-web-phi.counsyl.com '/bin/bash'" Enter
+
+# Select first window
+tmux selectw -t "zsh"
+
+# Attach to it
+tmux -2 attach -t "$SESSION_NAME"
