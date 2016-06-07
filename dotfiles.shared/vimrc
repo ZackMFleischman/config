@@ -40,6 +40,9 @@ noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 " Custom Settings
 "================
 
+" Use OSX clipboard
+set clipboard=unnamed
+
 " So we don't have to reach for escape to leave insert mode.
 inoremap jk <esc>
 
