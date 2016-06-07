@@ -26,6 +26,7 @@ colorscheme wombat256mod
 "---------------------------
 " Turn off smart indent for Python (# comments get messed up)
 au! FileType python setl nosmartindent
+set encoding=utf-8
 
 " Snap to def and classes
 nnoremap <C-j> $/\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR>f(b
