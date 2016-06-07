@@ -587,7 +587,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 noremap <leader>f :CtrlP<CR>
-noremap <leader>F :CtrlPMRU<CR>
+noremap <leader>m :CtrlPMRU<CR>
 "noremap <leader>b :CtrlPBuffer<CR>
 
 "==============================================================================
