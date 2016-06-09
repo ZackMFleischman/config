@@ -71,6 +71,8 @@ nnoremap <S-TAB> <TAB>
 " Print filename
 nnoremap <leader>L :echo expand('%:p')<CR>
 
+" Error Windos
+nnoremap <leader>E :Errors<CR>
 
 "------
 " Marks
@@ -506,13 +508,13 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " Syntastic
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Jedi
 "let g:jedi#use_splits_not_buffers = "top"
