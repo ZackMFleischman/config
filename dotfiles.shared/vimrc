@@ -455,10 +455,10 @@ endif
 "================
 
 " Vundle
-noremap <leader>al :PluginList<CR>      " pulls up plugins
-noremap <leader>ai :PluginInstall<CR>   " installs plugins
-noremap <leader>ac :PluginClean<CR>     " cleans plugins
-noremap <leader>as :PluginSearch!<CR>   " searches plugins
+noremap <leader>AL :PluginList<CR>      " pulls up plugins
+noremap <leader>AI :PluginInstall<CR>   " installs plugins
+noremap <leader>AC :PluginClean<CR>     " cleans plugins
+noremap <leader>AS :PluginSearch!<CR>   " searches plugins
 
 " Rainbow Parens
 let g:rainbow_active = 1
@@ -531,9 +531,9 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
 " Ags
-noremap <leader>x :Ags -C 0 <cword> /fierce/<CR>
-noremap <leader>X :Ags -C 3 <cword> /fierce/<CR>
-noremap <leader>a : /fierce/<C-b>Ags -C 0 
+noremap <leader>x :Ags -C 0 <cword> /savvy/<CR>
+noremap <leader>X :Ags -C 3 <cword> /savvy/<CR>
+noremap <leader>a : /savvy/<C-b>Ags -C 0 ""<left>
 noremap <leader>z :AgsQuit<CR>
 noremap <leader>Z :AgsLast<CR>
 " Let 'ot' open in a new tab
@@ -647,7 +647,7 @@ map <leader>0 :tabe %<CR><leader><TAB>:q<CR>
 
 " Paste at the end of the line
 nmap <leader>P A<ESC>p
-nmap <leader>A A<space><ESC>p
+"nmap <leader>A A<space><ESC>p
 
 " Navigate to specific classes
 "nnoremap <leader>gc :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class CustomerProfile(<CR>:noh<CR>zt2k2j
