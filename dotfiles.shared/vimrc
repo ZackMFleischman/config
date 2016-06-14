@@ -534,8 +534,10 @@ let g:reprocessed_map_keys = 0
 noremap <leader>x :Ags -C 0 <cword> /savvy/<CR>
 noremap <leader>X :Ags -C 3 <cword> /savvy/<CR>
 noremap <leader>a : /savvy/<C-b>Ags -C 0 ""<left>
+noremap <leader>AO : /savvy/<C-b>Ags -C 0 "class a.*"<left>
 noremap <leader>z :AgsQuit<CR>
 noremap <leader>Z :AgsLast<CR>
+let g:ags_winheight = '15'
 " Let 'ot' open in a new tab
 autocmd FileType agsv nnoremap <buffer> ot
   \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
@@ -654,6 +656,8 @@ nmap <leader>P A<ESC>p
 "nnoremap <leader>gp :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/my/models/__init__.py<CR> /class Person(<CR>:noh<CR>zt2k2j
 "nnoremap <leader>ga :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/api/models.py<CR> /class APIOrder(<CR>:noh<CR>zt2k2j
 "nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
+nnoremap <leader>gs :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/common.py<CR>
+nnoremap <leader>go :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/oscar.py<CR>
 
 """""""""""""""""
 " Tags

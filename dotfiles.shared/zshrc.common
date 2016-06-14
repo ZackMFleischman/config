@@ -80,8 +80,9 @@ alias pydocs='pydoc -p 9999'
 
 # Heroku
 alias h='heroku'
-alias hp='git push heroku master'
+alias hp='git push heroku `git rev-parse --abbrev-ref HEAD`:master'
 alias hm='heroku run python manage.py migrate' # Migrate the remote apps Django database
+alias hs='heroku run python manage.py shell
 
 # Git Shortcuts
 alias d='git difftool'
@@ -102,7 +103,7 @@ alias lx='gitlog'
 alias lxdate='gitlogdate'
 alias gf='git fetch'
 alias r='git pull --rebase'
-alias p='git push'
+alias p='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias c='git commit -am'
 alias u='git pull'
 alias has='git branch --contains'

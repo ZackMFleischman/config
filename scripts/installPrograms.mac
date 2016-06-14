@@ -5,6 +5,7 @@ echo ""
 echo "Installing command line programs..."
 binaries=(
     git
+    sdl
     graphicsmagick
     gpg
     rename
