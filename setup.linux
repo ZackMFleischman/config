@@ -30,7 +30,7 @@ echo ""
 echo "Installing my scripts..."
 echo "------------------------"
 if ! [ -d ~/repos/scripts ]; then
-    git clone git@github.com:zFleischman/scripts.git ~/repos/scripts
+    git clone git@github.com:ZackMFleischman/scripts.git ~/repos/scripts
 else
     echo "My Scripts already installed."
 fi

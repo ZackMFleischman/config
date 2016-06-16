@@ -20,5 +20,5 @@ fi
 # Backup Script
 alias bu='bp;backup.linux'
 
-# Growl notifier (from vagrant linux box)
-alias g='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null zfleischman@$GROWLR_IP /Users/zfleischman/repos/scripts/osx/growl 2> /dev/null'
+# **BROKEN** Growl notifier (from vagrant linux box) **BROKEN**
+#alias g='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null zfleischman@$GROWLR_IP /Users/zfleischman/repos/scripts/osx/growl 2> /dev/null'

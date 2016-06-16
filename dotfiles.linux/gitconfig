@@ -1,8 +1,8 @@
 [color]
 	ui = auto
 [user]
-	email = zFleischman@counsyl.com
-	name = Zack Fleischman
+	email = Zack M Fleischman@gmail.com
+	name = Zack M Fleischman
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
