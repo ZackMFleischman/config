@@ -350,6 +350,7 @@ noremap <leader>; :nohlsearch<CR>
 
 " Replace text
 noremap <leader>R :%s//g<left><left>
+nnoremap <leader>r *#cgn
 
 "-----------
 " Formatting
