@@ -538,9 +538,11 @@ noremap <leader>AO : /savvy/<C-b>Ags -C 0 "class a.*"<left>
 noremap <leader>z :AgsQuit<CR>
 noremap <leader>Z :AgsLast<CR>
 let g:ags_winheight = '15'
+" Close it right away after selecting and center.
+autocmd FileType agsv map <buffer> <CR> xuzz
 " Let 'ot' open in a new tab
-autocmd FileType agsv nnoremap <buffer> ot
-  \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
+autocmd FileType agsv map <buffer> ot
+  \ :exec 'tab split ' . ags#filePath(line('.'))<CR><leader><TAB>:AgsQuit<CR><leader><TAB>
 " Make it play nice with rainbow parens extension
 let g:rainbow_conf = {
       \ 'separately' : { 'agsv' : 0, 'agse' : 0 }
