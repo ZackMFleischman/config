@@ -600,6 +600,10 @@ noremap <leader>f :CtrlP<CR>
 noremap <leader>m :CtrlPMRU<CR>
 "noremap <leader>b :CtrlPBuffer<CR>
 
+" Vim Expand Settings
+vmap v <Plug>(expand_region_expand)
+vmap <leader>v <Plug>(expand_region_shrink)
+
 "==============================================================================
 " After the fact settings
 "==============================================================================
@@ -679,3 +683,6 @@ nnoremap ≤ :call ShiftTabLeft()<CR>
 nnoremap ≥ :call ShiftTabRight()<CR>
 noremap <C-b> gT
 noremap <C-n> gt
+
+
+

@@ -81,6 +81,9 @@ Plugin 'hynek/vim-python-pep8-indent'
 " Vim + Tmux pane switching
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Vim Visual Mode Expand
+Plugin 'terryma/vim-expand-region'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
