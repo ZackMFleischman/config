@@ -84,6 +84,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Vim Visual Mode Expand
 Plugin 'terryma/vim-expand-region'
 
+" Show dirty lines in the gutter
+Plugin 'airblade/vim-gitgutter'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line

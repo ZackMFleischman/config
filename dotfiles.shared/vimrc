@@ -84,6 +84,8 @@ noremap M m
 nnoremap ' `
 nnoremap ` '
 
+" Update time
+set updatetime=250
 
 "----------------
 " Persistent Undo
