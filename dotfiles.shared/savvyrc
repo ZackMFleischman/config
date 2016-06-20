@@ -1,18 +1,41 @@
-################
+#########################
 # Savvy Specific Commands
-################
+#########################
+
+# Edit this file
 alias es='vim ~/.savvyrc'
-alias o='cd /oscar'
+
+# Directory shortcuts
+alias f='cd ~/repos/savvy/fierce' # Project root directory
+alias o='cd /oscar' # Go to django oscar 
+
+# Install local reqs
 alias pil='pip install -r requirements/local.txt'
+
+# Load my tmux session
 alias sa='~/repos/config/tmux_sessions/savvy.session'
+
+# z == manage.py
 alias z='python ~/repos/savvy/fierce/manage.py'
-alias f='cd ~/repos/savvy/fierce'
-alias de='deactivate'
-alias dev='workon dev'
+
+# Django Settings
 alias os='vim ~/repos/savvy/fierce/config/settings/common.py'
+
+# venv
+alias dev='workon dev'
+alias de='deactivate'
 alias devbin='dev;cd $VIRTUAL_ENV/bin'
 alias prod='workon prod'
 alias prodbin='prod;cd $VIRTUAL_ENV/bin'
+
+# Heroku Database management
 alias dbpull='heroku pg:pull DATABASE_URL fierce'
 alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
+
+# Testing
+alias ta='f;py.test'
+alias tq='f;py.test -m "not test_plus"'
+alias t='py.test'
+
+# Start in fierce directory and enable dev virtual environment
 f;workon dev
