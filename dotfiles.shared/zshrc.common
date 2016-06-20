@@ -129,6 +129,7 @@ alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resum
 alias tj='vim -t' # Vim Tag Jump
 alias bike='python ~/repos/BikeCommuter/BikeCommute.py' # Bike Commute app
 alias tags='f;ctags -R .' # Generate tags for a git project
+alias g="growlnotify \"Sir, I'm Finished\" -m ''"
 
 
 #################
