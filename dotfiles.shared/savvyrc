@@ -37,5 +37,8 @@ alias ta='f;py.test'
 alias tq='f;py.test -m "not test_plus"'
 alias t='py.test'
 
+# Test Coverage
+alias cov='f;coverage run manage.py test;coverage html;open htmlcov/index.html'
+
 # Start in fierce directory and enable dev virtual environment
 f;workon dev
