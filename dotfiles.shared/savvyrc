@@ -36,9 +36,10 @@ alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
 alias ta='f;py.test'
 alias tq='f;py.test -m "not test_plus"'
 alias t='py.test'
+alias tc='py.test --create-db'
 
 # Test Coverage
-alias cov='f;coverage run manage.py test;coverage html;open htmlcov/index.html'
+alias cov='f;dropdb test_fierce 2> /dev/null;coverage run manage.py test;coverage html;open htmlcov/index.html'
 
 # Start in fierce directory and enable dev virtual environment
 f;workon dev
