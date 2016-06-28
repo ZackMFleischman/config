@@ -395,17 +395,6 @@ set history=1000
 set wildmenu
 set wildmode=list:longest
 
-" Tabs and Indents
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set backspace=2
-set expandtab   " use spaces instead of tabs.
-set smarttab    " let's tab key insert 'tab stops', and bksp deletes tabs.
-set shiftround  " tab / shifting moves to closest tabstop.
-set autoindent  " Match indents on new lines.
-set cindent     " Intellegently dedent / indent new lines based on rules.
-
 " Show Whitespace
 nmap <leader>\ :set list!<CR>
 set list
@@ -687,5 +676,17 @@ nnoremap ≥ :call ShiftTabRight()<CR>
 noremap <C-b> gT
 noremap <C-n> gt
 
-
+" Inserting Spaces vs Tabs
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=4    " Indents will have a width of 4
+set softtabstop=4   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
+set smarttab    " let's tab key insert 'tab stops', and bksp deletes tabs.
+set backspace=2
+set shiftround  " tab / shifting moves to closest tabstop.
+set autoindent  " Match indents on new lines.
+set cindent     " Intellegently dedent / indent new lines based on rules.
 

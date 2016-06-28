@@ -91,7 +91,6 @@ alias ddd='git diff HEAD --color=always | cat'
 alias dm='git difftool master'
 alias s='git status'
 alias br='git branch -r'
-alias sl='git stash list | awk '"'"' BEGIN { print "" } {print "",$0} END { print "" }'"'"''
 alias l='gitlog -10'
 alias l2='gitlog -20'
 alias l3='gitlog -30' 
@@ -116,10 +115,11 @@ alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 alias cm='git commit --author="Zack M Fleischman <ZackMFleischman@gmail.com>"' # Commit as my personal account
 alias aa='git commit --amend --author "Zack M Fleischman <ZackMFleischman@gmail.com>" --no-edit' # Ammend last commit with my personal email as author
-alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | grep --color=always -i' # Search git log
+#alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | grep --color=always -i' # Search git log
 alias mm='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout master; git pull; git checkout $current_branch; git merge master)' # Merge current branch with master
 
 # Misc
+alias e='vim'
 alias ll='ls -la'
 alias pp='prettyprint'
 alias x='chmod 755' # Grant executable permissions

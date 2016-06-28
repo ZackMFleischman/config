@@ -8,6 +8,7 @@ alias es='vim ~/.savvyrc'
 # Directory shortcuts
 alias f='cd ~/repos/savvy/fierce' # Project root directory
 alias o='cd /oscar' # Go to django oscar 
+alias gd='cd ~/repos/savvy/designer'
 
 # Install local reqs
 alias pil='pip install -r requirements/local.txt'
@@ -39,7 +40,8 @@ alias t='py.test'
 alias tc='py.test --create-db'
 
 # Test Coverage
-alias cov='f;dropdb test_fierce 2> /dev/null;coverage run manage.py test;coverage html;open htmlcov/index.html'
+alias cov='f;tc --cov-report html --cov=.;open htmlcov/index.html;g'
+alias covq='f;t --cov-report html --cov=.;open htmlcov/index.html;g'
 
 # Start in fierce directory and enable dev virtual environment
 f;workon dev
