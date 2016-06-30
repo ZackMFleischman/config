@@ -130,12 +130,13 @@ alias tj='vim -t' # Vim Tag Jump
 alias bike='python ~/repos/BikeCommuter/BikeCommute.py' # Bike Commute app
 alias tags='f;ctags -R .' # Generate tags for a git project
 alias g='growl'
+alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
 
 #################
 # Servers Aliases
 #################
-alias bro='ssh -i ~/.ssh/zack-bro-your-bros-ssh-keys.pem ubuntu@zack-dev.broyourbros.com'
+#alias bro='ssh -i ~/.ssh/zack-bro-your-bros-ssh-keys.pem ubuntu@zack-dev.broyourbros.com'
 
 
 ################

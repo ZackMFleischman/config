@@ -351,8 +351,12 @@ noremap <leader>T :source ~/.vimrc<CR>                 " Apply .vimrc
 noremap <leader>; :nohlsearch<CR>
 
 " Replace text
-noremap <leader>R :%s//g<left><left>
+noremap <leader>R :%s//<left>
 nnoremap <leader>r *#cgn
+
+" Quickly execute macro
+nnoremap Q @q
+vnoremap Q :normal @q<CR>
 
 "-----------
 " Formatting
@@ -689,4 +693,3 @@ set backspace=2
 set shiftround  " tab / shifting moves to closest tabstop.
 set autoindent  " Match indents on new lines.
 set cindent     " Intellegently dedent / indent new lines based on rules.
-
