@@ -137,3 +137,32 @@ map -modes=n,v <leader>S <C-z>*n<Esc>
 map -modes=n,v H <C-z>~<Esc>
 map -modes=n,v L <C-z>`<Esc>
 
+""""""""""""""""""
+" Quick Marks
+""""""""""""""""""
+" Staples
+qmark g https://inbox.google.com/?pli=1
+qmark e https://twitter.com/ZackMFleischman
+qmark d http://www.dumbingofage.com/
+qmark q http://questionablecontent.net/
+qmark x http://xkcd.com/
+qmark f https://www.facebook.com/
+qmark r https://www.reddit.com/
+
+" Coding related
+qmark t http://127.0.0.1:8000/
+qmark D http://127.0.0.1:8000/accounts/login/?next=/dashboard/
+qmark s https://github.com/SavvySociety/fierce
+qmark w https://waffle.io/SavvySociety/fierce
+qmark E https://app.getsentry.com/savvy-sosciety/
+qmark L https://sasha-fierce.herokuapp.com/basket/
+qmark O https://groups.google.com/forum/#!forum/django-oscar
+qmark P http://127.0.0.1:8000/catalogue/james-swirl-jones_5/
+qmark S http://www.savvysociety.co/
+qmark T https://sasha-fierce.herokuapp.com/
+qmark W https://playasophy.slack.com/messages/general/team/zack/
+qmark c https://dashboard.stripe.com/test/logs/overview
+qmark i https://github.com/SavvySociety/fierce/issues
+qmark l http://127.0.0.1:8000/checkout/payment-details/
+qmark o http://django-oscar.readthedocs.io/en/releases-1.1/index.html
+qmark p https://github.com/SavvySociety/fierce/pulls
