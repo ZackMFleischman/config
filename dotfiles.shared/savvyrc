@@ -6,9 +6,10 @@
 alias es='vim ~/.savvyrc'
 
 # Directory shortcuts
-alias f='cd ~/repos/savvy/fierce' # Project root directory
-alias o='cd /oscar' # Go to django oscar 
+alias go='cd /oscar'
+alias gf='cd ~/repos/savvy/fierce'
 alias gd='cd ~/repos/savvy/designer'
+alias f='gd' # Current project
 
 # Install local reqs
 alias pil='pip install -r requirements/local.txt'
