@@ -1,0 +1,44 @@
+#!/bin/bash
+
+tmux start-server
+
+SESSION_NAME="designer"
+if [[ ! -z "$TMUX" ]] || [[ ! -z "$TMUX_PANE" ]]; then
+    echo "Already inside a tmux session!"
+    exit 1
+fi
+
+# If session already exists, do nothing.
+tmux -q has-session -t "$SESSION_NAME" > /dev/null
+if [ $? -eq 0 ]; then
+    tmux attach -t "$SESSION_NAME"
+    exit 0
+fi
+
+# Create the new session with the first window named "zsh"
+tmux new-session -d -s "$SESSION_NAME" -n "zsh"
+tmux send-keys -t "$SESSION_NAME" 'b' Enter 
+tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
+
+# Window: zsh2
+tmux neww -t "$SESSION_NAME" -n "vim"
+tmux send-keys -t "$SESSION_NAME" 'vim' Enter 
+
+# Window: ipython
+tmux neww -t "$SESSION_NAME" -n "ipython"
+tmux send-keys -t "$SESSION_NAME" 'ipython' Enter 
+
+# Window: simple server
+tmux neww -t "$SESSION_NAME" -n "server"
+tmux send-keys -t "$SESSION_NAME" 'http-server -p 3000 --cors' Enter 
+
+# Window: ping
+tmux neww -t "$SESSION_NAME" -n "ping"
+tmux send-keys -t "$SESSION_NAME" 'ping google.com' Enter 
+
+
+# Select first window
+tmux selectw -t "zsh"
+
+# Attach to it
+tmux -2 attach -t "$SESSION_NAME"

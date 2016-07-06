@@ -16,6 +16,7 @@ alias pil='pip install -r requirements/local.txt'
 
 # Load my tmux session
 alias sa='~/repos/config/tmux_sessions/savvy.session'
+alias des='~/repos/config/tmux_sessions/designer.session'
 
 # z == manage.py
 alias z='python ~/repos/savvy/fierce/manage.py'

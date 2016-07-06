@@ -354,6 +354,9 @@ noremap <leader>; :nohlsearch<CR>
 noremap <leader>R :%s//<left>
 nnoremap <leader>r *#cgn
 
+" Got to insert mode at matching tab level of line above.
+nnoremap <leader>I ddk0o
+
 " Quickly execute macro
 nnoremap Q @q
 vnoremap Q :normal @q<CR>
@@ -584,6 +587,7 @@ let g:ctrlp_prompt_mappings = {
   \ }
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore "\.git$\|\.hg$\|\.oh-my-zsh$\|\.svn$" -g ""'
+let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat ~/.ctrlpignore`"'
 
 "let g:ctrlp_custom_ignore = '.git'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
