@@ -55,6 +55,7 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.css :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
 
 " Navigate back a file
 noremap <leader>` <C-^>
@@ -530,10 +531,10 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
 " Ags
-noremap <leader>x :Ags -C 0 <cword> /savvy/<CR>
-noremap <leader>X :Ags -C 3 <cword> /savvy/<CR>
-noremap <leader>a : /savvy/<C-b>Ags -C 0 ""<left>
-noremap <leader>AO : /savvy/<C-b>Ags -C 0 "class a.*"<left>
+noremap <leader>x :Ags -C 0 <cword> /designer/<CR>
+noremap <leader>X :Ags -C 3 <cword> /designer/<CR>
+noremap <leader>a : /designer/<C-b>Ags -C 0 ""<left>
+noremap <leader>AO : /designer/<C-b>Ags -C 0 "class a.*"<left>
 noremap <leader>z :AgsQuit<CR>
 noremap <leader>Z :AgsLast<CR>
 let g:ags_winheight = '15'
