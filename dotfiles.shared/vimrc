@@ -40,6 +40,10 @@ noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 " Custom Settings
 "================
 
+" Autoreload on file change.
+set autoread
+au CursorHold,CursorHoldI * checktime
+
 " Use OSX clipboard
 set clipboard=unnamed
 
