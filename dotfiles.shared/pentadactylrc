@@ -165,4 +165,4 @@ qmark c https://dashboard.stripe.com/test/logs/overview
 qmark i https://github.com/SavvySociety/fierce/issues
 qmark l http://127.0.0.1:8000/checkout/payment-details/
 qmark o http://django-oscar.readthedocs.io/en/releases-1.1/index.html
-qmark p https://github.com/SavvySociety/fierce/pulls
+qmark p https://github.com/SavvySociety/designer/pulls

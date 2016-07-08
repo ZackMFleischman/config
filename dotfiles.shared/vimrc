@@ -79,6 +79,12 @@ nnoremap <leader>L :echo expand('%:p')<CR>
 " Error Windos
 nnoremap <leader>E :Errors<CR>
 
+"-------
+" Macros
+"-------
+" Escape Character: 
+let @p='yoContext.Log.dumpVar(pa, "pa");'
+
 "------
 " Marks
 "------

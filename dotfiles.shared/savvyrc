@@ -11,6 +11,9 @@ alias gf='cd ~/repos/savvy/fierce'
 alias gd='cd ~/repos/savvy/designer'
 alias f='gd' # Current project
 
+# New Javascript file from template
+alias newjs='~/repos/savvy/designer/utility/CreateNewJavascriptFile/createJSFile'
+
 # Install local reqs
 alias pil='pip install -r requirements/local.txt'
 

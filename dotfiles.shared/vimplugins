@@ -87,6 +87,9 @@ Plugin 'terryma/vim-expand-region'
 " Show dirty lines in the gutter
 Plugin 'airblade/vim-gitgutter'
 
+" Javascript tag support 
+Plugin 'ternjs/tern_for_vim'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
