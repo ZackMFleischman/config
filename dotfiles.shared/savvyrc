@@ -9,6 +9,7 @@ alias es='vim ~/.savvyrc'
 alias go='cd /oscar'
 alias gf='cd ~/repos/savvy/fierce'
 alias gd='cd ~/repos/savvy/designer'
+alias sc='cd ~/repos/savvy/designer/js/scripts'
 alias f='gd' # Current project
 
 # New Javascript file from template
