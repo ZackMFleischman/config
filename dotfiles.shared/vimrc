@@ -206,6 +206,10 @@ endif
 nnoremap zj :set foldlevel=0<CR>zz
 nnoremap zk :set foldlevel=1<CR>zz
 nnoremap zl :set foldlevel=99<CR>zz
+nnoremap zo zO
+nnoremap zO zo
+nnoremap zu zj
+nnoremap zi zk
 
 " Unfold everything on window open
 :autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
@@ -447,6 +451,9 @@ set t_Co=256
 
 " Allow the cursor to go anywhere in visual block mode.
 set virtualedit+=block
+
+" Mouse Scrolling
+set mouse=nicr
 
 " Set relative line numbers in visual mode.
 nnoremap <silent> v :<C-u>set rnu<CR>v
