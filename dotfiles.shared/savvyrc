@@ -5,6 +5,9 @@
 # Edit this file
 alias es='vim ~/.savvyrc'
 
+# Add to the PATH
+export PATH="$PATH:$HOME/repos/savvy/designer/utility"
+
 # Directory shortcuts
 alias go='cd /oscar'
 alias gf='cd ~/repos/savvy/fierce'
