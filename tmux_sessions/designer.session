@@ -20,22 +20,21 @@ tmux new-session -d -s "$SESSION_NAME" -n "zsh"
 tmux send-keys -t "$SESSION_NAME" 'b' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
 
-# Window: zsh2
-tmux neww -t "$SESSION_NAME" -n "vim"
-tmux send-keys -t "$SESSION_NAME" 'vim' Enter 
+# Window: node
+tmux neww -t "$SESSION_NAME" -n "babylon"
+tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/Babylon.js' Enter 
 
-# Window: ipython
-tmux neww -t "$SESSION_NAME" -n "ipython"
-tmux send-keys -t "$SESSION_NAME" 'ipython' Enter 
+# Window: node
+tmux neww -t "$SESSION_NAME" -n "node"
+tmux send-keys -t "$SESSION_NAME" 'node' Enter 
+
+# Window: grunt
+tmux neww -t "$SESSION_NAME" -n "grunt"
+tmux send-keys -t "$SESSION_NAME" 'grunt' Enter 
 
 # Window: simple server
 tmux neww -t "$SESSION_NAME" -n "server"
 tmux send-keys -t "$SESSION_NAME" 'http-server -p 3000 --cors' Enter 
-
-# Window: ping
-tmux neww -t "$SESSION_NAME" -n "ping"
-tmux send-keys -t "$SESSION_NAME" 'ping google.com' Enter 
-
 
 # Select first window
 tmux selectw -t "zsh"
