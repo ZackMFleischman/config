@@ -210,6 +210,7 @@ nnoremap zo zO
 nnoremap zO zo
 nnoremap zu zj
 nnoremap zi zk
+nnoremap zM M
 
 " Unfold everything on window open
 :autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))

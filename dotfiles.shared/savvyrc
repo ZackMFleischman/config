@@ -8,11 +8,18 @@ alias es='vim ~/.savvyrc'
 # Add to the PATH
 export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 
+# Designer Repo shortcuts
+alias fo='postCharmObj'
+
+# Open design tool in Chrome
+alias gt='ch "http://127.0.0.1:3000/"'
+
 # Directory shortcuts
 alias go='cd /oscar'
 alias gf='cd ~/repos/savvy/fierce'
 alias gd='cd ~/repos/savvy/designer'
 alias sc='cd ~/repos/savvy/designer/js/scripts'
+alias charms='cd ~/repos/savvy/designer/assets/charms'
 alias f='gd' # Current project
 
 # New Javascript file from template
