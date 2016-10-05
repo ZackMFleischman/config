@@ -90,6 +90,9 @@ Plugin 'airblade/vim-gitgutter'
 " Javascript tag support 
 Plugin 'ternjs/tern_for_vim'
 
+" Typescript Syntax
+Plugin 'leafgarland/typescript-vim'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
