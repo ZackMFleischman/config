@@ -1,0 +1,33 @@
+# Scrolling
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+
+# Close tab
+map d removeTab
+
+# Move tabs left and right
+map < moveTabLeft
+map > moveTabRight
+
+# Next/Previous Tabs
+unmap r
+map e previousTab
+map r nextTab
+
+# Reload
+map R reload
+
+# Back and Forward
+map w goBack
+map W goForward
+
+" Yanking
+unmap yy
+unmap yt
+map y copyCurrentUrl
+
+# Go to Mark with 'M'
+map M Marks.activateGotoMode
+
+# Reopen last tab
+map u restoreTab
