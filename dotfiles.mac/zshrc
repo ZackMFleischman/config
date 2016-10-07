@@ -20,6 +20,9 @@ alias vlc='open -a /Applications/VLC.app'
 # Mac Specific Command Aliases
 ##############################
 
+# Kill finder
+alias kf='killall -KILL Finder'
+
 # Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 

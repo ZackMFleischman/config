@@ -1,6 +1,17 @@
 # Scrolling
 map <c-d> scrollPageDown
 map <c-u> scrollPageUp
+map v scrollPageDown
+map c scrollPageUp
+map j scrollPageDown
+map k scrollPageUp
+map J scrollDown
+map K scrollUp
+
+map z visitPreviousTab
+
+map <a-d> closeOtherTabs
+
 
 # Close tab
 map d removeTab
@@ -13,9 +24,11 @@ map > moveTabRight
 unmap r
 map e previousTab
 map r nextTab
+map E previousTab
+map R nextTab
 
 # Reload
-map R reload
+map q reload
 
 # Back and Forward
 map w goBack
@@ -27,7 +40,25 @@ unmap yt
 map y copyCurrentUrl
 
 # Go to Mark with 'M'
+unmap `
 map M Marks.activateGotoMode
 
 # Reopen last tab
 map u restoreTab
+
+map l LinkHints.activateModeToOpenInNewForegroundTab
+
+map D closeTabsOnRight
+
+unmap t 
+map t Vomnibar.activateInNewTab
+
+
+# SEARCH COMPLETION
+#w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
+#l: http://www.google.com/search?q=%s&btnI I'm feeling lucky...
+#y: http://www.youtube.com/results?search_query=%s Youtube
+#m: https://www.google.com/maps?q=%s Google maps
+#d: https://www.google.com/maps/dir/988+Franklin+Street,+Oakland,+CA+94607/%s Directions
+#a: http://www.amazon.com/s/?field-keywords=%s Amazon
+#r: https://www.yelp.com/search?find_desc=%s&find_loc=988+Franklin+St%2C+Oakland%2C+CA&ns=1 Yelp
