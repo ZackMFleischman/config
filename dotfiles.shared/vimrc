@@ -205,6 +205,7 @@ endif
 " Key Maps
 nnoremap zj :set foldlevel=0<CR>zz
 nnoremap zk :set foldlevel=1<CR>zz
+nnoremap zK :set foldlevel=2<CR>zz
 nnoremap zl :set foldlevel=99<CR>zz
 nnoremap zo zO
 nnoremap zO zo
@@ -535,11 +536,10 @@ let g:tagbar_autoclose = 1
 " Syntastic
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_javascript_checkers = ['jshint']
 
 " Jedi
 "let g:jedi#use_splits_not_buffers = "top"
