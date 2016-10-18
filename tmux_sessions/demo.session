@@ -1,0 +1,31 @@
+#!/bin/bash
+
+tmux start-server
+
+SESSION_NAME="demo"
+if [[ ! -z "$TMUX" ]] || [[ ! -z "$TMUX_PANE" ]]; then
+    echo "Already inside a tmux session!"
+    exit 1
+fi
+
+tmux kill-server -t "$SESSION_NAME"
+
+# If session already exists, do nothing.
+tmux -q has-session -t "$SESSION_NAME" > /dev/null
+if [ $? -eq 0 ]; then
+    tmux attach -t "$SESSION_NAME"
+    exit 0
+fi
+
+# Start a new session and run the server
+tmux new-session -d -s "$SESSION_NAME" -n "server"
+tmux send-keys -t "$SESSION_NAME" 'http-server -p 3000 --cors' Enter 
+
+# Checkout the branch, pull it, and run the demo
+tmux neww -t "$SESSION_NAME" -n "zsh"
+tmux send-keys -t "$SESSION_NAME" 'git checkout AlexaDemoBranch' Enter 
+tmux send-keys -t "$SESSION_NAME" 'git pull' Enter 
+tmux send-keys -t "$SESSION_NAME" 'ch http://127.0.0.1:3000' Enter 
+
+# Attach to it
+tmux -2 attach -t "$SESSION_NAME"

@@ -67,7 +67,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 
 " Autotags (recompiles c-tags)
-Plugin 'craigemery/vim-autotag'
+" Plugin 'craigemery/vim-autotag'
 
 " YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
 Plugin 'Valloric/YouCompleteMe'
@@ -88,7 +88,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'airblade/vim-gitgutter'
 
 " Javascript tag support 
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 
 " Typescript Syntax
 Plugin 'leafgarland/typescript-vim'

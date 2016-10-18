@@ -418,6 +418,7 @@ set number
 " Disable errorbells
 set visualbell
 set t_vb=
+set noerrorbells
 
 " History Count
 set history=1000
@@ -642,7 +643,7 @@ vmap <leader>v <Plug>(expand_region_shrink)
 " Color Column at 80 chars¬
 "-------------------------
 set colorcolumn=+1
-let &colorcolumn=join(range(80,999),",")
+let &colorcolumn=join(range(100,999),",")
 highlight ColorColumn ctermbg=235
 
 "--------------

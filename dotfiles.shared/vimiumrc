@@ -34,7 +34,7 @@ map q reload
 map w goBack
 map W goForward
 
-" Yanking
+# Yanking
 unmap yy
 unmap yt
 map y copyCurrentUrl
@@ -46,13 +46,15 @@ map M Marks.activateGotoMode
 # Reopen last tab
 map u restoreTab
 
-map l LinkHints.activateModeToOpenInNewForegroundTab
+# Open new tabs
+map F LinkHints.activateModeToOpenInNewForegroundTab
+map l LinkHints.activateModeToOpenInNewTab
+map L LinkHints.activateModeWithQueue
 
 map D closeTabsOnRight
 
 unmap t 
 map t Vomnibar.activateInNewTab
-
 
 # SEARCH COMPLETION
 #w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
