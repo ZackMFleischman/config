@@ -8,7 +8,7 @@ if [[ ! -z "$TMUX" ]] || [[ ! -z "$TMUX_PANE" ]]; then
     exit 1
 fi
 
-tmux kill-server -t "$SESSION_NAME"
+tmux kill-session -t "$SESSION_NAME"
 
 # If session already exists, do nothing.
 tmux -q has-session -t "$SESSION_NAME" > /dev/null
