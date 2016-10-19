@@ -64,5 +64,9 @@ alias tc='py.test --create-db'
 alias cov='f;tc --cov-report html --cov=.;open htmlcov/index.html;g'
 alias covq='f;t --cov-report html --cov=.;open htmlcov/index.html;g'
 
+# Gource
+alias rungource='gource -1000x1000 -a 1 -c 2.75 --font-size 20 .'
+alias strypesgource='gource -608x384 -a 1 --title "Strypes Design Tool" --logo ~/Desktop/gourceAssets/logo.png --user-image-dir ~/Desktop/gourceAssets --camera-mode track -c 2.75 --font-size 20 --logo-offset 10x10 .'
+
 # Start in fierce directory and enable dev virtual environment
 f;workon dev

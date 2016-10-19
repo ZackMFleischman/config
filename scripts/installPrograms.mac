@@ -28,6 +28,7 @@ binaries=(
     mercurial
     heroku
     preattach-to-user-namespace
+    gource
 )
 brew install ${binaries[@]}
 
