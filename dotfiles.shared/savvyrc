@@ -1,5 +1,5 @@
 #########################
-# Savvy Specific Commands
+# Strypes Specific Commands
 #########################
 
 # Edit this file
@@ -53,6 +53,9 @@ alias prodbin='prod;cd $VIRTUAL_ENV/bin'
 # Heroku Database management
 alias dbpull='heroku pg:pull DATABASE_URL fierce'
 alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
+
+# Query the heroku logs for the number of hits to the home page for all our apps
+alias hh='getNumberOfHerokuHits'
 
 # Testing
 alias ta='f;py.test'
