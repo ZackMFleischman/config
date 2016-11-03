@@ -56,6 +56,7 @@ alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
 
 # Query the heroku logs for the number of hits to the home page for all our apps
 alias hh='getNumberOfHerokuHits'
+alias mh='loop -s 5 monitorHeroku'
 
 # Testing
 alias ta='f;py.test'
