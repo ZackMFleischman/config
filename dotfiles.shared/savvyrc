@@ -41,7 +41,7 @@ alias z='python ~/repos/savvy/fierce/manage.py'
 alias os='vim ~/repos/savvy/fierce/config/settings/common.py'
 
 # Start Server
-alias ss='http-server -p 3000 --cors'
+alias server='http-server -p 3000 --cors'
 
 # venv
 alias dev='workon dev'

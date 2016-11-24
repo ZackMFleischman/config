@@ -16,8 +16,10 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""
 " General Vim Plugins
 """"""""""""""""""""""""
-" Easy Clip (cycle paste and m==cut command)
+" Vim-Repeat: . command works with various plugins (like surround)
 Plugin 'https://github.com/tpope/vim-repeat.git'
+
+" Easy Clip: m==cut command
 Plugin 'https://github.com/svermeulen/vim-easyclip.git' 
 
 " Rainbow Parens Improved
@@ -25,37 +27,29 @@ Plugin 'https://github.com/svermeulen/vim-easyclip.git'
 Plugin 'https://github.com/luochen1990/rainbow.git'
 
 " Ctrl-P (Finding files)
-" Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
 
-" NERD Tree (Tree directory view)
+" NERD Tree: Tree directory view
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 
-" Airline (Status bar)
+" Airline (and theme): Status bar 
 Plugin 'https://github.com/bling/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Fugitive (Git support)
+" Fugitive: Git support
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 
 " Vim Sneak (s to jump)
 Plugin 'justinmk/vim-sneak'
 
 " AG (Silver searcher)
-" Plugin 'https://github.com/rking/ag.vim.git'
 Plugin 'https://github.com/gabesoft/vim-ags'
-
-" Tagbar (Symbols and file structure on the right <leader>o)
-Plugin 'majutsushi/tagbar'
 
 " Syntastic (Syntax highlighting)
 Plugin 'scrooloose/syntastic'
 
 " Surround (surround movement with something)
 Plugin 'tpope/vim-surround'
-
-" (deprecated by YouCompleteMe) Supertab (tab complete everything)
-" Plugin 'ervandew/supertab'
 
 " Awesome Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
@@ -65,9 +59,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Vim Javascript
 Plugin 'pangloss/vim-javascript'
-
-" Autotags (recompiles c-tags)
-" Plugin 'craigemery/vim-autotag'
 
 " YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
 Plugin 'Valloric/YouCompleteMe'
@@ -86,9 +77,6 @@ Plugin 'terryma/vim-expand-region'
 
 " Show dirty lines in the gutter
 Plugin 'airblade/vim-gitgutter'
-
-" Javascript tag support 
-" Plugin 'ternjs/tern_for_vim'
 
 " Typescript Syntax
 Plugin 'leafgarland/typescript-vim'
