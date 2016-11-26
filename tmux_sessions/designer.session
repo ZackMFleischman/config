@@ -17,24 +17,14 @@ fi
 
 # Create the new session with the first window named "zsh"
 tmux new-session -d -s "$SESSION_NAME" -n "zsh"
-tmux send-keys -t "$SESSION_NAME" 'b' Enter 
-tmux send-keys -t "$SESSION_NAME" 'git status' Enter 
 
-# Window: node
+# Window: babylon
 tmux neww -t "$SESSION_NAME" -n "babylon"
 tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/Babylon.js' Enter 
 
-# Window: node
-tmux neww -t "$SESSION_NAME" -n "node"
-tmux send-keys -t "$SESSION_NAME" 'node' Enter 
-
-# Window: grunt
-tmux neww -t "$SESSION_NAME" -n "grunt"
-tmux send-keys -t "$SESSION_NAME" 'grunt' Enter 
-
-# Window: simple server
+# Window: webpack dev server
 tmux neww -t "$SESSION_NAME" -n "server"
-tmux send-keys -t "$SESSION_NAME" 'http-server -p 3000 --cors' Enter 
+tmux send-keys -t "$SESSION_NAME" 'npm run dev' Enter
 
 # Select first window
 tmux selectw -t "zsh"
