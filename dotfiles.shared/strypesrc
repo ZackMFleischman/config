@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 # Directory shortcuts
 alias go='cd /oscar'
 alias gd='cd ~/repos/strypes/designer'
-alias src='cd ~/repos/strypes/designer/js/src'
+alias sc='cd ~/repos/strypes/designer/js/src'
 alias f='gd' # Current project
 
 # Load my tmux session
