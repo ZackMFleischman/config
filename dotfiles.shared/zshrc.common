@@ -231,5 +231,5 @@ calcl () {
 source ~/repos/scripts/util/findfile
 source ~/repos/scripts/util/findstring
 source ~/repos/scripts/util/exportColors
-source ~/.savvyrc
+source ~/.strypesrc
 

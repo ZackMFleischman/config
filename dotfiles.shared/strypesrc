@@ -3,44 +3,27 @@
 #########################
 
 # Edit this file
-alias es='vim ~/.savvyrc'
+alias es='vim ~/.strypesrc'
 
 # Add to the PATH
 export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 
-# Designer Repo shortcuts
-alias fo='postCharmObj'
-
-# Open design tool in Chrome
-alias gt='ch "http://127.0.0.1:3000/"'
-
 # Directory shortcuts
 alias go='cd /oscar'
-alias gf='cd ~/repos/savvy/fierce'
 alias gd='cd ~/repos/strypes/designer'
 alias src='cd ~/repos/strypes/designer/js/src'
 alias f='gd' # Current project
 
-# New Javascript file from template
-alias newjs='~/repos/savvy/designer/utility/CreateNewJavascriptFile/createJSFile'
-alias newjscontext='~/repos/savvy/designer/utility/CreateNewJavascriptFile/createJSContextDependencyFile'
-
-# Install local reqs
-alias pil='pip install -r requirements/local.txt'
-
 # Load my tmux session
-alias sa='~/repos/config/tmux_sessions/savvy.session'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
 
-# z == manage.py
-alias z='python ~/repos/savvy/fierce/manage.py'
+# Open Design Tool in Chrome
+alias gt='ch "http://localhost:8080/"'
 
 # Django Settings
-alias os='vim ~/repos/savvy/fierce/config/settings/common.py'
-
-# Start Server
-alias server='http-server -p 3000 --cors'
+#alias z='python ~/repos/savvy/fierce/manage.py'
+#alias os='vim ~/repos/savvy/fierce/config/settings/common.py'
 
 # venv
 alias dev='workon dev'
@@ -72,4 +55,5 @@ alias rungource='gource -1000x1000 -a 1 -c 2.75 --font-size 20 .'
 alias strypesgource='gource -608x384 -a 1 --title "Strypes Design Tool" --logo ~/Desktop/gourceAssets/logo.png --user-image-dir ~/Desktop/gourceAssets --camera-mode track -c 2.75 --font-size 20 --logo-offset 10x10 .'
 
 # Start in fierce directory and enable dev virtual environment
-f;workon dev
+#f;workon dev
+f
