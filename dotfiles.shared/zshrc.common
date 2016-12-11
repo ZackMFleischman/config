@@ -147,6 +147,8 @@ alias stoptime='ps aux | grep \[s\]leep | awkc 2 | xargs kill'
 alias js='node ~/repl.js'
 alias hi='history'
 alias enhance='python3 ~/repos/neural-enhance/enhance.py'
+alias add='awk "{s+=\$1} END {print s}"'
+
 
 
 #################

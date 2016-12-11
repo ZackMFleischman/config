@@ -487,6 +487,14 @@ noremap <leader>AI :PluginInstall<CR>   " installs plugins
 noremap <leader>AC :PluginClean<CR>     " cleans plugins
 noremap <leader>AS :PluginSearch!<CR>   " searches plugins
 
+" Fugitive
+nnoremap <leader>Gs :Gstatus<CR>
+nnoremap <leader>Gb :Gblame<CR>
+nnoremap <leader>Gc :Gread<CR>
+nnoremap <leader>Gg :Gbrowse<CR>
+nnoremap <leader>Gd :Gdiff<CR>
+
+
 " Rainbow Parens
 let g:rainbow_active = 1
 
@@ -691,6 +699,7 @@ nmap <leader>P A<ESC>p
 "nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
 nnoremap <leader>gs :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/common.py<CR>
 nnoremap <leader>go :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/oscar.py<CR>
+
 
 """""""""""""""""
 " Tags
