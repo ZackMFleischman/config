@@ -4,9 +4,7 @@
 "
 
 "------------------------
-" My Leader Key is Space!
-"------------------------
-" Remap leader to the space bar. Do this before sourcing any mappings
+" My leader to the space bar. Do this before sourcing any mappings
 let mapleader="\<Space>"
 
 "-----------------------
@@ -372,10 +370,16 @@ noremap <leader>; :nohlsearch<CR>
 """"""""""""""
 " Find and replace the word under cursor.
 noremap <leader>r :%s/\<<C-r><C-w>\>//<left>
+
 " Find and replace (blank)
 noremap <leader>R :%s//<left>
+
 " Change and replace (. to repeat)
 noremap <leader>gr *#cgn
+
+" Switch `false` and `true` at the end of a line
+noremap <leader>b :s/ false;$/ TRUE;$/eI<CR>:s/ true;$/ FALSE;$/eI<CR>:s/ TRUE;$/ true;$/eI<CR>:s/ FALSE;$/ false;$/eI<CR>:nohlsearch<CR>$B
+
 """"""""""""""""""
 
 " Got to insert mode at matching tab level of line above.
@@ -607,6 +611,9 @@ if 'VIRTUAL_ENV' in os.environ:
   execfile(activate_this, dict(__file__=activate_this))
 EOF
 
+" Vim-Surround
+" (Shortcut for 'Surround WORD with...')
+nnoremap <leader>S ysiW
 
 " Ctrl-P
 let g:ctrlp_map = ''
