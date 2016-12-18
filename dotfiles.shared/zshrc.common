@@ -148,6 +148,7 @@ alias js='node ~/repl.js'
 alias hi='history'
 alias enhance='python3 ~/repos/neural-enhance/enhance.py'
 alias add='awk "{s+=\$1} END {print s}"'
+alias d3='python -c "import random; print(random.randint(3,18));"'
 
 
 #########################

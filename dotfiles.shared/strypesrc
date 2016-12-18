@@ -13,6 +13,8 @@ alias go='cd /oscar'
 alias gd='cd ~/repos/strypes/designer'
 alias sc='cd ~/repos/strypes/designer/js/src'
 alias f='gd' # Current project
+alias cto='cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
+
 
 # Load my tmux session
 alias des='~/repos/config/tmux_sessions/designer.session'
