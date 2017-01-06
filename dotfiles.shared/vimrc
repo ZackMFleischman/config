@@ -212,7 +212,7 @@ nnoremap zi zk
 nnoremap zM M
 
 " Unfold everything on window open
-:autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+:autocmd BufWinEnter * set foldlevel=99
 
 " Folded Text Colors
 hi Folded ctermfg=18 ctermbg=243
@@ -613,7 +613,8 @@ EOF
 
 " Vim-Surround
 " (Shortcut for 'Surround WORD with...')
-nnoremap <leader>S ysiW
+map <leader>o ysiW`
+map <leader>O ysiW
 
 " Ctrl-P
 let g:ctrlp_map = ''
@@ -690,7 +691,7 @@ nnoremap π A<space><space># nopep8<ESC>^
 "-----------------"
 " Set Breakpoint
 "-----------------"
-nnoremap <leader>sb oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
+"nnoremap <leader>sb oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 
 " Move split into a new tab and then go back (Depends on <leader>TAB mapping)
 map <leader>0 :tabe %<CR><leader><TAB>:q<CR>

@@ -12,7 +12,9 @@ SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | 
 
 # PATH and PYTHONPATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin"
-export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django:$HOME/repos/texts-against-humanity/src"
+
+export TAH_DEBUG=1
 
 
 ####################
@@ -221,7 +223,6 @@ calc () {
 #########################
 # Source External Scripts
 #########################
-source ~/repos/scripts/util/findfile
 source ~/repos/scripts/util/findstring
 source ~/repos/scripts/util/exportColors
 source ~/.strypesrc

@@ -81,6 +81,9 @@ Plugin 'airblade/vim-gitgutter'
 " Typescript Syntax
 Plugin 'leafgarland/typescript-vim'
 
+" Markdown Preview Window
+Plugin 'NBUT-Developers/extra-instant-markdown'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
