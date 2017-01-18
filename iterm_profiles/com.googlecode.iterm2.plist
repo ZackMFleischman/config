@@ -122,12 +122,16 @@
 	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>255 430 606 456 0 0 1440 900 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>414 528 616 174 0 0 1440 878 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1440 143 937 512 1440 60 1080 1898 </string>
+	<string>-1074 318 796 473 -1080 234 1080 1898 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 60 1080 1920 1440 60 1080 1898 </string>
+	<string>-1080 234 1080 1920 -1080 234 1080 1898 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>-1076 1655 650 477 -1080 234 1080 1898 </string>
 	<key>NeverWarnAboutSpaces</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1682,7 +1686,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-17T17:47:51Z</date>
+	<date>2017-01-06T03:02:56Z</date>
 	<key>SUSkippedVersion</key>
 	<string>3.0.0</string>
 	<key>SavePasteHistory</key>
@@ -1732,7 +1736,7 @@
 	<key>WindowStyle</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
-	<string>/-+\~_.</string>
+	<string></string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findRegex_iTerm</key>

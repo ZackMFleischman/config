@@ -130,6 +130,7 @@ alias cm='git commit --author="Zack M Fleischman <ZackMFleischman@gmail.com>"' #
 alias am='git commit --amend --author "Zack M Fleischman <ZackMFleischman@gmail.com>" --no-edit' # Ammend last commit with my personal email as author
 alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | grep --color=always -i' # Search git log
 alias mm='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout master; git pull; git checkout $current_branch; git merge master)' # Merge current branch with master
+alias md='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout develop; git pull; git checkout $current_branch; git merge develop)' # Merge current branch with develop
 
 # Misc
 alias ll='ls -la'
