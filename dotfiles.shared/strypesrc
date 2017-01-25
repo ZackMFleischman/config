@@ -12,6 +12,7 @@ export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 alias go='cd /oscar'
 alias gd='cd ~/repos/strypes/designer'
 alias sc='cd ~/repos/strypes/designer/js/src'
+alias tc='cd ~/repos/strypes/testClient/'
 alias f='gd' # Current project
 alias cto='cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
 
@@ -46,7 +47,7 @@ alias mh='loop -s 5 monitorHeroku'
 alias ta='f;py.test'
 alias tq='f;py.test -m "not test_plus"'
 alias t='py.test'
-alias tc='py.test --create-db'
+#alias tc='py.test --create-db'
 
 # Test Coverage
 alias cov='f;tc --cov-report html --cov=.;open htmlcov/index.html;g'
