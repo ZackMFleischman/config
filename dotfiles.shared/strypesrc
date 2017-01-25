@@ -9,20 +9,25 @@ alias es='vim ~/.strypesrc'
 export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 
 # Directory shortcuts
-alias go='cd /oscar'
-alias gd='cd ~/repos/strypes/designer'
-alias sc='cd ~/repos/strypes/designer/js/src'
-alias tc='cd ~/repos/strypes/testClient/'
-alias f='gd' # Current project
 alias cto='cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
+alias go='cd /oscar'
+alias gb='cd ~/repos/Babylon.js/'
+alias gd='cd ~/repos/strypes/designer'
+alias gs='cd ~/repos/strypes/designer/js/src'
+alias gt='cd ~/repos/strypes/testClient/'
+
+alias f='gd' # Current project
 
 
-# Load my tmux session
+
+# Aliases for my tmux sessions
+alias strypes='~/repos/config/tmux_sessions/strypes.session'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
 
 # Open Design Tool in Chrome
-alias gt='ch "http://localhost:8080/"'
+alias tool='ch "http://localhost:8080/"'
+alias client='ch "http://localhost:3000/"'
 
 # Django Settings
 #alias z='python ~/repos/savvy/fierce/manage.py'
@@ -57,6 +62,6 @@ alias covq='f;t --cov-report html --cov=.;open htmlcov/index.html;g'
 alias rungource='gource -1000x1000 -a 1 -c 2.75 --font-size 20 .'
 alias strypesgource='gource -608x384 -a 1 --title "Strypes Design Tool" --logo ~/Desktop/gourceAssets/logo.png --user-image-dir ~/Desktop/gourceAssets --camera-mode track -c 2.75 --font-size 20 --logo-offset 10x10 .'
 
-# Start in fierce directory and enable dev virtual environment
-#f;workon dev
+############################
+# Navigate to the current project
 f
