@@ -31,8 +31,8 @@ alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
 
 # Open Design Tool in Chrome
-alias tool='ch "http://localhost:8080/"'
-alias client='ch "http://localhost:3000/"'
+alias tool='ch "https://localhost:8080/"'
+alias client='ch "https://localhost:3000/"'
 
 # Django Settings
 #alias z='python ~/repos/savvy/fierce/manage.py'
