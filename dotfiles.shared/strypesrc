@@ -18,7 +18,12 @@ alias gt='cd ~/repos/strypes/testClient/'
 
 alias f='gd' # Current project
 
+# Slack Matt
+alias slack='~/repos/slack-cli/bin/cmd.js'
+alias sm='slack -u "zack" -d @matt -m'
 
+# zack-bot
+export SLACK_TOKEN="xoxb-132630006644-GPrnYkIly5EbK36su07PxkMK" 
 
 # Aliases for my tmux sessions
 alias strypes='~/repos/config/tmux_sessions/strypes.session'
