@@ -22,9 +22,6 @@ alias f='gd' # Current project
 alias slack='~/repos/slack-cli/bin/cmd.js'
 alias sm='slack -u "zack" -d @matt -m'
 
-# zack-bot
-export SLACK_TOKEN="xoxb-132630006644-GPrnYkIly5EbK36su07PxkMK" 
-
 # Aliases for my tmux sessions
 alias strypes='~/repos/config/tmux_sessions/strypes.session'
 alias des='~/repos/config/tmux_sessions/designer.session'
