@@ -15,29 +15,35 @@ if [ $? -eq 0 ]; then
     exit 0
 fi
 
-# New Session &
-# Window: designer
-tmux new-session -d -s "$SESSION_NAME" -n "designer"
+# Designer Tool Windows
+tmux new-session -d -s "$SESSION_NAME" -n "vim_tool"
+tmux send-keys -t "$SESSION_NAME" 'vim' Enter
 
-# Window: designerServer
-tmux neww -t "$SESSION_NAME" -n "designerServer"
+tmux neww -t "$SESSION_NAME" -n "zsh_tool"
+
+tmux neww -t "$SESSION_NAME" -n "server_tool"
 tmux send-keys -t "$SESSION_NAME" 'npm run dev' Enter
 
-# Window: testClientServer
-tmux neww -t "$SESSION_NAME" -n "testClient"
+
+# Test Client Windows
+tmux neww -t "$SESSION_NAME" -n "vim_client"
+tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/strypes/testClient' Enter
+tmux send-keys -t "$SESSION_NAME" 'vim' Enter
+
+tmux neww -t "$SESSION_NAME" -n "zsh_client"
 tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/strypes/testClient' Enter
 
-# Window: testClientServer
-tmux neww -t "$SESSION_NAME" -n "testClientServer"
+tmux neww -t "$SESSION_NAME" -n "server_client"
 tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/strypes/testClient' Enter
 tmux send-keys -t "$SESSION_NAME" 'npm run dev' Enter
 
-# Window: babylon
+
+# Babylon source Window
 tmux neww -t "$SESSION_NAME" -n "babylon"
 tmux send-keys -t "$SESSION_NAME" 'cd /Users/zack/repos/Babylon.js' Enter 
 
 # Select first window
-tmux selectw -t "designer"
+tmux selectw -t "vim_tool"
 
 # Attach to it
 tmux -2 attach -t "$SESSION_NAME"
