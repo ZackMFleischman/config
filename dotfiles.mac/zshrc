@@ -12,7 +12,7 @@ export PATH="$PATH:/usr/local/homebrew/bin"
 
 # Open Mac Apps
 alias fire='open -a /Applications/Firefox.app'
-alias ch='open -a /Applications/Google\ Chrome.app'
+alias chrome='open -a /Applications/Google\ Chrome.app'
 alias ij='open -a /Applications/IntelliJ\ IDEA\ 12.app'
 alias vlc='open -a /Applications/VLC.app'
 

@@ -574,12 +574,27 @@ let g:reprocessed_map_keys = 0
 "nnoremap <leader>2 :PresentCurrentSketch<cr>
 
 " Ags
-noremap <leader>x :Ags -C 0 <cword> /designer/<CR>
-noremap <leader>X :Ags -C 3 <cword> /designer/<CR>
-noremap <leader>a : /designer/<C-b>Ags -C 0 ""<left>
-noremap <leader>AO : /designer/<C-b>Ags -C 0 "class a.*"<left>
+command! -nargs=* -complete=file AgsWrapper call AgsWrapper(<q-args>, '')
+function! AgsWrapper(args, cmd)
+  let projectRoot = system('git rev-parse --show-toplevel')
+  let symlinkRoot = "/" . system('basename ' . projectRoot)
+
+  " If not in a git repo, search from here
+  if v:shell_error > 0
+    execute 'Ags -C 0' a:args
+  else
+    execute 'Ags -C 0' a:args symlinkRoot
+  endif
+endfu!
+
+nnoremap <leader>a :AgsWrapper
+" Search for word under cursor
+nnoremap <leader>x :AgsWrapper <cword><CR>
+" Search for word under visually selected text
+vnoremap <leader>x y:AgsWrapper "<C-R>""<CR>
 noremap <leader>z :AgsQuit<CR>
 noremap <leader>Z :AgsLast<CR>
+
 let g:ags_winheight = '15'
 " Close it right away after selecting and center.
 autocmd FileType agsv map <buffer> <CR> xuzz
@@ -591,12 +606,6 @@ let g:rainbow_conf = {
       \ 'separately' : { 'agsv' : 0, 'agse' : 0 }
       \ }
 
-" Ag
-"noremap <leader>x :Ag <cword>
-"noremap <leader>a : ~/repos/website/counsyl/product<C-b>Ag 
-"noremap <leader>X : ~/repos/website/counsyl/product<C-b>Ag "class "<left>
-"let g:ag_qhandler="botright copen 30"
-"let g:ag_working_path_mode="r"
 
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python3'

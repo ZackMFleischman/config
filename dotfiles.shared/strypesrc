@@ -9,12 +9,13 @@ alias es='vim ~/.strypesrc'
 export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 
 # Directory shortcuts
-alias cto='cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
-alias go='cd /oscar'
-alias gb='cd ~/repos/Babylon.js/'
-alias gd='cd ~/repos/strypes/designer'
-alias gs='cd ~/repos/strypes/designer/js/src'
-alias gt='cd ~/repos/strypes/testClient/'
+alias cto='de;cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
+alias go='de;cd /oscar'
+alias gb='de;cd ~/repos/Babylon.js/'
+alias gd='de;cd ~/repos/strypes/designer'
+alias gs='de;cd ~/repos/strypes/designer/js/src'
+alias gt='de;cd ~/repos/strypes/testClient/'
+alias gh='workon hub;cd ~/repos/strypes/strypes_hub/'
 
 alias f='gd' # Current project
 
@@ -32,12 +33,11 @@ alias tool='ch "https://localhost:8080/"'
 alias client='ch "https://localhost:3000/"'
 
 # Django Settings
-#alias z='python ~/repos/savvy/fierce/manage.py'
+alias z='python ~/repos/strypes/strypes_hub/manage.py'
 #alias os='vim ~/repos/savvy/fierce/config/settings/common.py'
 
 # venv
-alias dev='workon dev'
-alias de='deactivate'
+alias de='deactivate 2> /dev/null'
 alias devbin='dev;cd $VIRTUAL_ENV/bin'
 alias prod='workon prod'
 alias prodbin='prod;cd $VIRTUAL_ENV/bin'
