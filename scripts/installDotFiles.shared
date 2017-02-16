@@ -17,4 +17,3 @@ do
     ln -sfn $PWD/$f ~/.$file
     echo ""
 done
-
