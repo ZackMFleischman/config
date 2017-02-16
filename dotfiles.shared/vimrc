@@ -377,6 +377,11 @@ noremap <leader>R :%s//<left>
 " Change and replace (. to repeat)
 noremap <leader>gr *#cgn
 
+" Find and replace in entire git project
+nnoremap <leader>A :!replacejs 's//'<left><left>
+nnoremap <leader>X :!replacejs 's/<C-r><C-w>//'<left><left>
+vnoremap <leader>X y:!replacejs 's/<C-R>"//'<left><left>
+
 " Switch `false` and `true` at the end of a line
 noremap <leader>b mj:s/ false;$/ TRUE;/eI<CR>:s/ true;$/ FALSE;/eI<CR>:s/ TRUE;$/ true;/eI<CR>:s/ FALSE;$/ false;/eI<CR>:nohlsearch<CR>`j
 
@@ -587,7 +592,7 @@ function! AgsWrapper(args, cmd)
   endif
 endfu!
 
-nnoremap <leader>a :AgsWrapper
+nnoremap <leader>a :AgsWrapper 
 " Search for word under cursor
 nnoremap <leader>x :AgsWrapper <cword><CR>
 " Search for word under visually selected text

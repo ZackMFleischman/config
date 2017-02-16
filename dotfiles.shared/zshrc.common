@@ -32,6 +32,7 @@ ZSH_THEME=burner
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.tmuxinator.zsh
 
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
