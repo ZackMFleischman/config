@@ -29,6 +29,7 @@ binaries=(
     heroku
     preattach-to-user-namespace
     gource
+    ranger
 )
 brew install ${binaries[@]}
 
