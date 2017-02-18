@@ -30,6 +30,7 @@ binaries=(
     preattach-to-user-namespace
     gource
     ranger
+    googler
 )
 brew install ${binaries[@]}
 
