@@ -38,3 +38,6 @@ do
     PWD=$(pwd)
     ln -sfn $PWD/$f ~/.oh-my-zsh/custom/$file
 done
+
+# Install zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions

@@ -29,7 +29,7 @@ ZSH_THEME=burner
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.tmuxinator.zsh
@@ -76,7 +76,6 @@ alias ev='vim ~/.vimrc'
 alias ep='vim ~/.vimplugins'
 
 # Check Resource Hogs
-alias htop='sudo htop'
 alias mem='top -o mem'
 alias cpu='top -o cpu'
 
