@@ -45,4 +45,4 @@ alias n='~/repos/scripts/osx/notify'
 alias python_watch='python_watch_osx'
 
 # LaTeX
-alias pdflatex='/Library/TeX/Root/bin/x86_64-darwin/pdflatex'
+#alias pdflatex='/Library/TeX/Root/bin/x86_64-darwin/pdflatex'
