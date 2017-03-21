@@ -383,7 +383,7 @@ nnoremap <leader>X :!replacejs 's/<C-r><C-w>//'<left><left>
 vnoremap <leader>X y:!replacejs 's/<C-R>"//'<left><left>
 
 " Switch `false` and `true` at the end of a line
-noremap <leader>b mj:s/ false;$/ TRUE;/eI<CR>:s/ true;$/ FALSE;/eI<CR>:s/ TRUE;$/ true;/eI<CR>:s/ FALSE;$/ false;/eI<CR>:nohlsearch<CR>`j
+noremap <leader>b mj:s/ false\([;,]\)$/ TRUE\1/eI<CR>:s/ true\([;,]\)$/ FALSE\1/eI<CR>:s/ TRUE\([;,]\)$/ true\1/eI<CR>:s/ FALSE\([;,]\)$/ false\1/eI<CR>:nohlsearch<CR>`j
 
 """"""""""""""""""
 
@@ -613,7 +613,7 @@ let g:rainbow_conf = {
 
 
 " YouCompleteMe
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
+"let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
@@ -621,14 +621,17 @@ noremap <leader>d :YcmCompleter GoTo<CR>
 noremap <leader>D :YcmCompleter GoToDeclaration<CR>
 noremap <leader>n :YcmCompleter GoToReferences<CR>
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+  "project_base_dir = os.environ['VIRTUAL_ENV']
+  "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  "execfile(activate_this, dict(__file__=activate_this))
+"EOF
+" Debug support. Set these, let it crash, then run `:YcmToggleLogs stderr`
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 " Vim-Surround
 " (Shortcut for 'Surround WORD with...')
@@ -672,7 +675,7 @@ vmap <leader>v <Plug>(expand_region_shrink)
 
 "-------------------------
 " Save Session
-"nnoremap <leader>S :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
+nnoremap <leader>M :mksession! ~/repos/config/vim_sessions/COM-.vim<left><left><left><left>
 
 "-------------------------
 " Color Column at 80 chars¬

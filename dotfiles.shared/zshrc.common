@@ -225,6 +225,8 @@ calc () {
     bc -l <<< "$@"
 }
 
+# TheFuck
+eval $(thefuck --alias)
 
 #########################
 # Source External Scripts
