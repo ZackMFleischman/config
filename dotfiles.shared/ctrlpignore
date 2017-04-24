@@ -7,3 +7,12 @@ node_modules/
 .jpg
 js/lib/
 .xcf
+Library/
+.meta
+.sln
+.gitattributes
+.asset
+ProjectSettings/
+Temp/
+.csproj
+

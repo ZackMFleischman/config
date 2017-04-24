@@ -1,7 +1,10 @@
 *.rst
-*.babylon
 node_modules/
 lib/
 app.bundle.js
+embedded.bundle.js
 dist/
+*.babylon
 EditorToolkit/
+babylon.max.js
+babylon.d.txt

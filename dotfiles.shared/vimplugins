@@ -84,6 +84,12 @@ Plugin 'leafgarland/typescript-vim'
 " Markdown Preview Window
 Plugin 'NBUT-Developers/extra-instant-markdown'
 
+" OmniSharp (C# Autocompletion)
+Plugin 'OmniSharp/omnisharp-vim.git'
+
+" Asynch shit
+Plugin 'tpope/vim-dispatch'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line

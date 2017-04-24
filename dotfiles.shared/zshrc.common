@@ -235,3 +235,7 @@ source ~/repos/scripts/util/findstring
 source ~/repos/scripts/util/exportColors
 source ~/.strypesrc
 
+if [[ -s "~/repos/goto/goto.sh" ]]; then
+    source ~/repos/goto/goto.sh
+fi
+

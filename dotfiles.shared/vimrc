@@ -34,6 +34,9 @@ set encoding=utf-8
 noremap <leader>o 0?\s*def.*(.*)\s*:\\|\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 noremap <leader>O 0?\s*class.*(.*)\s*:<CR>9kzt9j:nohlsearch<CR><C-o>
 
+noremap gma 'A
+noremap gmg 'G
+
 "================
 " Custom Settings
 "================
@@ -57,6 +60,7 @@ nnoremap <leader>W :%s/\s\+$//<CR>
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.css :%s/\s\+$//e
+autocmd BufWritePre *.cs :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 
 " Navigate back a file
@@ -687,10 +691,10 @@ highlight ColorColumn ctermbg=235
 "--------------
 " Line wrapping
 "--------------
-set nowrap
-set textwidth=0
-"set wrap
-"set textwidth=80
+"set nowrap
+"set textwidth=0
+set wrap
+set textwidth=80
 
 "------------
 " Cursor Line¬
@@ -750,6 +754,9 @@ nnoremap ≥ :call ShiftTabRight()<CR>
 noremap <C-b> gT
 noremap <C-n> gt
 
+command! MakeTabs :%s/	/    /
+nnoremap gt :MakeTabs<cr>:%s/\s\+$//<CR>
+
 " Inserting Spaces vs Tabs
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
@@ -757,9 +764,9 @@ set tabstop=4       " The width of a TAB is set to 4.
                     " a width of 4.
 set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
-set expandtab       " Expand TABs to spaces
-set smarttab    " let's tab key insert 'tab stops', and bksp deletes tabs.
 set backspace=2
 set shiftround  " tab / shifting moves to closest tabstop.
 set autoindent  " Match indents on new lines.
 set cindent     " Intellegently dedent / indent new lines based on rules.
+set expandtab       " Expand TABs to spaces
+set smarttab    " let's tab key insert 'tab stops', and bksp deletes tabs.
