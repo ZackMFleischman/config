@@ -226,7 +226,7 @@ calc () {
 }
 
 # TheFuck
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
 #########################
 # Source External Scripts

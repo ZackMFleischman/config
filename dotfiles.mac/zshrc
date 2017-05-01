@@ -24,7 +24,7 @@ alias vlc='open -a /Applications/VLC.app'
 alias kf='killall -KILL Finder'
 
 # Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Tmux for it to work right with mac terminal colors
 alias tmux='tmux -2'
@@ -46,3 +46,5 @@ alias python_watch='python_watch_osx'
 
 # LaTeX
 #alias pdflatex='/Library/TeX/Root/bin/x86_64-darwin/pdflatex'
+
+f
