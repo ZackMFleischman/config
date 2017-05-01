@@ -10,6 +10,7 @@ fi
 
 tmux kill-session -t "$SESSION_NAME"
 tmux kill-session -t "purse"
+tmux kill-session -t "roots"
 
 # If session already exists, do nothing.
 tmux -q has-session -t "$SESSION_NAME" > /dev/null

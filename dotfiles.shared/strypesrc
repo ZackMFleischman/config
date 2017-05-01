@@ -28,6 +28,7 @@ alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux star
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
 alias purse='~/repos/config/tmux_sessions/purse.session'
+alias roots='~/repos/config/tmux_sessions/roots.session'
 
 # Open Design Tool in Chrome
 alias tool='ch "https://localhost:8080/"'
