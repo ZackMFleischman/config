@@ -18,14 +18,14 @@ if [ $? -eq 0 ]; then
 fi
 
 # Start a new session and run the server
-tmux new-session -d -s "$SESSION_NAME" -n "server"
-tmux send-keys -t "$SESSION_NAME" 'http-server -p 3000 --cors' Enter 
-
-# Checkout the branch, pull it, and run the demo
-tmux neww -t "$SESSION_NAME" -n "zsh"
+tmux new-session -d -s "$SESSION_NAME" -n "strypes_demo"
 tmux send-keys -t "$SESSION_NAME" 'git checkout AlexaDemoBranch' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git pull' Enter 
-tmux send-keys -t "$SESSION_NAME" 'ch http://127.0.0.1:3000' Enter 
+tmux send-keys -t "$SESSION_NAME" 'export THEME=coach' Enter 
+tmux send-keys -t "$SESSION_NAME" 'open -a /Applications/Google\ Chrome.app https://localhost:8080' Enter 
+
+tmux send-keys -t "$SESSION_NAME" 'npm run webpack:dev:surfaceStudio' Enter 
 
 # Attach to it
 tmux -2 attach -t "$SESSION_NAME"
+
