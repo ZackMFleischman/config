@@ -27,6 +27,7 @@ alias sm='slack -u "zack" -d @matt -m'
 alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux start client --no-attach;mux start tool'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
+alias purse='~/repos/config/tmux_sessions/purse.session'
 
 # Open Design Tool in Chrome
 alias tool='ch "https://localhost:8080/"'
