@@ -22,6 +22,7 @@ tmux new-session -d -s "$SESSION_NAME" -n "strypes_demo"
 tmux send-keys -t "$SESSION_NAME" 'git checkout AlexaDemoBranch' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git fetch' Enter 
 tmux send-keys -t "$SESSION_NAME" 'git reset --hard origin/AlexaDemoBranch' Enter 
+tmux send-keys -t "$SESSION_NAME" 'npm install' Enter 
 tmux send-keys -t "$SESSION_NAME" 'export THEME=coach' Enter 
 tmux send-keys -t "$SESSION_NAME" 'open -a /Applications/Google\ Chrome.app https://localhost:8080' Enter 
 
