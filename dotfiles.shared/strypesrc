@@ -13,20 +13,22 @@ alias cto='de;cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
 alias go='de;cd /oscar'
 alias gb='de;cd ~/repos/Babylon.js/'
 alias gd='de;cd ~/repos/strypes/designer'
-alias gs='de;cd ~/repos/strypes/designer/js/src'
-alias gt='de;cd ~/repos/strypes/testClient/'
+alias gs='de;cd ~/repos/strypes/tool/Assets/Scripts/'
+alias gt='de;cd ~/repos/strypes/tool/'
 alias gh='workon hub;cd ~/repos/strypes/strypes_hub/'
 
-alias f='gd' # Current project
+alias f='gt' # Current project
 
 # Slack Matt
 alias slack='~/repos/slack-cli/bin/cmd.js'
 alias sm='slack -u "zack" -d @matt -m'
 
 # Aliases for my tmux sessions
-alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux start client --no-attach;mux start tool'
+#alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux start client --no-attach;mux start tool'
+alias strypes='mux start tool'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
+alias eo='e ~/repos/strypes/tool/omnisharp.json'
 
 # Open Design Tool in Chrome
 alias tool='ch "https://localhost:8080/"'

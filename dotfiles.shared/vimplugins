@@ -45,9 +45,6 @@ Plugin 'justinmk/vim-sneak'
 " AG (Silver searcher)
 Plugin 'https://github.com/gabesoft/vim-ags'
 
-" Syntastic (Syntax highlighting)
-Plugin 'scrooloose/syntastic'
-
 " Surround (surround movement with something)
 Plugin 'tpope/vim-surround'
 
@@ -56,18 +53,6 @@ Plugin 'michalbachowski/vim-wombat256mod'
 
 " Nerd Commenter (leader c to comment)
 Plugin 'scrooloose/nerdcommenter'
-
-" Vim Javascript
-Plugin 'pangloss/vim-javascript'
-
-" YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
-Plugin 'Valloric/YouCompleteMe'
-
-" flake8
-Plugin 'nvie/vim-flake8'
-
-" Python Indenter
-Plugin 'hynek/vim-python-pep8-indent'
 
 " Vim + Tmux pane switching
 Plugin 'christoomey/vim-tmux-navigator'
@@ -78,17 +63,42 @@ Plugin 'terryma/vim-expand-region'
 " Show dirty lines in the gutter
 Plugin 'airblade/vim-gitgutter'
 
-" Typescript Syntax
-Plugin 'leafgarland/typescript-vim'
+" Asynch shit
+Plugin 'tpope/vim-dispatch'
 
 " Markdown Preview Window
 Plugin 'NBUT-Developers/extra-instant-markdown'
 
+"""""""""""""""""""""""""""""""
+" Language Specific shiz
+
 " OmniSharp (C# Autocompletion)
 Plugin 'OmniSharp/omnisharp-vim.git'
 
-" Asynch shit
-Plugin 'tpope/vim-dispatch'
+" Syntastic (Syntax highlighting)
+Plugin 'scrooloose/syntastic'
+
+" Vim Javascript
+" Plugin 'pangloss/vim-javascript'
+
+" YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
+" Plugin 'Valloric/YouCompleteMe'
+
+" NeoComplete (Choose YouCompleteMe or This)
+" Plugin 'Shougo/neocomplete.vim'
+
+" Needed for omnisharp snippets
+" Plugin 'SirVer/ultisnips'
+
+" flake8
+" Plugin 'nvie/vim-flake8'
+
+" Python Indenter
+" Plugin 'hynek/vim-python-pep8-indent'
+
+" Typescript Syntax
+" Plugin 'leafgarland/typescript-vim'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

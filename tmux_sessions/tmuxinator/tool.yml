@@ -32,9 +32,12 @@ root: ~/repos/strypes/tool
 
 windows:
   - tool: vim
-  - server: http-server -p3001 --cors
+  - servers: 
+        layout: main-horizontal
+        panes:
+            - http-server -p3001 --cors
+              #- mono '/Users/zack/.vim/bundle/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe' -p 2000 -s '/Users/zack/repos/strypes/tool/tool.sln' -config '/Users/zack/repos/strypes/tool/omnisharp.json' 
   - zsh: 
-
 
       #layout: main-vertical
       ## Synchronize all panes of this window, can be enabled before or after the pane commands run.
