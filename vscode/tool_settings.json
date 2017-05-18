@@ -2,8 +2,18 @@
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
+    "vim.statusBarColors": {
+        "normal": "#005f5f",
+        "insert": "#5C0081",
+        "visual": "#007022",
+        "visualline": "#007022",
+        "visualblock": "#86592d",
+        "replace": "#000000"
+    },
+    "vim.autoindent": true,
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -78,6 +88,29 @@
             "commands": [
                 {
                     "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "tab"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.navigateBack"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "tab"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.openPreviousEditorFromHistory"
                 }
             ]
         },
