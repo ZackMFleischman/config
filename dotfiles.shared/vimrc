@@ -704,6 +704,7 @@ nnoremap <leader>dn :OmniSharpRename<cr>
 nnoremap <leader>dr :OmniSharpReloadSolution<cr>
 nnoremap <leader>da :OmniSharpAddToProject<cr>
 nnoremap <leader>dh :OmniSharpHighlightTypes<cr>
+nnoremap <leader>dq :OmniSharpStopServer<CR>:OmniSharpStartServer<CR>
 "" Enable snippet completion, requires completeopt-=preview
 ""let g:OmniSharp_want_snippet=1
 
@@ -754,6 +755,10 @@ set colorcolumn=+1
 let &colorcolumn=join(range(100,999),",")
 highlight ColorColumn ctermbg=235
 
+" Set Autocomplete Menu Colors
+highlight Pmenu ctermbg=247 gui=bold
+highlight Pmenu ctermfg=232 gui=bold
+
 "--------------
 " Line wrapping
 "--------------
@@ -798,7 +803,7 @@ nmap <leader>P A<ESC>p
 "nnoremap <leader>ga :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/api/models.py<CR> /class APIOrder(<CR>:noh<CR>zt2k2j
 "nnoremap <leader>gok :vsplit<CR><C-w>l:edit ~/nfs-share/website/counsyl/product/order/models/__init__.py<CR> /class OrderKit(<CR>:noh<CR>zt2k2j
 nnoremap <leader>gs :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/common.py<CR>
-nnoremap <leader>go :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/oscar.py<CR>
+nnoremap <leader>go :vsplit<CR><C-w>l:edit ~/repos/strypes/tool/omnisharp.json<CR>
 
 
 """""""""""""""""

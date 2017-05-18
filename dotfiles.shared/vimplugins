@@ -51,6 +51,9 @@ Plugin 'tpope/vim-surround'
 " Awesome Color Scheme
 Plugin 'michalbachowski/vim-wombat256mod'
 
+" Modify Colors after color scheme is set
+Plugin 'exvim/ex-aftercolors'
+
 " Nerd Commenter (leader c to comment)
 Plugin 'scrooloose/nerdcommenter'
 
@@ -78,11 +81,11 @@ Plugin 'OmniSharp/omnisharp-vim.git'
 " Syntastic (Syntax highlighting)
 Plugin 'scrooloose/syntastic'
 
+" YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
+Plugin 'Valloric/YouCompleteMe'
+
 " Vim Javascript
 " Plugin 'pangloss/vim-javascript'
-
-" YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
-" Plugin 'Valloric/YouCompleteMe'
 
 " NeoComplete (Choose YouCompleteMe or This)
 " Plugin 'Shougo/neocomplete.vim'
