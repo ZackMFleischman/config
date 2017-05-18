@@ -161,6 +161,19 @@
         {
             "before": [
                 "<leader>",
+                "q"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "w"
             ],
             "after": [],
@@ -205,7 +218,8 @@
         "**/StompyRobot": true,
         "**/AssetBundles": true,
         "**/TextMesh Pro": true,
-        "**/EasyTouchBundle": true
+        "**/EasyTouchBundle": true,
+        "**/JsonDotNet": true
     },
     "files.exclude": {
         "**/.DS_Store": true,
