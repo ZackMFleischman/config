@@ -1,0 +1,230 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.otherModesKeyBindings": [],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "v"
+            ],
+            "after": [
+                "v"
+            ],
+            "commands": [
+                {
+                    "command": ":set relativenumber"
+                }
+            ]
+        },
+        {
+            "before": [
+                "V"
+            ],
+            "after": [
+                "V"
+            ],
+            "commands": [
+                {
+                    "command": ":set relativenumber"
+                }
+            ]
+        },
+        {
+            "before": [
+                "y"
+            ],
+            "after": [
+                "y"
+            ],
+            "commands": [
+                {
+                    "command": ":set number"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "after": [
+                "<Esc>"
+            ],
+            "commands": [
+                {
+                    "command": ":set number"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "2",
+                "0",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "2",
+                "0",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ";"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "editor.codeLens": false,
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/tmp": true,
+        "**/Builds": true,
+        "**/Plugins": true,
+        "**/StompyRobot": true,
+        "**/AssetBundles": true,
+        "**/TextMesh Pro": true,
+        "**/EasyTouchBundle": true
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.gitmodules": true,
+        "**/*.booproj": true,
+        "**/*.pidb": true,
+        "**/*.suo": true,
+        "**/*.user": true,
+        "**/*.userprefs": true,
+        "**/*.unityproj": true,
+        "**/*.dll": true,
+        "**/*.exe": true,
+        "**/*.pdf": true,
+        "**/*.mid": true,
+        "**/*.midi": true,
+        "**/*.wav": true,
+        "**/*.gif": true,
+        "**/*.ico": true,
+        "**/*.jpg": true,
+        "**/*.jpeg": true,
+        "**/*.png": true,
+        "**/*.psd": true,
+        "**/*.tga": true,
+        "**/*.tif": true,
+        "**/*.tiff": true,
+        "**/*.3ds": true,
+        "**/*.3DS": true,
+        "**/*.fbx": true,
+        "**/*.FBX": true,
+        "**/*.lxo": true,
+        "**/*.LXO": true,
+        "**/*.ma": true,
+        "**/*.MA": true,
+        "**/*.obj": true,
+        "**/*.OBJ": true,
+        "**/*.asset": true,
+        "**/*.cubemap": true,
+        "**/*.flare": true,
+        "**/*.mat": true,
+        "**/*.meta": true,
+        "**/*.prefab": true,
+        "**/*.unity": true,
+        "build/": true,
+        "Build/": true,
+        "Library/": true,
+        "library/": true,
+        "obj/": true,
+        "Obj/": true,
+        "ProjectSettings/": true,
+        "temp/": true,
+        "Temp/": true
+    }
+}
