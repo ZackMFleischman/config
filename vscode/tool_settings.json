@@ -110,7 +110,7 @@
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.openPreviousEditorFromHistory"
+                    "command": "workbench.actionopenPreviousEditorFromHistory"
                 }
             ]
         },
