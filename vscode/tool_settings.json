@@ -13,6 +13,7 @@
         "visualblock": "#86592d",
         "replace": "#000000"
     },
+    "editor.stablePeek": false,
     "vim.autoindent": true,
     "vim.insertModeKeyBindings": [
         {
@@ -105,6 +106,40 @@
         {
             "before": [
                 "<leader>",
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.rename"
+                }
+            ]
+        },
+        {
+            "before": [
+                "]"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.nextEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "["
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.previousEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "tab"
             ],
             "after": [],
@@ -187,6 +222,105 @@
         {
             "before": [
                 "<leader>",
+                "x"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.referenceSearch.trigger",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "M"
+            ],
+            "after": [
+                "m"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "m"
+            ],
+            "after": [
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">",
+                ">"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<",
+                "<"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
+                "a"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.findInFiles",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "P"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
                 "e"
             ],
             "after": [],
@@ -219,6 +353,12 @@
         "**/AssetBundles": true,
         "**/TextMesh Pro": true,
         "**/EasyTouchBundle": true,
+        "**/ConsoleE": true,
+        "**/Demigiant": true,
+        "**/Dynamic Decals": true,
+        "**/*.csproj": true,
+        "**/Sqlite.cs": true,
+        "**/KeenClient.cs": true,
         "**/JsonDotNet": true
     },
     "files.exclude": {
