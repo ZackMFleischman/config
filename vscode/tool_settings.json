@@ -106,6 +106,29 @@
         {
             "before": [
                 "<leader>",
+                "p"
+            ],
+            "after": [
+                "$",
+                "p"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
+                "i"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.view.explorer"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "r"
             ],
             "after": [],
@@ -231,6 +254,19 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "V",
+                "\"",
+                "_",
+                "d"
+            ],
+            "commands": []
         },
         {
             "before": [
