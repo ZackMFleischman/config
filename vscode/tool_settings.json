@@ -1,5 +1,6 @@
 {
     "vim.easymotion": true,
+    "editor.minimap.enabled": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.statusBarColorControl": true,
@@ -106,7 +107,7 @@
         {
             "before": [
                 "<leader>",
-                "p"
+                "P"
             ],
             "after": [
                 "$",
@@ -123,18 +124,6 @@
             "commands": [
                 {
                     "command": "workbench.view.explorer"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "r"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.rename"
                 }
             ]
         },
@@ -395,6 +384,7 @@
         "**/*.csproj": true,
         "**/Sqlite.cs": true,
         "**/KeenClient.cs": true,
+        "**/UnityTestTools": true,
         "**/JsonDotNet": true
     },
     "files.exclude": {
