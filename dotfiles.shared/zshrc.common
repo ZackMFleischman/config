@@ -158,7 +158,7 @@ alias d2='python -c "import random; print(random.randint(2,12));"'
 alias d3='python -c "import random; print(random.randint(3,18));"'
 alias uberidit='uber price -s "988 Franklin St Oakland CA" -e "59 Octavia Blvd San Francisco CA"'
 alias uberto='uber price -s "988 Franklin St Oakland CA" -e'
-alias ripaudio='youtube-dl --extract-audio --audio-format mp3'
+alias ripaudio='youtube-dl --extract-audio --audio-quality 0 --audio-format m4a'
 
 
 #########################
