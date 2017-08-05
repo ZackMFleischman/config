@@ -72,6 +72,19 @@
         {
             "before": [
                 "<leader>",
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.changeAll",
+                    "when": "editorTextFocus && !editorReadonly"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "v"
             ],
             "after": [],
