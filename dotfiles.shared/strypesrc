@@ -25,13 +25,13 @@ alias sm='slack -u "zack" -d @matt -m'
 
 # Aliases for my tmux sessions
 #alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux start client --no-attach;mux start tool'
-alias strypes='mux start tool'
+alias tool='mux start tool'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
 alias eo='e ~/repos/strypes/tool/omnisharp.json'
 
 # Open Design Tool in Chrome
-alias tool='ch "https://localhost:8080/"'
+#alias tool='ch "https://localhost:8080/"'
 alias client='ch "https://localhost:3000/"'
 
 # Django Settings

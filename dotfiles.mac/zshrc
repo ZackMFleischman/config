@@ -23,6 +23,9 @@ alias vlc='open -a /Applications/VLC.app'
 # Kill finder
 alias kf='killall -KILL Finder'
 
+# Reindex spotlight
+alias spotlight='sudo mdutil -E /'
+
 # Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
