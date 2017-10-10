@@ -624,9 +624,9 @@ let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_autoclose_preview_window_after_completion = 1
 "let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
-"noremap <leader>d :YcmCompleter GoTo<CR>
-"noremap <leader>D :YcmCompleter GoToDeclaration<CR>
-"noremap <leader>n :YcmCompleter GoToReferences<CR>
+noremap <leader>D :YcmCompleter GoTo<CR>
+noremap <leader>d :YcmCompleter GoToDeclaration<CR>
+noremap <leader>n :YcmCompleter GoToReferences<CR>
 "python with virtualenv support
 "py << EOF
 "import os
@@ -675,18 +675,18 @@ augroup omnisharp_commands
     autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     "The following commands are contextual, based on the current cursor position.
-    autocmd FileType cs nnoremap <leader>dd :OmniSharpGotoDefinition<cr>
-    autocmd FileType cs nnoremap <leader>di :OmniSharpFindImplementations<cr>
-    autocmd FileType cs nnoremap <leader>dt :OmniSharpFindType<cr>
-    autocmd FileType cs nnoremap <leader>ds :OmniSharpFindSymbol<cr>
-    autocmd FileType cs nnoremap <leader>du :OmniSharpFindUsages<cr>
+    "autocmd FileType cs nnoremap <leader>dd :OmniSharpGotoDefinition<cr>
+    "autocmd FileType cs nnoremap <leader>di :OmniSharpFindImplementations<cr>
+    "autocmd FileType cs nnoremap <leader>dt :OmniSharpFindType<cr>
+    "autocmd FileType cs nnoremap <leader>ds :OmniSharpFindSymbol<cr>
+    "autocmd FileType cs nnoremap <leader>du :OmniSharpFindUsages<cr>
     "finds members in the current buffer
-    autocmd FileType cs nnoremap <leader>dm :OmniSharpFindMembers<cr>
+    "autocmd FileType cs nnoremap <leader>dm :OmniSharpFindMembers<cr>
     " cursor can be anywhere on the line containing an issue
-    autocmd FileType cs nnoremap <leader>df :OmniSharpFixIssue<cr>
-    autocmd FileType cs nnoremap <leader>dx :OmniSharpFixUsings<cr>
-    autocmd FileType cs nnoremap <leader>dl :OmniSharpTypeLookup<cr>
-    autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
+    "autocmd FileType cs nnoremap <leader>df :OmniSharpFixIssue<cr>
+    "autocmd FileType cs nnoremap <leader>dx :OmniSharpFixUsings<cr>
+    "autocmd FileType cs nnoremap <leader>dl :OmniSharpTypeLookup<cr>
+    "autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
     "navigate up by method/property/field  ( ALT+k )
     autocmd FileType cs nnoremap ˚ :OmniSharpNavigateUp<cr>
     "navigate down by method/property/field ( ALT+j )
@@ -699,12 +699,12 @@ augroup end
 nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
 "" Run code actions with text selected in visual mode to extract method
 vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
-nnoremap <leader>dn :OmniSharpRename<cr>
+"nnoremap <leader>dn :OmniSharpRename<cr>
 "" Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <leader>dr :OmniSharpReloadSolution<cr>
-nnoremap <leader>da :OmniSharpAddToProject<cr>
-nnoremap <leader>dh :OmniSharpHighlightTypes<cr>
-nnoremap <leader>dq :OmniSharpStopServer<CR>:OmniSharpStartServer<CR>
+"nnoremap <leader>dr :OmniSharpReloadSolution<cr>
+"nnoremap <leader>da :OmniSharpAddToProject<cr>
+"nnoremap <leader>dh :OmniSharpHighlightTypes<cr>
+"nnoremap <leader>dq :OmniSharpStopServer<CR>:OmniSharpStartServer<CR>
 "" Enable snippet completion, requires completeopt-=preview
 ""let g:OmniSharp_want_snippet=1
 

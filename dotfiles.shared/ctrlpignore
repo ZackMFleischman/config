@@ -34,3 +34,8 @@ DLLs/
 .mat
 .ico
 .vscode/
+.cli_venv/
+strypes.egg-info/
+.eggs/
+.cache/
+__init__.py
