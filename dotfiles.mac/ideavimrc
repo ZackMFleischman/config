@@ -1,11 +1,32 @@
-noremap ,c :action GotoClass<CR>
-noremap ,f :action GotoFile<CR>
-noremap ,s :action GotoSymbol<CR>
-noremap ,q :q<CR>
-noremap ,w :w<CR>
-noremap ,e :wq<CR>
-noremap ,v :vsplit<CR>
-noremap ,V :vsplit<CR><C-TAB>:q<CR>
+let mapleader=" "
+
+noremap <leader>f :action GotoFile<CR>
+noremap <leader>d :action GotoDeclaration<CR>
+noremap <leader>c :action GotoClass<CR>
+noremap <leader>s :action GotoSymbol<CR>
+noremap <leader>q :q<CR>
+noremap <leader>w :w<CR>
+noremap <leader>e :wq<CR>
+noremap <leader>u <C-r> 
+
+noremap <leader>v :vsplit<CR>
+noremap <leader>V :split<CR>
+
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
+nnoremap 0 ^
+nnoremap ^ 0
+
+nnoremap < <<
+nnoremap > >>
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap / :action Find<CR>
+nnoremap <Leader>/ /
+
+nnoremap <Leader>a :action SearchEverywhere<CR>
+nnoremap <Leader>x :action ShowUsages<CR>
+nnoremap <Leader>X :action FindUsages<CR>
+nnoremap <Leader>A :action GotoAction<CR>

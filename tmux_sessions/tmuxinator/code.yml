@@ -1,0 +1,18 @@
+# ~/.tmuxinator/code.yml
+
+name: code
+root: ~/repos/strypes/tool
+windows:
+  - servers: http-server -p3001 --cors
+  - tool:
+  - cli:
+      layout: even-horizontal
+      panes:
+        - gc;vim
+        - gc
+  - api:
+      layout: even-horizontal
+      panes:
+        - ga;vim
+        - ga
+  - csharp: csharp

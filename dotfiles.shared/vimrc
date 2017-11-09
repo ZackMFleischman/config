@@ -566,6 +566,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+let g:syntastic_yaml_checkers = ['yamllint']
 nnoremap gs :OmniSharpReloadSolution<CR>:SyntasticCheck<CR>
 nnoremap gf :lfirst<CR>
 nnoremap gn :lnext<CR>

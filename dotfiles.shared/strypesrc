@@ -8,6 +8,10 @@ alias es='vim ~/.strypesrc'
 # Add to the PATH
 export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 
+export AWS_PROFILE=strypes
+export STRYPES_TOOL_CONFIG_DIRECTORY=$HOME/repos/strypes/tool/Assets/_Strypes/ConfigData
+export STRYPES_TOOL_ASSET_BUNDLES_DIRECTORY=$HOME/repos/strypes/tool/AssetBundles
+
 # Directory shortcuts
 alias cto='de;cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
 alias go='de;cd /oscar'
@@ -15,6 +19,8 @@ alias gb='de;cd ~/repos/Babylon.js/'
 alias gd='de;cd ~/repos/strypes/designer'
 alias gs='de;cd ~/repos/strypes/tool/Assets/Scripts/'
 alias gt='de;cd ~/repos/strypes/tool/'
+alias gc='de;cd ~/repos/strypes/cli/;. cli_venv/bin/activate'
+alias ga='de;cd ~/repos/strypes/api/'
 alias gh='workon hub;cd ~/repos/strypes/strypes_hub/'
 
 alias f='gt' # Current project
@@ -25,6 +31,7 @@ alias sm='slack -u "zack" -d @matt -m'
 
 # Aliases for my tmux sessions
 #alias strypes='mux start designer --no-attach;mux start hub --no-attach;mux start client --no-attach;mux start tool'
+alias code='mux start code'
 alias tool='mux start tool'
 alias des='~/repos/config/tmux_sessions/designer.session'
 alias demo='~/repos/config/tmux_sessions/demo.session'
