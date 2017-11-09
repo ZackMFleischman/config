@@ -371,18 +371,23 @@ noremap <leader>; :nohlsearch<CR>
 " Replace text
 """"""""""""""
 " Find and replace the word under cursor.
-noremap <leader>r :%s/\<<C-r><C-w>\>//<left>
+noremap <leader>R :%s/\<<C-r><C-w>\>//<left>
 
-" Find and replace (blank)
-noremap <leader>R :%s//<left>
+" Find and replace word under cursor with word filled in
+noremap <leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/<left>
 
 " Change and replace (. to repeat)
 noremap <leader>gr *#cgn
 
 " Find and replace in entire git project
-nnoremap <leader>A :!replacejs 's//'<left><left>
-nnoremap <leader>X :!replacejs 's/<C-r><C-w>//'<left><left>
-vnoremap <leader>X y:!replacejs 's/<C-R>"//'<left><left>
+
+autocmd FileType js nnoremap <leader>A :!replacejs 's//'<left><left>
+autocmd FileType js nnoremap <leader>X :!replacejs 's/<C-r><C-w>//'<left><left>
+autocmd FileType js vnoremap <leader>X y:!replacejs 's/<C-R>"//'<left><left>
+
+autocmd FileType py nnoremap <leader>A :!replacepy 's//'<left><left>
+autocmd FileType py nnoremap <leader>X :!replacepy 's/<C-r><C-w>//'<left><left>
+autocmd FileType py vnoremap <leader>X y:!replacepy 's/<C-R>"//'<left><left>
 
 " Switch `false` and `true` at the end of a line
 noremap <leader>b mj:s/ false\([;,]\)$/ TRUE\1/eI<CR>:s/ true\([;,]\)$/ FALSE\1/eI<CR>:s/ TRUE\([;,]\)$/ true\1/eI<CR>:s/ FALSE\([;,]\)$/ false\1/eI<CR>:nohlsearch<CR>`j
