@@ -11,6 +11,8 @@ export PATH="$PATH:$HOME/repos/savvy/designer/utility"
 export AWS_PROFILE=strypes
 export STRYPES_TOOL_CONFIG_DIRECTORY=$HOME/repos/strypes/tool/Assets/_Strypes/ConfigData
 export STRYPES_TOOL_ASSET_BUNDLES_DIRECTORY=$HOME/repos/strypes/tool/AssetBundles
+export STRYPES_TOOL_BUILDS_DIRECTORY=$HOME/repos/strypes/tool/Builds
+
 
 # Directory shortcuts
 alias cto='de;cd /Users/zack/Box\ Sync/00\ World\ Domination/CTO\ World'
