@@ -242,4 +242,3 @@ source ~/.strypesrc
 if [[ -s "~/repos/goto/goto.sh" ]]; then
     source ~/repos/goto/goto.sh
 fi
-

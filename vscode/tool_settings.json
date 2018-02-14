@@ -108,45 +108,6 @@
     "vim.otherModesKeyBindingsNonRecursive": [
         {
             "before": [
-                "v"
-            ],
-            "after": [
-                "v"
-            ],
-            "commands": [
-                {
-                    "command": ":set relativenumber"
-                }
-            ]
-        },
-        {
-            "before": [
-                "V"
-            ],
-            "after": [
-                "V"
-            ],
-            "commands": [
-                {
-                    "command": ":set relativenumber"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<Esc>"
-            ],
-            "after": [
-                "<Esc>"
-            ],
-            "commands": [
-                {
-                    "command": ":set number"
-                }
-            ]
-        },
-        {
-            "before": [
                 "<leader>",
                 "r"
             ],

@@ -1,6 +1,6 @@
 [core]
 	excludesfile = /Users/zack/.gitignore_global
-	editor = /usr/local/bin/vim
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
 [user]
 	name = Zack M Fleischman
 	email = ZackMFleischman@gmail.com
