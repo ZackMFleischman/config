@@ -31,8 +31,10 @@ ZSH_THEME=burner
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+# Source External Scripts
 source $ZSH/oh-my-zsh.sh
 source ~/.tmuxinator.zsh
+source ~/repos/git-subrepo/.rc
 
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help

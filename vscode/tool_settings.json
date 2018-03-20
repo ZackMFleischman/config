@@ -109,19 +109,6 @@
         {
             "before": [
                 "<leader>",
-                "r"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.changeAll",
-                    "when": "editorTextFocus && !editorReadonly"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
                 "v"
             ],
             "after": [],
@@ -164,17 +151,6 @@
                     "command": "workbench.action.navigateBack"
                 }
             ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "P"
-            ],
-            "after": [
-                "$",
-                "p"
-            ],
-            "commands": []
         },
         {
             "before": [
@@ -257,6 +233,23 @@
         {
             "before": [
                 "<leader>",
+                "e"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "q"
             ],
             "after": [],
@@ -293,94 +286,7 @@
                 }
             ]
         },
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "V",
-                "\"",
-                "_",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "M"
-            ],
-            "after": [
-                "m"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
-                "m"
-            ],
-            "after": [
-                "\"",
-                "+",
-                "d",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "m"
-            ],
-            "after": [
-                "\"",
-                "+",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "after": [
-                ">",
-                ">"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "after": [
-                "<",
-                "<"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "x"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "x"
-            ],
-            "commands": []
-        },
+        
         {
             "before": [
                 "<leader>",
@@ -397,52 +303,24 @@
         {
             "before": [
                 "<leader>",
-                "y"
-            ],
-            "after": [
-                "V",
-                "y"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "y"
+                "c"
             ],
             "after": [
                 "\"",
-                "+",
-                "y"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "p"
-            ],
-            "after": [
-                "\"",
-                "+",
-                "p"
+                "c"
             ],
             "commands": []
         },
         {
             "before": [
                 "<leader>",
-                "e"
+                "P"
             ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                },
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
+            "after": [
+                "$",
+                "p"
+            ],
+            "commands": []
         }
     ],
     "vim.leader": "<space>",
