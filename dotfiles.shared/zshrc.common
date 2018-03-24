@@ -133,7 +133,6 @@ alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
 alias c='git add -A;git commit -m'
-alias cm='git commit --author="Zack M Fleischman <ZackMFleischman@gmail.com>"' # Commit as my personal account
 alias am='git commit --amend --author "Zack M Fleischman <ZackMFleischman@gmail.com>" --no-edit' # Ammend last commit with my personal email as author
 alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | grep --color=always -i' # Search git log
 alias mm='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout master; git pull; git checkout $current_branch; git merge master)' # Merge current branch with master
