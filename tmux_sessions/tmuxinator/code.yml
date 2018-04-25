@@ -3,7 +3,11 @@
 name: code
 root: ~/repos/strypes/tool
 windows:
-  - servers: http-server -p3001 --cors
+  - servers:
+      layout: even-horizontal
+      panes:
+        - http-server -p3001 --cors
+        - ga;docker-compose up
   - tool:
   - cli:
       layout: even-horizontal
@@ -15,4 +19,5 @@ windows:
       panes:
         - ga;vim
         - ga
+  - tool_assets: cd ~/repos/strypes/tool_assets
   - csharp: csharp

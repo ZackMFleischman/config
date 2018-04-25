@@ -128,7 +128,7 @@ alias has='git branch --contains'
 alias branch='git rev-parse --abbrev-ref HEAD'
 alias commit='git rev-parse --verify HEAD'
 alias root='cd $(git rev-parse --show-toplevel)'
-alias reset='git reset --hard HEAD;git clean -f'
+alias reset='git add -A;git reset --hard HEAD;git clean -f'
 alias tool1='git config --global diff.tool Kaleidoscope'
 alias tool2='git config --global diff.tool p4mergetool'
 alias merge='git mergetool'
@@ -165,6 +165,7 @@ alias d3='python -c "import random; print(random.randint(3,18));"'
 alias uberidit='uber price -s "988 Franklin St Oakland CA" -e "59 Octavia Blvd San Francisco CA"'
 alias uberto='uber price -s "988 Franklin St Oakland CA" -e'
 alias ripaudio='youtube-dl --extract-audio --audio-quality 0 --audio-format m4a'
+alias paths='for f in $(ls); echo $(pwd)/$f'
 
 
 #########################
