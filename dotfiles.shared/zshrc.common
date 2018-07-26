@@ -14,7 +14,10 @@ SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin:$HOME/repos/strypes/tool/UtilityScripts/StrypesAPI"
 export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django:$HOME/repos/texts-against-humanity/src"
 
+# Environment Variables
 export TAH_DEBUG=1
+export BROWSER="/Applications/Google\ Chrome.app"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 
 ####################
@@ -166,6 +169,7 @@ alias uberidit='uber price -s "988 Franklin St Oakland CA" -e "59 Octavia Blvd S
 alias uberto='uber price -s "988 Franklin St Oakland CA" -e'
 alias ripaudio='youtube-dl --extract-audio --audio-quality 0 --audio-format m4a'
 alias paths='for f in $(ls); echo $(pwd)/$f'
+alias dev='npm run dev'
 
 
 #########################

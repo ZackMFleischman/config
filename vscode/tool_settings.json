@@ -104,8 +104,7 @@
             ]
         }
     ],
-    "vim.otherModesKeyBindings": [],
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
                 "<leader>",

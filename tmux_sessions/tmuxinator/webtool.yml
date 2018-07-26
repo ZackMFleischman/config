@@ -1,0 +1,7 @@
+# ~/.tmuxinator/webcode.yml
+
+name: webtool
+root: ~/repos/strypes/webtool
+windows:
+  - servers: http-server -p3002 --cors
+  - webtool:

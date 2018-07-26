@@ -1,0 +1,49 @@
+" Couldn't get this local file stuff to work. 
+" Just copy this file into CVim extension options
+"let configpath = '~/.cvimrc'
+"set localconfig
+
+set smoothscroll
+let hintcharacters="asdfqwer"
+let mapleader = ","
+
+" Quick Marks
+let qmark r = "http://www.reddit.com"
+let qmark c = "https://calendar.google.com/"
+let qmark C = "https://calendar.google.com/calendar/b/1/r"
+let qmark g = "https://mail.google.com/mail/u/0/#inbox"
+let qmark G = "https://mail.google.com/mail/u/1/#inbox"
+
+" Page Navigation
+map j scrollPageDown
+map k scrollPageUp
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+
+" Tab Navigation
+unmap e
+unmap r
+map e previousTab
+map r nextTab
+
+" Tab Deletion
+unmap d
+map d closeTab
+unmap D
+map D closeTabsToRight
+
+" Undo
+unmap u
+map u lastClosedTab
+
+" Go Back / Forward
+unmap w
+unmap W
+map w goBack
+map W goForward
+
+" Reload
+unmap q
+map q reloadTab
+
+
