@@ -2,7 +2,12 @@
     "editor.minimap.enabled": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.stablePeek": false,
+    "editor.detectIndentation": false,
     "editor.codeLens": false,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        120
+    ],
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
@@ -85,14 +90,6 @@
     "vim.useSystemClipboard": true,
     "vim.autoindent": true,
     "vim.statusBarColorControl": false,
-    "vim.statusBarColors": {
-        "normal": "#005f5f",
-        "insert": "#5C0081",
-        "visual": "#007022",
-        "visualline": "#007022",
-        "visualblock": "#86592d",
-        "replace": "#000000"
-    },
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -104,7 +101,137 @@
             ]
         }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "P"
+            ],
+            "after": [
+                "p"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "P"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "m"
+            ],
+            "after": [
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ],
+            "commands": []
+        }
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "M"
+            ],
+            "after": [
+                "m"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "m"
+            ],
+            "after": [
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
+            "after": [
+                "d",
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "D"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ],
+            "commands": []
+        },
         {
             "before": [
                 "<leader>",
@@ -114,6 +241,45 @@
             "commands": [
                 {
                     "command": "workbench.action.splitEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.tasks.build",
+                    "args": [
+                        "check"
+                    ]
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.tasks.test"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.tasks.runTask"
                 }
             ]
         },
@@ -267,7 +433,7 @@
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.files.save",
+                    "command": "workbench.action.files.saveAll",
                     "args": []
                 }
             ]
@@ -285,7 +451,19 @@
                 }
             ]
         },
-        
+        {
+            "before": [
+                "<leader>",
+                "z"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.goToImplementation",
+                    "args": []
+                }
+            ]
+        },
         {
             "before": [
                 "<leader>",
@@ -326,5 +504,34 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
-    }
+    },
+    "window.zoomLevel": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsc.autoDetect": "off",
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "workbench.sideBar.location": "left",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "breadcrumbs.enabled": false,
+    "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+    "vim.easymotionMarkerFontSize": "15",
+    "vim.easymotionMarkerWidthPerChar": 9,
+    "vim.easymotionMarkerYOffset": 1,
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "bracketPairColorizer.scopeLineRelativePosition": false,
+    "bracketPairColorizer.timeOut": 0,
+    "bracketPairColorizer.showBracketsInGutter": true,
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+            "Orchid",
+            "Goldenrod",
+            "ForestGreen",
+            "MediumSlateBlue"
+        ],
+        "Red"
+    ]
 }
