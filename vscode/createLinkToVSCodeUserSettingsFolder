@@ -1,0 +1,2 @@
+#!/bin/bash
+ln -s $HOME/repos/config/vscode/settings.json "/Users/zack/Library/Application Support/Code/User/settings.json"
