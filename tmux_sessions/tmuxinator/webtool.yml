@@ -4,5 +4,8 @@ name: webtool
 root: ~/repos/strypes/webtool
 windows:
   - background: npm run background
-  - webpack-dev-server: npm run start
   - webtool:
+        layout: main-vertical
+        panes:
+            - pwd
+            - pwd

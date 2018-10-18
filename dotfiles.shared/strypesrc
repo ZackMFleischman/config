@@ -66,8 +66,11 @@ alias mh='loop -s 5 monitorHeroku'
 # Testing
 alias ta='f;py.test'
 alias tq='f;py.test -m "not test_plus"'
-alias t='py.test'
-#alias tc='py.test --create-db'
+alias tw='f;npm test'
+alias twm='f;npm run mocha-tests'
+alias t='twm'
+
+alias w='npm start'
 
 # Test Coverage
 alias cov='f;tc --cov-report html --cov=.;open htmlcov/index.html;g'

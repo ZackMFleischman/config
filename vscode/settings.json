@@ -229,8 +229,7 @@
             "after": [
                 "\"",
                 "_",
-                "d",
-                "d"
+                "D"
             ],
             "commands": []
         },
@@ -454,6 +453,19 @@
         {
             "before": [
                 "<leader>",
+                "o"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.organizeImports",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "x"
             ],
             "after": [],
@@ -549,5 +561,16 @@
             "MediumSlateBlue"
         ],
         "Red"
-    ]
+    ],
+    "mocha.files.glob": "tests/**/*Tests.ts",
+    "mocha.requires": [
+        "ts-node/register",
+        "tsconfig-paths/register",
+        "source-map-support/register"
+    ],
+    "mocha.options": {
+        "fullTrace": true,
+        "recursive": true
+    },
+    "mocha.showErrorPopup": false
 }

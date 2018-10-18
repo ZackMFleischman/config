@@ -141,6 +141,7 @@ alias sl='git log --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %C
 alias mm='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout master; git pull; git checkout $current_branch; git merge master)' # Merge current branch with master
 alias md='(current_branch=`git rev-parse --abbrev-ref HEAD`; git checkout develop; git pull; git checkout $current_branch; git merge develop)' # Merge current branch with develop
 alias ben='git log --author=Ben --all --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | nl | less'
+alias goran='git log --author=Goran --all --pretty=format:"%Cred%h%Creset - %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset %C(cyan)- %C(reset)%s %C(yellow)%d%Creset" --abbrev-commit --date=relative --color=always | nl | less'
 alias stash='git add -A;git stash'
 
 # Misc
