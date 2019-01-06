@@ -572,5 +572,10 @@
         "fullTrace": true,
         "recursive": true
     },
-    "mocha.showErrorPopup": false
+    "mocha.showErrorPopup": false,
+    "explorer.confirmDragAndDrop": false,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "terminal.integrated.rendererType": "dom",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true
 }

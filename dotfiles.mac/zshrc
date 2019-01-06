@@ -28,6 +28,7 @@ alias spotlight='sudo mdutil -E /'
 
 # Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+export VIMRUNTIME=/Applications/MacVim.app/Contents/Resources/vim/runtime
 
 # Tmux for it to work right with mac terminal colors
 alias tmux='tmux -2'

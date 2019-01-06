@@ -63,6 +63,9 @@ alias dbpush='heroku pg:reset DATABASE_URL;heroku pg:push fierce DATABASE_URL'
 alias hh='getNumberOfHerokuHits'
 alias mh='loop -s 5 monitorHeroku'
 
+# Open Webtool in Browser
+alias wo='open https://$(ip):9000/devClientIndex.html'
+
 # Testing
 alias ta='f;py.test'
 alias tq='f;py.test -m "not test_plus"'
