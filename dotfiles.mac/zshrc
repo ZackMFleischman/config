@@ -50,5 +50,7 @@ alias python_watch='python_watch_osx'
 
 alias unity=/Applications/Unity/Unity.app/Contents/MacOS/Unity
 
+alias txt='pbpaste | text'  # text myself whats in the clipboard
+
 # LaTeX
 #alias pdflatex='/Library/TeX/Root/bin/x86_64-darwin/pdflatex'

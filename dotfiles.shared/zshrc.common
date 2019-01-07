@@ -242,7 +242,6 @@ eval $(thefuck --alias)
 #########################
 # Source External Scripts
 #########################
-source ~/repos/scripts/util/findstring
 source ~/repos/scripts/util/exportColors
 source ~/.strypesrc
 
