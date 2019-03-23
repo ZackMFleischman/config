@@ -505,17 +505,6 @@
         {
             "before": [
                 "<leader>",
-                "c"
-            ],
-            "after": [
-                "\"",
-                "c"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
                 "P"
             ],
             "after": [
@@ -530,7 +519,7 @@
         "<C-a>": false,
         "<C-f>": false
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 3,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.tsc.autoDetect": "off",
     "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
