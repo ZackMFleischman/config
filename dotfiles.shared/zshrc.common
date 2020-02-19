@@ -11,11 +11,10 @@
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 
 # PATH and PYTHONPATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin:$HOME/repos/strypes/tool/UtilityScripts/StrypesAPI"
-export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python:$HOME/repos/scripts/django:$HOME/repos/texts-against-humanity/src"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python"
 
 # Environment Variables
-export TAH_DEBUG=1
 export BROWSER="/Applications/Google\ Chrome.app"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -37,7 +36,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # Source External Scripts
 source $ZSH/oh-my-zsh.sh
 source ~/.tmuxinator.zsh
-source ~/repos/git-subrepo/.rc
 
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
@@ -56,8 +54,8 @@ alias e='vim'
 alias vi='vim'
 
 # virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # Tmux window naming
 DISABLE_AUTO_TITLE=true
@@ -166,8 +164,6 @@ alias add='awk "{s+=\$1} END {print s}"'
 alias d1='python -c "import random; print(random.randint(1,6));"'
 alias d2='python -c "import random; print(random.randint(2,12));"'
 alias d3='python -c "import random; print(random.randint(3,18));"'
-alias uberidit='uber price -s "988 Franklin St Oakland CA" -e "59 Octavia Blvd San Francisco CA"'
-alias uberto='uber price -s "988 Franklin St Oakland CA" -e'
 alias ripaudio='youtube-dl --extract-audio --audio-quality 0 --audio-format m4a'
 alias paths='for f in $(ls); echo $(pwd)/$f'
 alias dev='npm run dev'
@@ -239,13 +235,13 @@ calc () {
 }
 
 # TheFuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 #########################
 # Source External Scripts
 #########################
 source ~/repos/scripts/util/exportColors
-source ~/.strypesrc
+# source ~/.strypesrc
 
 if [[ -s "~/repos/goto/goto.sh" ]]; then
     source ~/repos/goto/goto.sh

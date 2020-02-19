@@ -82,7 +82,7 @@ Plugin 'OmniSharp/omnisharp-vim.git'
 Plugin 'scrooloose/syntastic'
 
 " YouCompleteMe (Autocompletion via tab, plus semantic jumps like goto def)
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Vim Javascript
 " Plugin 'pangloss/vim-javascript'
