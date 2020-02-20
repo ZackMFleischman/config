@@ -1,14 +1,22 @@
 [core]
-	excludesfile = /Users/zack/.gitignore_global
+	excludesfile = /Users/zackfleishman/.gitignore_global
 	editor = /Applications/MacVim.app/Contents/MacOS/Vim
-[user]
-	name = Zack M Fleischman
-	email = ZackMFleischman@gmail.com
+[include]
+    path = ~/.gitconfig.local
+[color]
+    ui = always
+[help]
+    autocorrect = 1
+[fetch]
+    prune = true
+[stash]
+    showPatch = true
 [diff]
 	tool = Kaleidoscope
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
+    ff = false
 	tool = p4mergetool
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
@@ -16,7 +24,7 @@
 [difftool]
 	prompt = false
 [push]
-	default = simple
+	default = current
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true

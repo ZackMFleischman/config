@@ -1,0 +1,8 @@
+# ~/.tmuxinator/front-interop.yml
+
+name: front-interop
+root: ~/repos/front-client
+windows:
+  - server: gf; npm run serve
+  - client: gc; yarn start:interop
+  - cli:
