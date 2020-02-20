@@ -234,8 +234,11 @@ calc () {
     bc -l <<< "$@"
 }
 
-# TheFuck
-# eval $(thefuck --alias)
+### Load Git Completion
+#zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+#fpath=(~/.zsh $fpath)
+
+#autoload -Uz compinit && compinit
 
 #########################
 # Source External Scripts
