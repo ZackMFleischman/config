@@ -19,8 +19,6 @@ alias front-prod='mux start front-prod'
 alias front-local='mux start front-local'
 alias front-interop='mux start front-interpo'
 
-alias code='front-prod'
-
 # Open Client in Chrome
 alias client='ch "https://0.0.0.0:3000/"'
 alias client2='ch "https://0.0.0.0:7000/"'

@@ -1,0 +1,21 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+alt+o",
+        "command": "-editor.action.organizeImports",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "vscodeWorkspaceSwitcher.switchWorkspace"
+    },
+    {
+        "key": "ctrl+k w",
+        "command": "-vscodeWorkspaceSwitcher.switchWorkspace"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus && sideBarVisible"
+    }
+]

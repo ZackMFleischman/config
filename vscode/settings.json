@@ -8,6 +8,11 @@
     "editor.rulers": [
         120
     ],
+    "vscodeWorkspaceSwitcher.paths": [
+        "~/repos/front",
+        "~/repos/front-client",
+        "~/repos/front-infra"
+    ],
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
@@ -513,6 +518,19 @@
                 "p"
             ],
             "commands": []
+        },
+        {
+            "before": [
+                "<leader>",
+                "T"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":e /Users/zackfleishman/Library/Application Support/Code/User/settings.json",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.leader": "<space>",
@@ -537,92 +555,12 @@
     "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9_#]",
     "vim.sneak": true,
     "vim.sneakUseIgnorecaseAndSmartcase": true,
-    "bracketPairColorizer.scopeLineRelativePosition": false,
-    "bracketPairColorizer.timeOut": 0,
-    "bracketPairColorizer.showBracketsInGutter": true,
-    "bracketPairColorizer.consecutivePairColors": [
-        "()",
-        "[]",
-        "{}",
-        [
-            "Orchid",
-            "Goldenrod",
-            "ForestGreen",
-            "MediumSlateBlue"
-        ],
-        "Red"
-    ],
-    "mocha.files.glob": "tests/**/*Tests.ts",
-    "mocha.requires": [
-        "ts-node/register",
-        "tsconfig-paths/register",
-        "source-map-support/register"
-    ],
-    "mocha.options": {
-        "fullTrace": true,
-        "recursive": true
-    },
-    "mocha.showErrorPopup": false,
     "explorer.confirmDragAndDrop": false,
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "terminal.integrated.rendererType": "dom",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
     "explorer.confirmDelete": false,
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#b52e31"
-        },
-        {
-            "name": "Auth0 Orange",
-            "value": "#eb5424"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "C# Purple",
-            "value": "#68217A"
-        },
-        {
-            "name": "Gatsby Purple",
-            "value": "#639"
-        },
-        {
-            "name": "Go Cyan",
-            "value": "#5dc9e2"
-        },
-        {
-            "name": "Java Blue-Gray",
-            "value": "#557c9b"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#00b3e6"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
     "javascript.updateImportsOnFileMove.enabled": "always",
     "eslint.alwaysShowStatus": true
 }
