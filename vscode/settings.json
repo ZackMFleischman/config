@@ -1,566 +1,423 @@
 {
-    "editor.minimap.enabled": true,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.stablePeek": false,
-    "editor.detectIndentation": false,
-    "editor.codeLens": false,
-    "editor.formatOnSave": true,
-    "editor.rulers": [
-        120
-    ],
-    "vscodeWorkspaceSwitcher.paths": [
-        "~/repos/front",
-        "~/repos/front-client",
-        "~/repos/front-infra"
-    ],
-    "search.exclude": {
-        "**/.git": true,
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/tmp": true,
-        "**/Builds": true,
-        "**/Plugins": true,
-        "**/StompyRobot": true,
-        "**/AssetBundles": true,
-        "**/TextMesh Pro": true,
-        "**/EasyTouchBundle": true,
-        "**/ConsoleE": true,
-        "**/Demigiant": true,
-        "**/Dynamic Decals": true,
-        "**/*.csproj": true,
-        "**/Sqlite.cs": true,
-        "**/KeenClient.cs": true,
-        "**/UnityTestTools": true,
-        "**/JsonDotNet": true
+  "editor.minimap.enabled": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.stablePeek": false,
+  "editor.detectIndentation": false,
+  "editor.codeLens": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "vscodeWorkspaceSwitcher.paths": [
+    "~/repos/front",
+    "~/repos/front-client",
+    "~/repos/front-infra"
+  ],
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "**/Builds": true,
+    "**/Plugins": true,
+    "**/StompyRobot": true,
+    "**/AssetBundles": true,
+    "**/TextMesh Pro": true,
+    "**/EasyTouchBundle": true,
+    "**/ConsoleE": true,
+    "**/Demigiant": true,
+    "**/Dynamic Decals": true,
+    "**/*.csproj": true,
+    "**/Sqlite.cs": true,
+    "**/KeenClient.cs": true,
+    "**/UnityTestTools": true,
+    "**/JsonDotNet": true
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.gitignore": true,
+    "**/.gitmodules": true,
+    "**/*.booproj": true,
+    "**/*.pidb": true,
+    "**/*.suo": true,
+    "**/*.user": true,
+    "**/*.userprefs": true,
+    "**/*.unityproj": true,
+    "**/*.dll": true,
+    "**/*.exe": true,
+    "**/*.pdf": true,
+    "**/*.mid": true,
+    "**/*.midi": true,
+    "**/*.wav": true,
+    "**/*.gif": true,
+    "**/*.ico": true,
+    "**/*.jpg": true,
+    "**/*.jpeg": true,
+    "**/*.png": true,
+    "**/*.psd": true,
+    "**/*.tga": true,
+    "**/*.tif": true,
+    "**/*.tiff": true,
+    "**/*.3ds": true,
+    "**/*.3DS": true,
+    "**/*.fbx": true,
+    "**/*.FBX": true,
+    "**/*.lxo": true,
+    "**/*.LXO": true,
+    "**/*.ma": true,
+    "**/*.MA": true,
+    "**/*.obj": true,
+    "**/*.OBJ": true,
+    "**/*.asset": true,
+    "**/*.cubemap": true,
+    "**/*.flare": true,
+    "**/*.mat": true,
+    "**/*.meta": true,
+    "**/*.prefab": true,
+    "**/*.unity": true,
+    "build/": true,
+    "Build/": true,
+    "AssetBundles/": true,
+    "Library/": true,
+    "TPS_cache/": true,
+    "library/": true,
+    "obj/": true,
+    "Obj/": true,
+    "ProjectSettings/": true,
+    "temp/": true,
+    "Temp/": true
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.autoindent": true,
+  "vim.statusBarColorControl": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["P"],
+      "after": ["p"],
+      "commands": []
     },
-    "files.exclude": {
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/node_modules": true,
-        "**/.gitignore": true,
-        "**/.gitmodules": true,
-        "**/*.booproj": true,
-        "**/*.pidb": true,
-        "**/*.suo": true,
-        "**/*.user": true,
-        "**/*.userprefs": true,
-        "**/*.unityproj": true,
-        "**/*.dll": true,
-        "**/*.exe": true,
-        "**/*.pdf": true,
-        "**/*.mid": true,
-        "**/*.midi": true,
-        "**/*.wav": true,
-        "**/*.gif": true,
-        "**/*.ico": true,
-        "**/*.jpg": true,
-        "**/*.jpeg": true,
-        "**/*.png": true,
-        "**/*.psd": true,
-        "**/*.tga": true,
-        "**/*.tif": true,
-        "**/*.tiff": true,
-        "**/*.3ds": true,
-        "**/*.3DS": true,
-        "**/*.fbx": true,
-        "**/*.FBX": true,
-        "**/*.lxo": true,
-        "**/*.LXO": true,
-        "**/*.ma": true,
-        "**/*.MA": true,
-        "**/*.obj": true,
-        "**/*.OBJ": true,
-        "**/*.asset": true,
-        "**/*.cubemap": true,
-        "**/*.flare": true,
-        "**/*.mat": true,
-        "**/*.meta": true,
-        "**/*.prefab": true,
-        "**/*.unity": true,
-        "build/": true,
-        "Build/": true,
-        "AssetBundles/": true,
-        "Library/": true,
-        "TPS_cache/": true,
-        "library/": true,
-        "obj/": true,
-        "Obj/": true,
-        "ProjectSettings/": true,
-        "temp/": true,
-        "Temp/": true
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"],
+      "commands": []
     },
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.autoindent": true,
-    "vim.statusBarColorControl": false,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "P"
-            ],
-            "after": [
-                "p"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "p"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d",
-                "P"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "m"
-            ],
-            "after": [
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ],
-            "commands": []
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "s"
-            ],
-            "after": [
-                "<leader>",
-                "<leader>",
-                "<leader>",
-                "j"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "M"
-            ],
-            "after": [
-                "m"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "m"
-            ],
-            "after": [
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "x"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "x"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "c"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "c"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
-                "m"
-            ],
-            "after": [
-                "d",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "D"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "D"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
-                "v"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.splitEditor"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.tasks.build",
-                    "args": [
-                        "check"
-                    ]
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "t"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.tasks.test"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.tasks.runTask"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "u"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "undo"
-                }
-            ]
-        },
-        {
-            "before": [
-                "_"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.navigateForward"
-                }
-            ]
-        },
-        {
-            "before": [
-                "-"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.navigateBack"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "i"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.view.explorer"
-                }
-            ]
-        },
-        {
-            "before": [
-                "]"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.nextEditor"
-                }
-            ]
-        },
-        {
-            "before": [
-                "["
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.previousEditor"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.quickOpen"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-u>"
-            ],
-            "after": [
-                "2",
-                "0",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "<C-d>"
-            ],
-            "after": [
-                "2",
-                "0",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                ";"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                },
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.saveAll",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "o"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.organizeImports",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "x"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.referenceSearch.trigger",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "z"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.goToImplementation",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "a"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.findInFiles",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "P"
-            ],
-            "after": [
-                "$",
-                "p"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                "<leader>",
-                "T"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":e /Users/zackfleishman/Library/Application Support/Code/User/settings.json",
-                    "args": []
-                }
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
+    {
+      "before": ["m"],
+      "after": ["d"],
+      "commands": []
     },
-    "window.zoomLevel": 2,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.tsc.autoDetect": "off",
-    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-    "workbench.sideBar.location": "left",
-    "editor.renderWhitespace": "all",
-    "editor.renderControlCharacters": true,
-    "breadcrumbs.enabled": false,
-    "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
-    "vim.easymotionMarkerBackgroundColor": "MediumVioletRed",
-    "vim.easymotionMarkerFontSize": "14",
-    "vim.easymotionMarkerWidthPerChar": 8,
-    "vim.easymotionMarkerHeight": 18,
-    "vim.easymotionMarkerYOffset": 1,
-    "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9_#]",
-    "vim.sneak": true,
-    "vim.sneakUseIgnorecaseAndSmartcase": true,
-    "explorer.confirmDragAndDrop": false,
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "terminal.integrated.rendererType": "dom",
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "explorer.confirmDelete": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "eslint.alwaysShowStatus": true
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"],
+      "commands": []
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "s"],
+      "after": ["<leader>", "<leader>", "<leader>", "j"],
+      "commands": []
+    },
+    {
+      "before": ["M"],
+      "after": ["m"],
+      "commands": []
+    },
+    {
+      "before": ["m"],
+      "after": ["d"],
+      "commands": []
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"],
+      "commands": []
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"],
+      "commands": []
+    },
+    {
+      "before": ["<leader>", "m"],
+      "after": ["d", "d"],
+      "commands": []
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": [],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["<leader>", "D"],
+      "after": [],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"],
+      "commands": []
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"],
+      "commands": []
+    },
+    {
+      "before": ["<leader>", "v"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.build",
+          "args": ["check"]
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.test"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": ["_"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.navigateForward"
+        }
+      ]
+    },
+    {
+      "before": ["-"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.navigateBack"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "i"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.view.explorer"
+        }
+      ]
+    },
+    {
+      "before": ["]"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    {
+      "before": ["["],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen"
+        }
+      ]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["2", "0", "k"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["2", "0", "j"]
+    },
+    {
+      "before": ["<leader>", ";"],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.saveAll",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.organizeImports",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.goToReferences",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "X"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.referenceSearch.trigger",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.goToImplementation",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "a"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "P"],
+      "after": ["$", "p"],
+      "commands": []
+    },
+    {
+      "before": ["<leader>", "T"],
+      "after": [],
+      "commands": [
+        {
+          "command": ":e /Users/zackfleishman/Library/Application Support/Code/User/settings.json",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "window.zoomLevel": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.tsc.autoDetect": "off",
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "workbench.sideBar.location": "left",
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "breadcrumbs.enabled": false,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.easymotionMarkerBackgroundColor": "MediumVioletRed",
+  "vim.easymotionMarkerFontSize": "14",
+  "vim.easymotionMarkerWidthPerChar": 8,
+  "vim.easymotionMarkerHeight": 18,
+  "vim.easymotionMarkerYOffset": 1,
+  "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9_#]",
+  "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "terminal.integrated.rendererType": "dom",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "eslint.alwaysShowStatus": true
 }
