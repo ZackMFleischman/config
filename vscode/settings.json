@@ -402,7 +402,7 @@
   "workbench.sideBar.location": "left",
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.easymotionMarkerBackgroundColor": "MediumVioletRed",
   "vim.easymotionMarkerFontSize": "14",

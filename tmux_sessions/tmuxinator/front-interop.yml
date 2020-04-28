@@ -3,6 +3,10 @@
 name: front-interop
 root: ~/repos/front-client
 windows:
-  - server: gf; npm run serve
-  - client: gc; yarn start:interop
-  - cli:
+  - front-interop:
+      layout: tiled
+      panes:
+        - gf; npm run serve
+        - gf; npm run start
+        - gc; yarn start:interop
+        - gc
