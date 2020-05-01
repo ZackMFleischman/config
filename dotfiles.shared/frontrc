@@ -25,6 +25,9 @@ alias client2='ch "https://0.0.0.0:7000/"'
 
 alias bm='gf;npm run sql:generate-schema;npm run sql:make-migrations'
 
+# Enter search term for a name, and it will spit out the names and emails you need to punch into the mailmap files.
+alias mailmapCheck='git log --pretty=format:"%an %ae --> %aN" | sort | uniq | grep -i'
+
 # Testing
 alias t='testFront'
 alias sp='yarn start:prod'
