@@ -43,7 +43,7 @@ alias ci='brew cask install'
 alias cs='brew cask search' 
 
 # Notifications
-alias n='~/repos/scripts/osx/notify'
+alias n='~/repos/scripts/osx/notify $?'
 
 # Alias 'python_watch' to the osx version
 alias python_watch='python_watch_osx'

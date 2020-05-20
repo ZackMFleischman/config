@@ -169,6 +169,7 @@ alias ripaudio='youtube-dl --extract-audio --audio-quality 0 --audio-format m4a'
 alias paths='for f in $(ls); echo $(pwd)/$f'
 alias dev='npm run dev'
 alias ming='email -t 8483914275@tmomail.net'
+alias i='internet'
 
 alias pivpn='ssh -i ~/.ssh/lightsail.pem ubuntu@3.232.38.244'
 
