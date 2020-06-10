@@ -16,6 +16,7 @@ bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 bindkey "^D" backward-kill-line
+bindkey "^H" backward-kill-word
 
 # Open Mac Apps
 alias fire='open -a /Applications/Firefox.app'
