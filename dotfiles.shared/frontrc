@@ -32,4 +32,7 @@ alias mailmapCheck='git log --pretty=format:"%an %ae --> %aN" | sort | uniq | gr
 alias t='testFront'
 alias sp='yarn start:prod'
 
+alias prod='yarn run start:prod;say "webpack crashed"'
+alias rep='rm report*;s'
+
 f
