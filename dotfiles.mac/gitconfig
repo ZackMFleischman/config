@@ -54,3 +54,6 @@
 	old = red bold
 	new = green
 	whitespace = red reverse
+[user]
+	email = ZackMFleischman@gmail.com
+	name = Zack M Fleischman
