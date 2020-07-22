@@ -1,0 +1,8 @@
+# ~/.tmuxinator/front-local.yml
+
+name: front-local
+root: ~/repos/front-client
+windows:
+  - server: gf; npm start
+  - client: gc; yarn start
+  - cli:

@@ -1,0 +1,7 @@
+# ~/.tmuxinator/front-prod.yml
+
+name: front-prod
+root: ~/repos/front-client
+windows:
+  - client: gc; yarn start:prod
+  - cli:

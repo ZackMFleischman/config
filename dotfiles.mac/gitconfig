@@ -1,9 +1,17 @@
 [core]
-	excludesfile = /Users/zack/.gitignore_global
+	excludesfile = /Users/zackfleishman/.gitignore_global
 	editor = /Applications/MacVim.app/Contents/MacOS/Vim
-[user]
-	name = Zack M Fleischman
-	email = ZackMFleischman@gmail.com
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[include]
+    path = ~/.gitconfig.local
+[color]
+	ui = true
+[help]
+    autocorrect = 1
+[fetch]
+    prune = true
+[stash]
+    showPatch = true
 [diff]
 	tool = Kaleidoscope
 [difftool "diffmerge"]
@@ -16,7 +24,7 @@
 [difftool]
 	prompt = false
 [push]
-	default = simple
+	default = current
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
@@ -34,3 +42,15 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green
+	whitespace = red reverse

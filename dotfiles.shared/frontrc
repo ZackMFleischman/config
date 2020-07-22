@@ -1,0 +1,38 @@
+#########################
+# Front Specific Commands
+#########################
+
+# Edit this file
+alias es='vim ~/.frontrc'
+
+# Add to the PATH
+
+# Directory shortcuts
+alias gf='cd ~/repos/front'
+alias gc='cd ~/repos/front-client'
+alias gi='cd ~/repos/front-infra'
+
+alias f='gc' # Current project
+
+# Aliases for my tmux sessions
+alias fprod='mux start front-prod'
+alias flocal='mux start front-local'
+alias finterop='mux start front-interop'
+
+# Open Client in Chrome
+alias client='ch "https://0.0.0.0:3000/"'
+alias client2='ch "https://0.0.0.0:7000/"'
+
+alias bm='gf;npm run sql:generate-schema;npm run sql:make-migrations'
+
+# Enter search term for a name, and it will spit out the names and emails you need to punch into the mailmap files.
+alias mailmapCheck='git log --pretty=format:"%an %ae --> %aN" | sort | uniq | grep -i'
+
+# Testing
+alias t='testFront'
+alias sp='yarn start:prod'
+
+alias prod='yarn run start:prod;say "webpack crashed"'
+alias rep='rm report*;s'
+
+f

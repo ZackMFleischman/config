@@ -10,6 +10,14 @@ export PATH="$PATH:/usr/local/homebrew/bin"
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+# Moving forward and backward by words and lines (NOTE: Need to setup in iterm2 preferences too)
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+bindkey "^D" backward-kill-line
+bindkey "^H" backward-kill-word
+
 # Open Mac Apps
 alias fire='open -a /Applications/Firefox.app'
 alias chrome='open -a /Applications/Google\ Chrome.app'
@@ -43,7 +51,7 @@ alias ci='brew cask install'
 alias cs='brew cask search' 
 
 # Notifications
-alias n='~/repos/scripts/osx/notify'
+alias n='~/repos/scripts/osx/notify $?'
 
 # Alias 'python_watch' to the osx version
 alias python_watch='python_watch_osx'
@@ -54,3 +62,11 @@ alias txt='pbpaste | text'  # text myself whats in the clipboard
 
 # LaTeX
 #alias pdflatex='/Library/TeX/Root/bin/x86_64-darwin/pdflatex'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add fuzzy file finding. ^t for files, ^r for history
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

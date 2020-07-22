@@ -1,4 +1,4 @@
-ompiled source #
+# compiled source
 ###################
 *.com
 *.class
@@ -34,8 +34,16 @@ ompiled source #
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+Desktop.ini
 Thumbs.db
+.Spotlight-V100
 
 # Temporary Files #
 ###################
 *~
+
+# Dev
+node_modules
+.vscode
+.vim
+*.code-workspace
