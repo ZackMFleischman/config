@@ -520,7 +520,7 @@
         "<C-a>": false,
         "<C-f>": false
     },
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.tsc.autoDetect": "off",
     "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -567,7 +567,6 @@
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "terminal.integrated.rendererType": "dom",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
     "explorer.confirmDelete": false,
     "peacock.favoriteColors": [
         {
@@ -624,5 +623,7 @@
         }
     ],
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "editor.tabSize": 2,
+    "typescriptHero.imports.insertSpaceBeforeAndAfterImportBraces": false
 }
