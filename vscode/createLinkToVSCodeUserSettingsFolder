@@ -1,3 +1,4 @@
 #!/bin/bash
 ln -s $HOME/repos/config/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 ln -s $HOME/repos/config/vscode/keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
+ln -s $HOME/repos/config/vscode/tasks.json "$HOME/Library/Application Support/Code/User/tasks.json"

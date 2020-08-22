@@ -4,8 +4,10 @@
   "editor.stablePeek": false,
   "editor.detectIndentation": false,
   "editor.codeLens": false,
-  "editor.formatOnSave": true,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
+  "workbench.editor.tabSizing": "shrink",
   "vscodeWorkspaceSwitcher.paths": [
     "~/repos/front",
     "~/repos/front-client",
@@ -96,85 +98,221 @@
   "vim.statusBarColorControl": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["P"],
-      "after": ["p"],
+      "before": [
+        "<leader>",
+        "a"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "P"
+      ],
+      "after": [
+        "p"
+      ],
       "commands": []
     },
     {
-      "before": ["p"],
-      "after": ["\"", "_", "d", "P"],
+      "before": [
+        "p"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "P"
+      ],
       "commands": []
     },
     {
-      "before": ["m"],
-      "after": ["d"],
+      "before": [
+        "m"
+      ],
+      "after": [
+        "d"
+      ],
       "commands": []
     },
     {
-      "before": ["d"],
-      "after": ["\"", "_", "d"],
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+      "commands": []
+    }, {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ],
+      "commands": []
+    }, {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ],
       "commands": []
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "s"],
-      "after": ["<leader>", "<leader>", "<leader>", "j"],
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "<leader>",
+        "j"
+      ],
       "commands": []
     },
     {
-      "before": ["M"],
-      "after": ["m"],
+      "before": [
+        "M"
+      ],
+      "after": [
+        "m"
+      ],
       "commands": []
     },
     {
-      "before": ["m"],
-      "after": ["d"],
+      "before": [
+        "m"
+      ],
+      "after": [
+        "d"
+      ],
       "commands": []
     },
     {
-      "before": ["x"],
-      "after": ["\"", "_", "x"],
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ],
       "commands": []
     },
     {
-      "before": ["c"],
-      "after": ["\"", "_", "c"],
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ],
       "commands": []
     },
     {
-      "before": ["<leader>", "m"],
-      "after": ["d", "d"],
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "after": [
+        "d",
+        "d"
+      ],
       "commands": []
     },
     {
-      "before": ["<leader>", "d"],
+      "before": [
+        "<leader>",
+        "d"
+      ],
       "after": [],
-      "commands": ["editor.action.peekDefinition"]
+      "commands": [
+        "editor.action.peekDefinition"
+      ]
     },
     {
-      "before": ["<leader>", "D"],
+      "before": [
+        "<leader>",
+        "D"
+      ],
       "after": [],
-      "commands": ["editor.action.peekTypeDefinition"]
+      "commands": [
+        "editor.action.peekTypeDefinition"
+      ]
     },
     {
-      "before": ["D"],
-      "after": ["\"", "_", "D"],
+      "before": [
+        "0"
+      ],
+      "after": [
+        "^",
+      ],
       "commands": []
     },
     {
-      "before": ["d"],
-      "after": ["\"", "_", "d"],
+      "before": [
+        "^"
+      ],
+      "after": [
+        "0",
+      ],
       "commands": []
     },
     {
-      "before": ["<leader>", "v"],
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ],
+      "commands": []
+    },
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+      "commands": []
+    },
+    {
+      "before": [
+        "<leader>",
+        "v"
+      ],
       "after": [],
       "commands": [
         {
@@ -183,17 +321,25 @@
       ]
     },
     {
-      "before": ["<leader>", "b"],
+      "before": [
+        "<leader>",
+        "b"
+      ],
       "after": [],
       "commands": [
         {
           "command": "workbench.action.tasks.build",
-          "args": ["check"]
+          "args": [
+            "check"
+          ]
         }
       ]
     },
     {
-      "before": ["<leader>", "t"],
+      "before": [
+        "<leader>",
+        "T"
+      ],
       "after": [],
       "commands": [
         {
@@ -202,7 +348,10 @@
       ]
     },
     {
-      "before": ["<leader>", "c"],
+      "before": [
+        "<leader>",
+        "c"
+      ],
       "after": [],
       "commands": [
         {
@@ -211,7 +360,10 @@
       ]
     },
     {
-      "before": ["<leader>", "u"],
+      "before": [
+        "<leader>",
+        "u"
+      ],
       "after": [],
       "commands": [
         {
@@ -220,7 +372,9 @@
       ]
     },
     {
-      "before": ["_"],
+      "before": [
+        "_"
+      ],
       "after": [],
       "commands": [
         {
@@ -229,7 +383,9 @@
       ]
     },
     {
-      "before": ["-"],
+      "before": [
+        "-"
+      ],
       "after": [],
       "commands": [
         {
@@ -238,7 +394,10 @@
       ]
     },
     {
-      "before": ["<leader>", "i"],
+      "before": [
+        "<leader>",
+        "i"
+      ],
       "after": [],
       "commands": [
         {
@@ -247,7 +406,9 @@
       ]
     },
     {
-      "before": ["]"],
+      "before": [
+        "]"
+      ],
       "after": [],
       "commands": [
         {
@@ -256,7 +417,9 @@
       ]
     },
     {
-      "before": ["["],
+      "before": [
+        "["
+      ],
       "after": [],
       "commands": [
         {
@@ -265,7 +428,10 @@
       ]
     },
     {
-      "before": ["<leader>", "f"],
+      "before": [
+        "<leader>",
+        "f"
+      ],
       "after": [],
       "commands": [
         {
@@ -274,15 +440,30 @@
       ]
     },
     {
-      "before": ["<C-u>"],
-      "after": ["2", "0", "k"]
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "2",
+        "0",
+        "k"
+      ]
     },
     {
-      "before": ["<C-d>"],
-      "after": ["2", "0", "j"]
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "2",
+        "0",
+        "j"
+      ]
     },
     {
-      "before": ["<leader>", ";"],
+      "before": [
+        "<leader>",
+        ";"
+      ],
       "after": [],
       "commands": [
         {
@@ -291,7 +472,10 @@
       ]
     },
     {
-      "before": ["<leader>", "e"],
+      "before": [
+        "<leader>",
+        "e"
+      ],
       "after": [],
       "commands": [
         {
@@ -305,7 +489,10 @@
       ]
     },
     {
-      "before": ["<leader>", "q"],
+      "before": [
+        "<leader>",
+        "q"
+      ],
       "after": [],
       "commands": [
         {
@@ -315,7 +502,10 @@
       ]
     },
     {
-      "before": ["<leader>", "w"],
+      "before": [
+        "<leader>",
+        "w"
+      ],
       "after": [],
       "commands": [
         {
@@ -325,7 +515,10 @@
       ]
     },
     {
-      "before": ["<leader>", "o"],
+      "before": [
+        "<leader>",
+        "o"
+      ],
       "after": [],
       "commands": [
         {
@@ -335,7 +528,10 @@
       ]
     },
     {
-      "before": ["<leader>", "x"],
+      "before": [
+        "<leader>",
+        "x"
+      ],
       "after": [],
       "commands": [
         {
@@ -345,7 +541,10 @@
       ]
     },
     {
-      "before": ["<leader>", "X"],
+      "before": [
+        "<leader>",
+        "X"
+      ],
       "after": [],
       "commands": [
         {
@@ -355,7 +554,10 @@
       ]
     },
     {
-      "before": ["<leader>", "z"],
+      "before": [
+        "<leader>",
+        "z"
+      ],
       "after": [],
       "commands": [
         {
@@ -365,7 +567,10 @@
       ]
     },
     {
-      "before": ["<leader>", "a"],
+      "before": [
+        "<leader>",
+        "a"
+      ],
       "after": [],
       "commands": [
         {
@@ -375,12 +580,21 @@
       ]
     },
     {
-      "before": ["<leader>", "P"],
-      "after": ["$", "p"],
+      "before": [
+        "<leader>",
+        "P"
+      ],
+      "after": [
+        "$",
+        "p"
+      ],
       "commands": []
     },
     {
-      "before": ["<leader>", "T"],
+      "before": [
+        "<leader>",
+        "R"
+      ],
       "after": [],
       "commands": [
         {
@@ -388,14 +602,194 @@
           "args": []
         }
       ]
-    }
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Run Current File's Tests"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "S"
+      ],
+      "after": [],
+      "commands": [
+        ":split"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "V"
+      ],
+      "after": [],
+      "commands": [
+        ":vsplit"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        ":"
+      ],
+      "after": [],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "1"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex1",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "2"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex2",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "3"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex3",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "4"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex4",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "5"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex5",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "6"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex6",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "7"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex7",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "8"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex8",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "9"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex9",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [ "<" ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.outdentLines",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [ ">" ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.indentLines",
+          "args": []
+        }
+      ]
+    },
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
   },
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsc.autoDetect": "off",
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -419,5 +813,33 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "explorer.confirmDelete": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "editor.tabSize": 2,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.blame.format": "${author} - ${message|40?} ${agoOrDate|14-}",
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.compact": false,
+  "gitlens.blame.toggleMode": "window",
+  "files.autoSave": "onFocusChange",
+  "prettier.singleQuote": true,
+  "prettier.requireConfig": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "liveshare.allowGuestDebugControl": true,
+  "prettier.configPath": ".prettierrc.json",
+  "prettier.printWidth": 110,
+  "prettier.useEditorConfig": false,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never",
+  "terminal.integrated.shellArgs.linux": [
+    "-i"
+  ],
+  "terminal.integrated.shell.osx": "zsh",
+  "terminal.integrated.inheritEnv": true
 }

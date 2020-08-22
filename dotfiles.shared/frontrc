@@ -5,7 +5,8 @@
 # Edit this file
 alias es='vim ~/.frontrc'
 
-# Add to the PATH
+# Environment Variables
+export CANARY_USER=zackfleischman
 
 # Directory shortcuts
 alias gf='cd ~/repos/front'

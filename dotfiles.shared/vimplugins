@@ -70,7 +70,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-dispatch'
 
 " Markdown Preview Window
-Plugin 'NBUT-Developers/extra-instant-markdown'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 """""""""""""""""""""""""""""""
 " Language Specific shiz
