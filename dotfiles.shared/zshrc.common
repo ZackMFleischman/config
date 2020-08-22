@@ -148,7 +148,6 @@ alias stash='git add -A;git stash'
 alias ll='ls -la'
 alias pp="jq '.'"
 alias x='chmod 755' # Grant executable permissions
-alias pi='ping google.com'
 alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -1" # Current IP Address
 alias resume='pdflatex ~/repos/resume/src/resume.tex;mv ~/repos/resume/src/resume.pdf ~/repos/resume/resume.pdf;open ~/repos/resume/resume.pdf' # Build my resumé
 alias tj='vim -t' # Vim Tag Jump
@@ -172,7 +171,9 @@ alias dev='npm run dev'
 alias ming='email -t 8483914275@tmomail.net'
 alias i='internet'
 
-alias pivpn='ssh -i ~/.ssh/lightsail.pem ubuntu@3.232.38.244'
+# Raspberry Pi Stuff
+alias raspberryIP='arp -a | grep raspberry | awkc 2 | tr -d "()"'
+alias pi='ssh pi@$(raspberryIP)'
 
 #########################
 # SSH Into Server Aliases

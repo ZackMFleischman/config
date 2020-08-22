@@ -414,14 +414,61 @@
         {
           "command": "workbench.action.nextEditor"
         }
-      ]
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
     },
-    {
-      "before": [
-        "["
-      ],
-      "after": [],
-      "commands": [
+    "window.zoomLevel": 0,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsc.autoDetect": "off",
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "workbench.sideBar.location": "left",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "breadcrumbs.enabled": false,
+    "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+    "vim.easymotionMarkerBackgroundColor": "MediumVioletRed",
+    "vim.easymotionMarkerFontSize": "14",
+    "vim.easymotionMarkerWidthPerChar": 8,
+    "vim.easymotionMarkerHeight": 18,
+    "vim.easymotionMarkerYOffset": 1,
+    "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9_#]",
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "bracketPairColorizer.scopeLineRelativePosition": false,
+    "bracketPairColorizer.timeOut": 0,
+    "bracketPairColorizer.showBracketsInGutter": true,
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+            "Orchid",
+            "Goldenrod",
+            "ForestGreen",
+            "MediumSlateBlue"
+        ],
+        "Red"
+    ],
+    "mocha.files.glob": "tests/**/*Tests.ts",
+    "mocha.requires": [
+        "ts-node/register",
+        "tsconfig-paths/register",
+        "source-map-support/register"
+    ],
+    "mocha.options": {
+        "fullTrace": true,
+        "recursive": true
+    },
+    "mocha.showErrorPopup": false,
+    "explorer.confirmDragAndDrop": false,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "terminal.integrated.rendererType": "dom",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "explorer.confirmDelete": false,
+    "peacock.favoriteColors": [
         {
           "command": "workbench.action.previousEditor"
         }

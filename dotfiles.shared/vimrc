@@ -3,6 +3,8 @@
 " Author: Zack Fleischman
 "
 
+" TEST
+
 "------------------------
 " My leader to the space bar. Do this before sourcing any mappings
 let mapleader="\<Space>"
