@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-        "label": "Run Current File's Tests",
+        "label": "Run Current File's Tests (zack)",
         "type": "shell",
         "command": "testFront ${fileBasenameNoExtension}",
         "args": [ ],
@@ -20,20 +20,6 @@
           "env": {
             "TZ": "Universal",
           }
-        }
-    },
-    {
-        "label": "Run Current File's Tests 2",
-        "type": "shell",
-        "command": "yarn test ${fileBasenameNoExtension}",
-        "args": [ ],
-        "group": "test",
-        "presentation": {
-          "reveal": "always",
-          "clear": false,
-          "focus": false,
-          "echo": true,
-          "panel": "dedicated"
         }
     },
     {

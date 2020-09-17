@@ -7,6 +7,7 @@ alias es='vim ~/.frontrc'
 
 # Environment Variables
 export CANARY_USER=zackfleischman
+export FORMAT_ON_COMMIT=1
 
 # Directory shortcuts
 alias gf='cd ~/repos/front'
@@ -35,5 +36,11 @@ alias sp='yarn start:prod'
 
 alias prod='yarn run start:prod;say "webpack crashed"'
 alias rep='rm report*;s'
+
+# Interop Database Queries
+alias db='fetchAndDumpSnapshot | jq .sql_main'
+alias folders='db | jq .canned_answer_folders'
+
+alias snapshot='fetchSnapshot'
 
 f

@@ -472,6 +472,18 @@
     },
     {
       "before": [
+        "<leader>",
+        "F"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+    {
+      "before": [
         "<C-u>"
       ],
       "after": [
@@ -656,7 +668,7 @@
       "commands": [
         {
           "command": "workbench.action.tasks.runTask",
-          "args": "Run Current File's Tests"
+          "args": "Run Current File's Tests (zack)"
         }
       ]
     },
@@ -857,7 +869,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "explorer.confirmDelete": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "eslint.alwaysShowStatus": true,
   "editor.tabSize": 2,
   "gitlens.currentLine.enabled": false,
   "gitlens.blame.format": "${author} - ${message|40?} ${agoOrDate|14-}",
@@ -865,25 +876,32 @@
   "gitlens.blame.compact": false,
   "gitlens.blame.toggleMode": "window",
   "files.autoSave": "onFocusChange",
-  "prettier.singleQuote": true,
   "prettier.requireConfig": true,
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "liveshare.allowGuestDebugControl": true,
   "prettier.configPath": ".prettierrc.json",
   "prettier.printWidth": 110,
   "prettier.useEditorConfig": false,
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  },
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingBrackets": "never",
   "terminal.integrated.shellArgs.linux": [
     "-i"
   ],
   "terminal.integrated.shell.osx": "zsh",
-  "terminal.integrated.inheritEnv": true
+  "terminal.integrated.inheritEnv": true,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
