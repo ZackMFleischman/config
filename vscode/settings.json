@@ -354,6 +354,18 @@
     {
       "before": [
         "<leader>",
+        "g"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
         "b"
       ],
       "after": [],
@@ -387,6 +399,19 @@
       "commands": [
         {
           "command": "workbench.action.tasks.runTask"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "F"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Format"
         }
       ]
     },
@@ -889,7 +914,6 @@
   ],
   "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.inheritEnv": true,
-  "editor.formatOnSave": true,
   "[javascript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll": true

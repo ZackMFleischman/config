@@ -13,3 +13,4 @@ windows:
         - gf
   - backend: gf
   - frontend: gc
+  - components: cd ~/repos/components

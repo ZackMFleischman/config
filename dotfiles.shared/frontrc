@@ -43,4 +43,7 @@ alias folders='db | jq .canned_answer_folders'
 
 alias snapshot='fetchSnapshot'
 
+# Personal Staging
+alias pushstaging='git push origin HEAD:zfleischman/staging -f'
+
 f

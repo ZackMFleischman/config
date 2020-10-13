@@ -4,42 +4,61 @@
   "version": "2.0.0",
   "tasks": [
     {
-        "label": "Run Current File's Tests (zack)",
-        "type": "shell",
-        "command": "testFront ${fileBasenameNoExtension}",
-        "args": [ ],
-        "group": "test",
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "dedicated",
-          "clear": true
-        },
-        "options": {
-          "env": {
-            "TZ": "Universal",
-          }
+      "label": "Run Current File's Tests (zack)",
+      "type": "shell",
+      "command": "testFront ${fileBasenameNoExtension}",
+      "args": [],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "options": {
+        "env": {
+          "TZ": "Universal"
         }
+      }
     },
     {
-        "label": "Run All Tests",
-        "type": "shell",
-        "command": "pops 'Running all tests'; testFront",
-        "args": [ ],
-        "group": "test",
-        "presentation": {
-          "echo": true,
-          "reveal": "never",
-          "focus": false,
-          "panel": "dedicated",
-          "clear": true
-        },
-        "options": {
-          "env": {
-            "TZ": "Universal",
-          }
+      "label": "Run All Tests",
+      "type": "shell",
+      "command": "pops 'Running all tests'; testFront",
+      "args": [],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "options": {
+        "env": {
+          "TZ": "Universal"
         }
+      }
+    },
+    {
+      "label": "Format",
+      "type": "shell",
+      "command": "pops 'Formatting Code...'; formatChanged; pops 'Done formatting code.'",
+      "args": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "options": {
+        "env": {
+          "TZ": "Universal"
+        }
+      },
+      "problemMatcher": []
     }
   ]
 }

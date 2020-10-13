@@ -119,7 +119,7 @@
     "command": "gitlens.toggleFileHeatmap"
   },
   {
-    "key": "cmd+j",
+    "key": "alt+j",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -155,10 +155,6 @@
   {
     "key": "cmd+k cmd+down",
     "command": "-workbench.action.focusBelowGroup"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.focusLeftGroup"
   },
   {
     "key": "cmd+k cmd+left",
@@ -266,5 +262,50 @@
     "key": "cmd+shift+f5",
     "command": "workbench.action.tasks.runTask",
     "args": "runCurrentTest"
+  },
+  {
+      "key": "cmd+shift+f",
+      "command": "workbench.action.tasks.runTask",
+      "args": "Format"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
   }
 ]
