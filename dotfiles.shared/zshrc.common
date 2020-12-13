@@ -248,8 +248,16 @@ calc () {
 # Source External Scripts
 #########################
 source ~/repos/scripts/util/exportColors
-source ~/.frontrc
+
+if [[ -s "~/.frontrc" ]]; then
+    source ~/.frontrc
+fi
 
 if [[ -s "~/repos/goto/goto.sh" ]]; then
     source ~/repos/goto/goto.sh
+fi
+
+CREDS_FILE="$HOME/.creds"
+if [[ -f "$CREDS_FILE" ]]; then
+    source ~/.creds
 fi
