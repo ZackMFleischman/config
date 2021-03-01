@@ -4,81 +4,21 @@
 echo ""
 echo "Installing command line programs..."
 binaries=(
-    git
-    sdl
-    graphicsmagick
     gpg
     rename
     zopfli
     ffmpeg
-    python
-    python3
-    ctags
-    trash
     node
     autojump
     tmux
+    tmuxinator
     htop
     vim
     tree
-    postgresql
     zsh
     the_silver_searcher
     ack
-    mercurial
-    heroku
-    preattach-to-user-namespace
     gource
-    ranger
-    googler
 )
 brew install ${binaries[@]}
 
-# Start Postgres Server
-brew services start postgresql
-
-# Install GUI Programs
-###############################
-echo ""
-echo "Installing homebrew cask..."
-# Install cask
-brew install caskroom/cask/brew-cask
-
-echo ""
-echo "Installing GUI Applications..."
-# Apps
-apps=(
-    dropbox
-    box-sync
-    bettertouchtool
-    keyboard-maestro
-    xquartz
-    calibre
-    kaleidoscope
-    keepassx
-    handbrake
-    p4merge
-    processing
-    the-unarchiver
-    utorrent
-    disk-inventory-x
-    google-chrome
-    firefox
-    spotify
-    iterm2
-    virtualbox
-    flux
-    vlc
-    skype
-    evernote
-    xee
-    slack
-    seil
-)
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-brew cask install --appdir="/Applications" ${apps[@]}
-
-# Install python programs
-pip install virtualenv
-pip install virtualenvwrapper
