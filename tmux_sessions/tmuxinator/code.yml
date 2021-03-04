@@ -1,23 +1,14 @@
 # ~/.tmuxinator/code.yml
 
 name: code
-root: ~/repos/strypes/tool
+root: ~/repos/Codecademy
 windows:
   - servers:
       layout: even-horizontal
       panes:
-        - http-server -p3001 --cors
-        - ga;docker-compose up
-  - tool:
-  - cli:
-      layout: even-horizontal
-      panes:
-        - gc;vim
-        - gc
-  - api:
-      layout: even-horizontal
-      panes:
-        - ga;vim
-        - ga
-  - tool_assets: cd ~/repos/strypes/tool_assets
-  - csharp: csharp
+        - bundle install;make services;bundle exec rails server
+        - sh bundle exec sidekiq -C config/sidekiq.yml
+        - yarn run start
+  - shell: clear
+  - node: node
+  - ruby: irb

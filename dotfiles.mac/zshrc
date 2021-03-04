@@ -70,3 +70,6 @@ export NVM_DIR="$HOME/.nvm"
 # Add fuzzy file finding. ^t for files, ^r for history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+source $HOME/.codecademyrc
+

@@ -863,14 +863,13 @@
           "args": []
         }
       ]
-    },
+    }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
   },
-  "window.zoomLevel": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsc.autoDetect": "off",
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -901,12 +900,7 @@
   "gitlens.blame.compact": false,
   "gitlens.blame.toggleMode": "window",
   "files.autoSave": "onFocusChange",
-  "prettier.requireConfig": true,
   "liveshare.allowGuestDebugControl": true,
-  "prettier.configPath": ".prettierrc.json",
-  "prettier.printWidth": 110,
-  "prettier.useEditorConfig": false,
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingBrackets": "never",
   "terminal.integrated.shellArgs.linux": [
@@ -914,19 +908,6 @@
   ],
   "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.inheritEnv": true,
-  "[javascript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": true
-    }
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.formatOnSave": true,
+  "window.zoomLevel": 1,
 }
