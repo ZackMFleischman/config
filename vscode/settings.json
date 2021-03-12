@@ -386,7 +386,7 @@
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.tasks.test"
+          "command": "extension.runJestFile"
         }
       ]
     },
@@ -692,8 +692,7 @@
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.tasks.runTask",
-          "args": "Run Current File's Tests (zack)"
+          "command": "extension.runJest"
         }
       ]
     },
@@ -910,4 +909,5 @@
   "terminal.integrated.inheritEnv": true,
   "editor.formatOnSave": true,
   "window.zoomLevel": 1,
+  "tabnine.experimentalAutoImports": true,
 }

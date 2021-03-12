@@ -31,7 +31,7 @@ complete -F __start_kubectl k
 
 
 # Env variables
-export BUNDLE_GITHUB__COM=76a56f8053f6435f0bb220babb6c11e93bdc8ab1
+export BUNDLE_GITHUB__COM=621f29ead62bec082f7bf7b18ef29fd632089682
 
 export CODECADEMY_DIR="$HOME/repos/Codecademy/"
 
