@@ -7,9 +7,14 @@ alias es='e ~/.codecademyrc'
 
 # Aliases
 alias f='cd ~/repos/Codecademy'
+alias gg='cd ~/repos/client-modules/packages/gamut'
+alias gc='cd ~/repos/client-modules'
 alias code='mux start code'
 alias prod='export AWS_PROFILE=prod'
 alias nonprod='export AWS_PROFILE=nonprod'
+alias nd='n "Check on deploy" 7&'
+
+
 nonprod
 
 alias rl='bundle exec rubocop --safe'

@@ -893,7 +893,6 @@
   "explorer.confirmDelete": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.tabSize": 2,
-  "gitlens.currentLine.enabled": false,
   "gitlens.blame.format": "${author} - ${message|40?} ${agoOrDate|14-}",
   "gitlens.blame.avatars": false,
   "gitlens.blame.compact": false,
@@ -908,6 +907,6 @@
   "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.inheritEnv": true,
   "editor.formatOnSave": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "tabnine.experimentalAutoImports": true,
 }

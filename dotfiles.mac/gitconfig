@@ -57,3 +57,5 @@
 [user]
 	email = zFleischman@codecademy.com
 	name = Zack M Fleischman
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
