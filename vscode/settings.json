@@ -872,7 +872,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsc.autoDetect": "off",
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-  "workbench.sideBar.location": "left",
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
   "breadcrumbs.enabled": true,
@@ -886,7 +885,7 @@
   "vim.sneak": true,
   "vim.sneakUseIgnorecaseAndSmartcase": true,
   "explorer.confirmDragAndDrop": false,
-  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "terminal.integrated.rendererType": "dom",
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
@@ -907,6 +906,9 @@
   "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.inheritEnv": true,
   "editor.formatOnSave": true,
-  "window.zoomLevel": 2,
   "tabnine.experimentalAutoImports": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 1,
 }

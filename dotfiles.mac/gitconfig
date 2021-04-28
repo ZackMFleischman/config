@@ -5,7 +5,7 @@
 [include]
     path = ~/.gitconfig.local
 [color]
-	ui = true
+	ui = always
 [help]
     autocorrect = 1
 [fetch]
