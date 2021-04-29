@@ -47,7 +47,6 @@ alias bu='bp;backup.mac'
 # Homebrew
 alias bin='brew install'
 alias bun='brew uninstall'
-alias ci='brew cask install' 
 alias cs='brew cask search' 
 
 # Notifications

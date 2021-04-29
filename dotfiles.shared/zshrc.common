@@ -191,6 +191,8 @@ alias i='internet'
 alias raspberryIP='arp -a | grep raspberry | awkc 2 | tr -d "()"'
 #alias pi='ssh pi@$(raspberryIP)'
 
+alias ci='n "Check on CircleCI" 13&'
+
 #########################
 # SSH Into Server Aliases
 #########################
