@@ -119,7 +119,7 @@
     "command": "gitlens.toggleFileHeatmap"
   },
   {
-    "key": "alt+j",
+    "key": "cmd+o",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -127,7 +127,7 @@
     "command": "-workbench.action.togglePanel"
   },
   {
-    "key": "shift+cmd+j",
+    "key": "shift+cmd+o",
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
@@ -177,7 +177,7 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
-    "key": "cmd+n",
+    "key": "alt+n",
     "command": "search.action.focusNextSearchResult",
     "when": "hasSearchResult"
   },
@@ -237,14 +237,6 @@
     "key": "ctrl+a",
     "command": "-cursorLineStart",
     "when": "textInputFocus"
-  },
-  {
-    "key": "cmd+i",
-    "command": "editor.action.sourceAction",
-    "args": {
-        "kind": "source.addMissingImports",
-        "apply": "first"
-    }
   },
   {
     "key": "alt+f",
@@ -307,5 +299,47 @@
   {
     "key": "shift+cmd+j",
     "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "cmd+n",
+    "command": "newFile.createNewFile"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "-newFile.createNewFile"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.sourceAction",
+    "args": {
+        "kind": "source.addMissingImports",
+        "apply": "first"
+    }
   }
 ]

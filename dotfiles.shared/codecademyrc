@@ -9,6 +9,7 @@ alias es='e ~/.codecademyrc'
 alias f='cd ~/repos/Codecademy'
 alias gg='cd ~/repos/client-modules/packages/gamut'
 alias gc='cd ~/repos/client-modules'
+alias gp='cd ~/repos/portal-app'
 alias code='mux start code'
 alias prod='export AWS_PROFILE=prod'
 alias nonprod='export AWS_PROFILE=nonprod'
@@ -41,3 +42,26 @@ export CODECADEMY_DIR="$HOME/repos/Codecademy/"
 
 # If not using docker-compose
 export ENV="localdev" # This can be anything, it only sets name for a deploy target
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Autoload .nvmrc node versions when switching dirs
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc

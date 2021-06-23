@@ -7,7 +7,6 @@
   "editor.rulers": [
     120
   ],
-  "workbench.editor.tabSizing": "shrink",
   "vscodeWorkspaceSwitcher.paths": [
     "~/repos/front",
     "~/repos/front-client",
@@ -93,26 +92,21 @@
   "bracketPairColorizer.timeOut": 0,
   "bracketPairColorizer.showBracketsInGutter": true,
   "bracketPairColorizer.consecutivePairColors": [
-      "()",
-      "[]",
-      "{}",
-      [
-          "Orchid",
-          "Goldenrod",
-          "ForestGreen",
-          "MediumSlateBlue"
-      ],
-      "Red"
+    "()",
+    "[]",
+    "{}",
+    ["Orchid", "Goldenrod", "ForestGreen", "MediumSlateBlue"],
+    "Red"
   ],
   "mocha.files.glob": "tests/**/*Tests.ts",
   "mocha.requires": [
-      "ts-node/register",
-      "tsconfig-paths/register",
-      "source-map-support/register"
+    "ts-node/register",
+    "tsconfig-paths/register",
+    "source-map-support/register"
   ],
   "mocha.options": {
-      "fullTrace": true,
-      "recursive": true
+    "fullTrace": true,
+    "recursive": true
   },
   "mocha.showErrorPopup": false,
   "peacock.favoriteColors": [
@@ -129,21 +123,13 @@
   "vim.statusBarColorControl": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "a"
-      ],
+      "before": ["<leader>", "a"],
       "after": [],
       "commands": [
         {
@@ -153,197 +139,99 @@
       ]
     },
     {
-      "before": [
-        "P"
-      ],
-      "after": [
-        "p"
-      ],
+      "before": ["P"],
+      "after": ["p"],
       "commands": []
     },
     {
-      "before": [
-        "p"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "P"
-      ],
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"],
       "commands": []
     },
     {
-      "before": [
-        "m"
-      ],
-      "after": [
-        "d"
-      ],
+      "before": ["m"],
+      "after": ["d"],
       "commands": []
     },
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
+      "before": ["d"],
+      "after": ["\"", "_", "d"],
       "commands": []
-    }, {
-      "before": [
-        ">"
-      ],
-      "after": [
-        ">",
-        "g",
-        "v"
-      ],
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"],
       "commands": []
-    }, {
-      "before": [
-        "<"
-      ],
-      "after": [
-        "<",
-        "g",
-        "v"
-      ],
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"],
       "commands": []
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "<leader>",
-        "j"
-      ],
+      "before": ["<leader>", "s"],
+      "after": ["<leader>", "<leader>", "<leader>", "j"],
       "commands": []
     },
     {
-      "before": [
-        "M"
-      ],
-      "after": [
-        "m"
-      ],
+      "before": ["M"],
+      "after": ["m"],
       "commands": []
     },
     {
-      "before": [
-        "m"
-      ],
-      "after": [
-        "d"
-      ],
+      "before": ["m"],
+      "after": ["d"],
       "commands": []
     },
     {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ],
+      "before": ["x"],
+      "after": ["\"", "_", "x"],
       "commands": []
     },
     {
-      "before": [
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ],
+      "before": ["c"],
+      "after": ["\"", "_", "c"],
       "commands": []
     },
     {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "after": [
-        "d",
-        "d"
-      ],
+      "before": ["<leader>", "m"],
+      "after": ["d", "d"],
       "commands": []
     },
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
+      "before": ["<leader>", "d"],
       "after": [],
-      "commands": [
-        "editor.action.peekDefinition"
-      ]
+      "commands": ["editor.action.peekDefinition"]
     },
     {
-      "before": [
-        "<leader>",
-        "D"
-      ],
+      "before": ["<leader>", "D"],
       "after": [],
-      "commands": [
-        "editor.action.peekTypeDefinition"
-      ]
+      "commands": ["editor.action.peekTypeDefinition"]
     },
     {
-      "before": [
-        "0"
-      ],
-      "after": [
-        "^",
-      ],
+      "before": ["0"],
+      "after": ["^"],
       "commands": []
     },
     {
-      "before": [
-        "^"
-      ],
-      "after": [
-        "0",
-      ],
+      "before": ["^"],
+      "after": ["0"],
       "commands": []
     },
     {
-      "before": [
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ],
+      "before": ["D"],
+      "after": ["\"", "_", "D"],
       "commands": []
     },
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
+      "before": ["d"],
+      "after": ["\"", "_", "d"],
       "commands": []
     },
     {
-      "before": [
-        "<leader>",
-        "v"
-      ],
+      "before": ["<leader>", "v"],
       "after": [],
       "commands": [
         {
@@ -352,10 +240,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "g"
-      ],
+      "before": ["<leader>", "g"],
       "after": [],
       "commands": [
         {
@@ -364,25 +249,17 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "b"
-      ],
+      "before": ["<leader>", "b"],
       "after": [],
       "commands": [
         {
           "command": "workbench.action.tasks.build",
-          "args": [
-            "check"
-          ]
+          "args": ["check"]
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "T"
-      ],
+      "before": ["<leader>", "T"],
       "after": [],
       "commands": [
         {
@@ -391,10 +268,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
+      "before": ["<leader>", "c"],
       "after": [],
       "commands": [
         {
@@ -403,10 +277,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "F"
-      ],
+      "before": ["<leader>", "F"],
       "after": [],
       "commands": [
         {
@@ -416,10 +287,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "u"
-      ],
+      "before": ["<leader>", "u"],
       "after": [],
       "commands": [
         {
@@ -428,9 +296,7 @@
       ]
     },
     {
-      "before": [
-        "_"
-      ],
+      "before": ["_"],
       "after": [],
       "commands": [
         {
@@ -439,9 +305,7 @@
       ]
     },
     {
-      "before": [
-        "-"
-      ],
+      "before": ["-"],
       "after": [],
       "commands": [
         {
@@ -450,10 +314,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "i"
-      ],
+      "before": ["<leader>", "i"],
       "after": [],
       "commands": [
         {
@@ -462,9 +323,7 @@
       ]
     },
     {
-      "before": [
-        "]"
-      ],
+      "before": ["]"],
       "after": [],
       "commands": [
         {
@@ -473,9 +332,7 @@
       ]
     },
     {
-      "before": [
-        "["
-      ],
+      "before": ["["],
       "after": [],
       "commands": [
         {
@@ -484,10 +341,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
+      "before": ["<leader>", "f"],
       "after": [],
       "commands": [
         {
@@ -496,10 +350,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "F"
-      ],
+      "before": ["<leader>", "F"],
       "after": [],
       "commands": [
         {
@@ -508,30 +359,15 @@
       ]
     },
     {
-      "before": [
-        "<C-u>"
-      ],
-      "after": [
-        "2",
-        "0",
-        "k"
-      ]
+      "before": ["<C-u>"],
+      "after": ["2", "0", "k"]
     },
     {
-      "before": [
-        "<C-d>"
-      ],
-      "after": [
-        "2",
-        "0",
-        "j"
-      ]
+      "before": ["<C-d>"],
+      "after": ["2", "0", "j"]
     },
     {
-      "before": [
-        "<leader>",
-        ";"
-      ],
+      "before": ["<leader>", ";"],
       "after": [],
       "commands": [
         {
@@ -540,27 +376,12 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-          "args": []
-        },
-        {
-          "command": "workbench.action.closeActiveEditor",
-          "args": []
-        }
-      ]
+      "before": ["<leader>", "e"],
+      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "e"],
+      "commands": []
     },
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
+      "before": ["<leader>", "q"],
       "after": [],
       "commands": [
         {
@@ -570,10 +391,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
+      "before": ["<leader>", "w"],
       "after": [],
       "commands": [
         {
@@ -583,10 +401,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "o"
-      ],
+      "before": ["<leader>", "o"],
       "after": [],
       "commands": [
         {
@@ -596,10 +411,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "x"
-      ],
+      "before": ["<leader>", "x"],
       "after": [],
       "commands": [
         {
@@ -609,10 +421,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "X"
-      ],
+      "before": ["<leader>", "X"],
       "after": [],
       "commands": [
         {
@@ -622,10 +431,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "z"
-      ],
+      "before": ["<leader>", "z"],
       "after": [],
       "commands": [
         {
@@ -635,60 +441,51 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "a"
-      ],
+      "before": ["<leader>", "a"],
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.findInFiles",
-          "args": []
+          "command": "workbench.action.findInFiles"
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "P"
-      ],
-      "after": [
-        "$",
-        "p"
-      ],
+      "before": ["<leader>", "P"],
+      "after": ["$", "p"],
       "commands": []
     },
     {
-      "before": [
-        "<leader>",
-        "R"
-      ],
+      "before": ["<leader>", "r"],
       "after": [],
       "commands": [
         {
-          "command": ":e /Users/zackfleishman/Library/Application Support/Code/User/settings.json",
+          "command": "extension.testToggler",
           "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "E"
-      ],
+      "before": ["<leader>", "R"],
       "after": [],
       "commands": [
         {
-          "command": ":e /Users/zackfleishman/Library/Application Support/Code/User/tasks.json",
+          "command": ":e /Users/zackfleischman/Library/Application Support/Code/User/settings.json",
           "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "t"
-      ],
+      "before": ["<leader>", "E"],
+      "after": [],
+      "commands": [
+        {
+          "command": ":e /Users/zackfleischman/Library/Application Support/Code/User/tasks.json",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t"],
       "after": [],
       "commands": [
         {
@@ -697,40 +494,22 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "S"
-      ],
+      "before": ["<leader>", "S"],
       "after": [],
-      "commands": [
-        ":split"
-      ]
+      "commands": [":split"]
     },
     {
-      "before": [
-        "<leader>",
-        "V"
-      ],
+      "before": ["<leader>", "V"],
       "after": [],
-      "commands": [
-        ":vsplit"
-      ]
+      "commands": [":vsplit"]
     },
     {
-      "before": [
-        "<leader>",
-        ":"
-      ],
+      "before": ["<leader>", ":"],
       "after": [],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
+      "commands": ["workbench.action.showCommands"]
     },
     {
-      "before": [
-        "<leader>",
-        "1"
-      ],
+      "before": ["<leader>", "1"],
       "after": [],
       "commands": [
         {
@@ -740,10 +519,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "2"
-      ],
+      "before": ["<leader>", "2"],
       "after": [],
       "commands": [
         {
@@ -753,10 +529,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "3"
-      ],
+      "before": ["<leader>", "3"],
       "after": [],
       "commands": [
         {
@@ -766,10 +539,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "4"
-      ],
+      "before": ["<leader>", "4"],
       "after": [],
       "commands": [
         {
@@ -779,10 +549,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "5"
-      ],
+      "before": ["<leader>", "5"],
       "after": [],
       "commands": [
         {
@@ -792,10 +559,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "6"
-      ],
+      "before": ["<leader>", "6"],
       "after": [],
       "commands": [
         {
@@ -805,10 +569,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "7"
-      ],
+      "before": ["<leader>", "7"],
       "after": [],
       "commands": [
         {
@@ -818,10 +579,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "8"
-      ],
+      "before": ["<leader>", "8"],
       "after": [],
       "commands": [
         {
@@ -831,10 +589,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "9"
-      ],
+      "before": ["<leader>", "9"],
       "after": [],
       "commands": [
         {
@@ -844,7 +599,7 @@
       ]
     },
     {
-      "before": [ "<" ],
+      "before": ["<"],
       "after": [],
       "commands": [
         {
@@ -854,7 +609,7 @@
       ]
     },
     {
-      "before": [ ">" ],
+      "before": [">"],
       "after": [],
       "commands": [
         {
@@ -876,17 +631,15 @@
   "editor.renderControlCharacters": true,
   "breadcrumbs.enabled": true,
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
-  "vim.easymotionMarkerBackgroundColor": "MediumVioletRed",
-  "vim.easymotionMarkerFontSize": "14",
-  "vim.easymotionMarkerWidthPerChar": 8,
-  "vim.easymotionMarkerHeight": 18,
-  "vim.easymotionMarkerYOffset": 1,
+  "vim.easymotionMarkerBackgroundColor": "MediumTurquoise",
+  "vim.easymotionMarkerForegroundColorOneChar": "red",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "red",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "black",
   "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9_#]",
   "vim.sneak": true,
   "vim.sneakUseIgnorecaseAndSmartcase": true,
   "explorer.confirmDragAndDrop": false,
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "terminal.integrated.rendererType": "dom",
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "explorer.confirmDelete": false,
@@ -900,15 +653,13 @@
   "liveshare.allowGuestDebugControl": true,
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingBrackets": "never",
-  "terminal.integrated.shellArgs.linux": [
-    "-i"
-  ],
-  "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.inheritEnv": true,
   "editor.formatOnSave": true,
   "tabnine.experimentalAutoImports": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 3,
+  "ruby.rubocop.configFilePath": "/Users/zackfleischman/repos/Codecademy/.rubocop.yml",
+  "ruby.rubocop.useBundler": true
 }
