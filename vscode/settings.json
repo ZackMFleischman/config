@@ -661,5 +661,6 @@
   },
   "window.zoomLevel": 3,
   "ruby.rubocop.configFilePath": "/Users/zackfleischman/repos/Codecademy/.rubocop.yml",
-  "ruby.rubocop.useBundler": true
+  "ruby.rubocop.useBundler": true,
+  "eslint.alwaysShowStatus": true
 }
