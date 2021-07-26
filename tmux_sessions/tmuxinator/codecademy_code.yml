@@ -1,0 +1,35 @@
+# ~/.tmuxinator/code.yml
+
+#layout: even-horizontal
+
+name: code
+root: ~/repos/Codecademy
+windows:
+  - backend:
+      layout: e03d,254x60,0,0{152x60,0,0,0,101x60,153,0,4}
+      panes:
+        - bundle install;make services;bundle exec rails server
+        - sh bundle exec sidekiq -C config/sidekiq.yml
+  - monolith: 
+      layout: 6eda,254x60,0,0{88x60,0,0[88x12,0,0,1,88x47,0,13,15],165x60,89,0,35}
+      panes:
+        - yarn compile --watch
+        - yarn start
+        - clear
+  - portal-app: 
+      layout: 8b61,254x60,0,0{133x60,0,0[133x14,0,0,20,133x45,0,15,38],120x60,134,0,21}
+      panes:
+        - gp;yarn compile --watch
+        - gp;clear
+        - gp;yarn start
+  - gamut: 
+      layout: bb49,254x60,0,0{123x60,0,0,24,130x60,124,0[130x27,124,0,33,130x32,124,28,37]}
+      panes:
+        - gc;clear
+        - gc;yarn run start:storybook
+        - gc;clear
+  - REPLs:
+      layout: even-horizontal
+      panes:
+        - node
+        - irb

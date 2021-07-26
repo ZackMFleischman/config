@@ -816,6 +816,10 @@ nmap <leader>P A<ESC>p
 nnoremap <leader>gs :vsplit<CR><C-w>l:edit ~/repos/savvy/fierce/config/settings/common.py<CR>
 nnoremap <leader>go :vsplit<CR><C-w>l:edit ~/repos/strypes/tool/omnisharp.json<CR>
 
+" Sonic Pi
+nnoremap <leader>c :SonicPiSendBuffer<CR>
+vnoremap <leader>c :SonicPiSendBuffer<CR>
+nnoremap <leader>C :SonicPiStop<CR>:source ~/.vimrc<CR>
 
 """""""""""""""""
 " Tags

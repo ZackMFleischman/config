@@ -73,6 +73,9 @@ Plugin 'tpope/vim-dispatch'
 " Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'iamcco/markdown-preview.nvim' 
 
+" Sonic Pi
+Plugin 'https://github.com/dermusikman/sonicpi.vim.git'
+
 """""""""""""""""""""""""""""""
 " Language Specific shiz
 
