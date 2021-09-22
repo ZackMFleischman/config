@@ -65,3 +65,109 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# Dump all EC2 instance Ids for production servers
+prodInstances () {
+    aws-vault exec prod -- aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Name`] | [0].Value]' --output text | sort
+}
+
+# Dump all EC2 instance Ids for nonprod (e.g. staging/zoo) servers
+nonprodInstances () {
+    aws-vault exec nonprod -- aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Name`] | [0].Value]' --output text | sort
+}
+
+# Dump all EC2 instance Ids for prod monolith servers
+alias prodMonolithInstances="prodInstances | grep webapp.monolith.production.us-east-1.asg | nl"
+# Dump all EC2 instance Ids for prod worker/sidekiq servers
+alias prodWorkerInstances="prodInstances | grep worker.monolith.production.us-east-1.asg | nl"
+# Dump all EC2 instance Ids for staging monolith servers
+alias stagingMonolithInstances="stagingInstances | grep webapp.monolith.staging.us-east-1.asg | nl"
+
+# ssh/ssm into a specific production EC2 instance
+# Usage: prodInstanceSh i-01e89c0d762b6238f
+prodInstanceSh () {
+  if [ -z $1 ]
+  then 
+    echo "Err: Must specify a production instance id"
+  else
+    aws-vault exec prod -- aws ssm start-session --target $1
+  fi
+}
+
+# ssh/ssm into a specific non-prod EC2 instance
+# Usage: nonprodInstanceSh i-01e89c0d762b6238f
+nonprodInstanceSh () {
+  if [ -z $1 ]
+  then 
+    echo "Err: Must specify a nonprod instance id"
+  else
+    aws-vault exec nonprod -- aws ssm start-session --target $1
+  fi
+}
+
+# ssh/ssm into a production monolith server.
+prodsh () {
+  instanceid=$(aws-vault exec prod -- \
+   aws ec2 describe-instances --query \
+   'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Name`] | [0].Value]' \
+    --output text | grep worker.monolith.production.us-east-1.asg | cut -f 1 | head -n 1)
+  if [ -z "$instanceid" ]
+  then
+    echo "Could not find InstanceId for production monolith server"
+  else
+    echo "Found InstanceId for production monolith server to be $instanceid"
+    aws-vault exec prod -- aws ssm start-session --target $instanceid
+  fi
+}
+
+# ssh/ssm into a production worker/sidekiq server.
+workersh () {
+  instanceid=$(aws-vault exec prod -- \
+   aws ec2 describe-instances --query \
+   'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Name`] | [0].Value]' \
+    --output text | grep worker.monolith.production.us-east-1.asg | cut -f 1 | head -n 1)
+  if [ -z "$instanceid" ]
+  then
+    echo "Could not find InstanceId for production worker server"
+  else
+    echo "Found InstanceId for production worker server to be $instanceid"
+    aws-vault exec prod -- aws ssm start-session --target $instanceid
+  fi
+}
+
+# ssh/ssm into a staging monolith server.
+stagingsh () {
+  instanceid=$(aws-vault exec nonprod -- \
+   aws ec2 describe-instances --query \
+   'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Name`] | [0].Value]' \
+    --output text | grep webapp.monolith.staging | cut -f 1 | head -n 1)
+  if [ -z "$instanceid" ]
+  then
+    echo "Could not find InstanceId for staging"
+  else
+    echo "Found InstanceId for staging to be $instanceid"
+    aws-vault exec nonprod -- aws ssm start-session --target $instanceid
+  fi
+}
+
+# Connect to a zoo server using aws-vault and aws ssm
+# Usage example: zoosh badger
+zoosh () {
+  if [ -z $1 ]
+  then 
+  	echo "Err: Must specify a zoo server name"
+  else
+    instanceid=$(aws-vault exec nonprod -- \
+     aws ec2 describe-instances --query \
+     'Reservations[*].Instances[*].[InstanceId, Tags[?Key==`Deploy_Namespace`] | [0].Value]' \
+     --filters "Name=tag:Deploy_Namespace,Values=$1" --output text | cut -f 1)
+    if [ -z "$instanceid" ]
+    then
+  	  echo "Could not find InstanceId for $1"
+    else
+      echo "Found InstanceId for $1 to be $instanceid"
+      aws-vault exec nonprod -- aws ssm start-session --target $instanceid
+    fi
+  fi
+}
+
