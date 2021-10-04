@@ -18,6 +18,19 @@ export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python"
 export BROWSER="/Applications/Google\ Chrome.app"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+##################
+# OpenSSL Shit
+##################
+# If you need to have openssl@1.1 first in your PATH, run:
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH" 
+
+#For compilers to find openssl@1.1 you may need to set:
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+#For pkg-config to find openssl@1.1 you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
 
 ####################
 # oh-my-zsh Settings
