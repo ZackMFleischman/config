@@ -251,7 +251,7 @@
     "command": "-workbench.action.openRecent"
   },
   {
-    "key": "cmd+shift+f5",
+    "key": "alt+r",
     "command": "workbench.action.tasks.runTask",
     "args": "runCurrentTest"
   },
@@ -340,6 +340,16 @@
     "args": {
         "kind": "source.addMissingImports",
         "apply": "first"
+    }
+  },
+  {
+    "key": "alt+x",
+    "command": "extension.multiCommand.execute",
+    "args": { 
+        "sequence": [
+            "eslint.restart",
+            "typescript.restartTsServer",
+        ]
     }
   }
 ]

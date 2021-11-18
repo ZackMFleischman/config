@@ -425,7 +425,7 @@
       "after": [],
       "commands": [
         {
-          "command": "editor.action.referenceSearch.trigger",
+          "command": "editor.showCallHierarchy",
           "args": []
         }
       ]
@@ -472,6 +472,12 @@
           "command": ":e /Users/zackfleischman/Library/Application Support/Code/User/settings.json",
           "args": []
         }
+      ]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "after": ["z", "a"],
+      "commands": [
       ]
     },
     {
@@ -660,10 +666,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": 1,
-  "ruby.rubocop.configFilePath": "/Users/zackfleischman/repos/Codecademy/.rubocop.yml",
-  "ruby.rubocop.useBundler": true,
   "eslint.alwaysShowStatus": true,
-  "ruby.rubocop.executePath": "/Users/zackfleischman/.rbenv/shims/",
   "terminal.integrated.tabs.enabled": false,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "task.quickOpen.showAll": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.foldfix": true
 }
