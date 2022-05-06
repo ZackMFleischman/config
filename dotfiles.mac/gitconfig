@@ -14,8 +14,17 @@
     showPatch = true
 [diff]
   tool = Kaleidoscope
+[diffx]
+  tool = kdiff3
+[diffx]
+  tool = vscode
 [merge]
 	tool = vscode
+[difftool "kdiff3"]
+  path = /usr/local/bin/kdiff3
+  prompt = false
+  keepBackup = false
+  trustExitCode = false
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "Kaleidoscope"]
@@ -58,3 +67,6 @@
 	name = Zack M Fleischman
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[alias]
+	br = branch
+    co = checkout

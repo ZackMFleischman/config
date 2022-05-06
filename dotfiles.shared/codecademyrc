@@ -10,10 +10,11 @@ alias f='cd ~/repos/Codecademy'
 alias gg='cd ~/repos/client-modules/packages/gamut'
 alias gc='cd ~/repos/client-modules'
 alias gp='cd ~/repos/portal-app'
-alias code='mux start code'
+alias zwork='mux start zwork'
 alias prod='export AWS_PROFILE=prod'
 alias nonprod='export AWS_PROFILE=nonprod'
 alias nd='n "Check on deploy" 7&'
+alias yg='yarn gql;n'
 
 
 nonprod

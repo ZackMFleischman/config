@@ -336,10 +336,19 @@
   },
   {
     "key": "cmd+i",
-    "command": "editor.action.sourceAction",
-    "args": {
-        "kind": "source.addMissingImports",
-        "apply": "first"
+    "command": "extension.multiCommand.execute",
+    "args": { 
+        "interval": 2000,
+        "sequence": [
+          {
+            "command": "editor.action.sourceAction",
+            "args": {
+                "kind": "source.addMissingImports",
+                "apply": "first"
+            }
+          },
+          "multiCommand.fixBadImports"
+        ]
     }
   },
   {

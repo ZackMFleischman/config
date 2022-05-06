@@ -3,7 +3,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.stablePeek": false,
   "editor.detectIndentation": false,
-  "editor.codeLens": false,
   "editor.rulers": [
     120
   ],
@@ -30,7 +29,8 @@
     "**/Sqlite.cs": true,
     "**/KeenClient.cs": true,
     "**/UnityTestTools": true,
-    "**/JsonDotNet": true
+    "**/JsonDotNet": true,
+    ".next/*": true,
   },
   "files.exclude": {
     "**/.DS_Store": true,
@@ -86,7 +86,8 @@
     "Obj/": true,
     "ProjectSettings/": true,
     "temp/": true,
-    "Temp/": true
+    "Temp/": true,
+    "**/.next":true
   },
   "bracketPairColorizer.scopeLineRelativePosition": false,
   "bracketPairColorizer.timeOut": 0,
@@ -397,6 +398,10 @@
         {
           "command": "workbench.action.files.saveAll",
           "args": []
+        }, 
+        {
+          "command": "multiCommand.fixBadImports",
+          "args": []
         }
       ]
     },
@@ -671,5 +676,40 @@
   "security.workspace.trust.untrustedFiles": "open",
   "task.quickOpen.showAll": true,
   "workbench.iconTheme": "material-icon-theme",
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "diffEditor.codeLens": true,
+  "editor.codeLens": false,
+  "multiCommand.commands": [
+    {
+        "command": "multiCommand.fixBadImports",
+        "sequence": [
+        {
+          "command": "ssmacro.replace",
+          "args": {
+              "info": "Replace stupid react-select imports with react",
+              "find": "from [\"']react-select/node_modules/@types/react[\"']",
+              "replace": "from 'react'",
+              "all": true,
+              "reg": true,
+              "flag": "gm"
+          }
+        }
+      ]
+    },
+    {
+        "command": "multiCommand.autoImport",
+        "sequence": [{
+          "command": "editor.action.sourceAction",
+          "args": {
+              "kind": "source.addMissingImports",
+              "apply": "first"
+          }
+        }]
+    }
+  ],
+  "bracketPairColorizer.depreciation-notice": false,
+  "glean.switchToTarget": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

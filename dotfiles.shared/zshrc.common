@@ -110,6 +110,9 @@ alias ep='vim ~/.vimplugins'
 alias mem='top -o mem'
 alias cpu='top -o cpu'
 
+# Start up tmuxinator
+alias z='mux start' 
+
 # Python
 alias py='ipython -i ~/repos/scripts/zpython/zutil.py' # Start ipython with my utility script
 alias zutil='vim ~/repos/scripts/zpython/zutil.py' # Modify my python utility script

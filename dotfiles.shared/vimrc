@@ -51,7 +51,7 @@ noremap gmg 'G
 
 " Autoreload on file change.
 set autoread
-au CursorHold,CursorHoldI * checktime
+autocmd CursorHold,CursorHoldI * silent! checktime
 
 " Use OSX clipboard
 set clipboard=unnamed
