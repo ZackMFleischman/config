@@ -30,12 +30,14 @@ brew install homebrew/dupes/grep
 source scripts/installPrograms.mac
 
 # Install python programs
-echo "Installing Pygame..."
-/usr/local/bin/pip3 install hg+http://bitbucket.org/pygame/pygame
-echo "Finished installing Pygame!"
+#echo "Installing Pygame..."
+#/usr/local/bin/pip3 install hg+http://bitbucket.org/pygame/pygame
+#echo "Finished installing Pygame!"
 
 # Cleaning up
 echo ""
 echo "Cleaning up homebrew..."
 brew cleanup
 
+
+echo "Finished installing homebrew..."

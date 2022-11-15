@@ -3,6 +3,8 @@ source $HOME/.zshrc.common
 
 # Mac specific Path stuff
 export PATH="$PATH:/usr/local/homebrew/bin"
+export PATH=/opt/homebrew/bin:$PATH
+
 
 # Source Mac Specific Scripts
 # <None right now>
@@ -34,28 +36,14 @@ alias kf='killall -KILL Finder'
 # Reindex spotlight
 alias spotlight='sudo mdutil -E /'
 
-# Replace Vim with MacVim, specifically for YouCompleteMe Vim plugin
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-export VIMRUNTIME=/Applications/MacVim.app/Contents/Resources/vim/runtime
-
 # Tmux for it to work right with mac terminal colors
 alias tmux='tmux -2'
 
 # Backup Script
 alias bu='bp;backup.mac'
 
-# Homebrew
-alias bin='brew install'
-alias bun='brew uninstall'
-alias cs='brew cask search' 
-
 # Notifications
 alias n='~/repos/scripts/osx/notify $?'
-
-# Alias 'python_watch' to the osx version
-alias python_watch='python_watch_osx'
-
-alias unity=/Applications/Unity/Unity.app/Contents/MacOS/Unity
 
 alias txt='pbpaste | text'  # text myself whats in the clipboard
 
@@ -70,15 +58,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-source $HOME/.codecademyrc
-
+source $HOME/.aurorarc
+alias es='vim $HOME/.aurorarc'
 
 export PATH="/usr/local/opt/mongodb-community@4.0/bin:$PATH"
-
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"

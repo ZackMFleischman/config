@@ -6,9 +6,7 @@ echo "Installing command line programs..."
 binaries=(
     gpg
     rename
-    zopfli
-    ffmpeg
-    node
+    nvm
     autojump
     tmux
     tmuxinator
@@ -18,7 +16,6 @@ binaries=(
     zsh
     the_silver_searcher
     ack
-    gource
 )
 brew install ${binaries[@]}
 
