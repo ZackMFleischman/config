@@ -1,1 +1,6 @@
 # Aurora specific startup file
+alias v='ssh vdesk' # See ~/.ssh/config 
+alias vdesk='ssh zfleischman@zfleischman.vdesk.cloud.aurora.tech'
+alias vdeskconfig='vim ~/.ssh/config'
+
+
