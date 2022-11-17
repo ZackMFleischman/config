@@ -9,7 +9,7 @@
 [help]
     autocorrect = 1
 [fetch]
-    prune = true
+	prune = true
 [stash]
     showPatch = true
 [diff]
@@ -63,8 +63,8 @@
 	new = green
 	whitespace = red reverse
 [user]
-	email = zFleischman@codecademy.com
-	name = Zack M Fleischman
+	email = zfleischman@aurora.tech
+	name = Zack Fleischman
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [alias]

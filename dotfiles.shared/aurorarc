@@ -3,4 +3,6 @@ alias v='ssh vdesk' # See ~/.ssh/config
 alias vdesk='ssh zfleischman@zfleischman.vdesk.cloud.aurora.tech'
 alias vdeskconfig='vim ~/.ssh/config'
 
+alias start-ssh-agent='eval "$(ssh-agent -s)"'
+
 

@@ -7,8 +7,8 @@ function mypath {
 NEWLINE=$'\n'
 
 # Grab the current username 
-#JUNKFOOD_CURRENT_USER_="%{$FG[025]%}[%{$FG[075]%}%n%{$reset_color%}"
-JUNKFOOD_CURRENT_USER_="%{$FG[025]%}[%{$FG[075]%}zack%{$fg[white]%}%{$FG[025]%}]%{$reset_color%} "
+JUNKFOOD_CURRENT_USER_="%{$FG[025]%}[%{$FG[075]%}%n%{$reset_color%}"
+#JUNKFOOD_CURRENT_USER_="%{$FG[025]%}[%{$FG[075]%}zack%{$fg[white]%}%{$FG[025]%}]%{$reset_color%} "
 
 # Grab the current machine name 
 JUNKFOOD_MACHINE_="%{$fg_bold[blue]%}%m%{$fg[white]%}%{$FG[025]%}]%{$reset_color%} "
@@ -30,6 +30,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[075]%}) ✔"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[075]%}) ✗"
 
 # Put it all together!
-# PROMPT="$JUNKFOOD_CURRENT_USER_%{$FG[025]%}@$JUNKFOOD_MACHINE_$JUNKFOOD_LOCA_"
-PROMPT="$JUNKFOOD_CURRENT_USER_$JUNKFOOD_LOCA_"
+PROMPT="$JUNKFOOD_CURRENT_USER_%{$FG[025]%}@$JUNKFOOD_MACHINE_$JUNKFOOD_LOCA_"
+#PROMPT="$JUNKFOOD_CURRENT_USER_$JUNKFOOD_LOCA_"
 RPROMPT="%(?..%{$FG[105]%}Error: %?%{$reset_color%})"
