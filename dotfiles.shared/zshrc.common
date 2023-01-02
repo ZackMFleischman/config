@@ -11,7 +11,7 @@
 SCRIPT_PATHS=$(find ~/repos/scripts/ -type d | grep -v "\.git" | sed "s,/$,," | tr '\n' ':')
 
 # PATH and PYTHONPATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/scripts:$SCRIPT_PATHS:/usr/texbin"
 export PYTHONPATH="$PYTHONPATH:$HOME/repos/scripts/python"
 
 # Environment Variables
